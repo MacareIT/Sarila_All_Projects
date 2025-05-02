@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e58060e5-692a-4545-8c5e-353f978fcf77" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://macare.mactech.net.in/MACARE_MIS_Service/Webservice_ModuleUsage/WebService_ModuleUsage.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WebService_ModuleUsage.disco" MetadataType="Disco" ID="4ff8a462-0cb2-4c10-848f-6e8361cbcc9e" SourceId="1" SourceUrl="https://macare.mactech.net.in/MACARE_MIS_Service/Webservice_ModuleUsage/WebService_ModuleUsage.asmx?disco" />
+    <MetadataFile FileName="WebService_ModuleUsage.wsdl" MetadataType="Wsdl" ID="def11c11-ce99-4232-aa83-3be67a47fa9e" SourceId="1" SourceUrl="https://macare.mactech.net.in/MACARE_MIS_Service/Webservice_ModuleUsage/WebService_ModuleUsage.asmx?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

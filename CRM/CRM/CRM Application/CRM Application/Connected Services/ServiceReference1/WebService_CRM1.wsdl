@@ -1,0 +1,1728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_loginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_NewBooking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DeptID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DoctorID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="BookDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VisitTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PatientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_NewBookingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insert_NewBookingResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Doctor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DoctorID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_DoctorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insert_DoctorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_RescheduledBooking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Booking_Id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BranchID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DeptID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DoctorID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="BookDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VisitTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PatientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_RescheduledBookingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insert_RescheduledBookingResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_CRMBooking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Booking_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BranchID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DeptID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DoctorID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="BookDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VisitTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PatientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_CRMBookingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update_CRMBookingResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Bookingdtl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Booking_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="PatientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_BookingdtlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update_BookingdtlResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_BookingStatus_Arrived">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Booking_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_BookingStatus_ArrivedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update_BookingStatus_ArrivedResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_BookingStatus_Confirm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Booking_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="confirmby" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_BookingStatus_ConfirmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update_BookingStatus_ConfirmResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_BookingStatus_Cancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Booking_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Reason_ForCancel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cancelledby" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_BookingStatus_CancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Add_BookingStatus_CancelResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_BookingStatus_Reschedule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Booking_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Reason_ForCancel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cancelledby" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_BookingStatus_RescheduleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Add_BookingStatus_RescheduleResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Branch">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_BranchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_BranchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Registereddoctors">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branchid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_RegistereddoctorsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_RegistereddoctorsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delete_select">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="drid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delete_selectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="delete_selectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Department">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_DepartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_DepartmentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Doctor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_DoctorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_DoctorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Doctor1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Doctor1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Doctor1Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Doctorfrmdrrreg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_DoctorfrmdrrregResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_DoctorfrmdrrregResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Doctorattendance_avail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Doctorattendance_availResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Doctorattendance_availResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Doctor_availability">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Doctor_availabilityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Doctor_availabilityResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Doctor_availabilityattend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Doctor_availabilityattendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Doctor_availabilityattendResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Doctor_departmentforconfirmation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Doctor_departmentforconfirmationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Doctor_departmentforconfirmationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Report">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_NextToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="doctor_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date_" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_NextTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_NextTokenResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_VisitTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="doctor_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date_" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_VisitTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_VisitTimeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BookingDtlstoreschedule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="booking_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BookingDtlstorescheduleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_BookingDtlstorescheduleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BookingDtls_forconsultationstatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dr_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BookingDtls_forconsultationstatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_BookingDtls_forconsultationstatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BookingDtls_forconfirmation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dr_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BookingDtls_forconfirmationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_BookingDtls_forconfirmationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BookingDtls_foredit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dr_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BookingDtls_foreditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_BookingDtls_foreditResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BookingDtls">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dr_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BookingDtlsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_BookingDtlsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BookingDtls_Todaybooking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dr_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BookingDtls_TodaybookingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_BookingDtls_TodaybookingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Report_Todaybooking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dr_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Report_TodaybookingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Report_TodaybookingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PatientDtls">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="doctor_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date_" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="visit_time" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PatientDtlsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_PatientDtlsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BookingReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="doctor_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="date_" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="visit_time" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BookingReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_BookingReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Usage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_UsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insert_UsageResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_loginSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_login" />
+  </wsdl:message>
+  <wsdl:message name="Get_loginSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_NewBookingSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_NewBooking" />
+  </wsdl:message>
+  <wsdl:message name="Insert_NewBookingSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_NewBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_DoctorSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_Doctor" />
+  </wsdl:message>
+  <wsdl:message name="Insert_DoctorSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_DoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_RescheduledBookingSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_RescheduledBooking" />
+  </wsdl:message>
+  <wsdl:message name="Insert_RescheduledBookingSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_RescheduledBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_CRMBookingSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_CRMBooking" />
+  </wsdl:message>
+  <wsdl:message name="Update_CRMBookingSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_CRMBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_BookingdtlSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_Bookingdtl" />
+  </wsdl:message>
+  <wsdl:message name="Update_BookingdtlSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_BookingdtlResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_BookingStatus_ArrivedSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_BookingStatus_Arrived" />
+  </wsdl:message>
+  <wsdl:message name="Update_BookingStatus_ArrivedSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_BookingStatus_ArrivedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_BookingStatus_ConfirmSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_BookingStatus_Confirm" />
+  </wsdl:message>
+  <wsdl:message name="Update_BookingStatus_ConfirmSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_BookingStatus_ConfirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add_BookingStatus_CancelSoapIn">
+    <wsdl:part name="parameters" element="tns:Add_BookingStatus_Cancel" />
+  </wsdl:message>
+  <wsdl:message name="Add_BookingStatus_CancelSoapOut">
+    <wsdl:part name="parameters" element="tns:Add_BookingStatus_CancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add_BookingStatus_RescheduleSoapIn">
+    <wsdl:part name="parameters" element="tns:Add_BookingStatus_Reschedule" />
+  </wsdl:message>
+  <wsdl:message name="Add_BookingStatus_RescheduleSoapOut">
+    <wsdl:part name="parameters" element="tns:Add_BookingStatus_RescheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_BranchSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Branch" />
+  </wsdl:message>
+  <wsdl:message name="Get_BranchSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_BranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_RegistereddoctorsSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Registereddoctors" />
+  </wsdl:message>
+  <wsdl:message name="Get_RegistereddoctorsSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_RegistereddoctorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="delete_selectSoapIn">
+    <wsdl:part name="parameters" element="tns:delete_select" />
+  </wsdl:message>
+  <wsdl:message name="delete_selectSoapOut">
+    <wsdl:part name="parameters" element="tns:delete_selectResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_DepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Department" />
+  </wsdl:message>
+  <wsdl:message name="Get_DepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_DepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_DoctorSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Doctor" />
+  </wsdl:message>
+  <wsdl:message name="Get_DoctorSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_DoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Doctor1SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Doctor1" />
+  </wsdl:message>
+  <wsdl:message name="Get_Doctor1SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Doctor1Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_DoctorfrmdrrregSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Doctorfrmdrrreg" />
+  </wsdl:message>
+  <wsdl:message name="Get_DoctorfrmdrrregSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_DoctorfrmdrrregResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Doctorattendance_availSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Doctorattendance_avail" />
+  </wsdl:message>
+  <wsdl:message name="Get_Doctorattendance_availSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Doctorattendance_availResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Doctor_availabilitySoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Doctor_availability" />
+  </wsdl:message>
+  <wsdl:message name="Get_Doctor_availabilitySoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Doctor_availabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Doctor_availabilityattendSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Doctor_availabilityattend" />
+  </wsdl:message>
+  <wsdl:message name="Get_Doctor_availabilityattendSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Doctor_availabilityattendResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Doctor_departmentforconfirmationSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Doctor_departmentforconfirmation" />
+  </wsdl:message>
+  <wsdl:message name="Get_Doctor_departmentforconfirmationSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Doctor_departmentforconfirmationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ReportSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Report" />
+  </wsdl:message>
+  <wsdl:message name="Get_ReportSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_NextTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_NextToken" />
+  </wsdl:message>
+  <wsdl:message name="Get_NextTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_NextTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_VisitTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_VisitTime" />
+  </wsdl:message>
+  <wsdl:message name="Get_VisitTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_VisitTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_BookingDtlstorescheduleSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_BookingDtlstoreschedule" />
+  </wsdl:message>
+  <wsdl:message name="Get_BookingDtlstorescheduleSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_BookingDtlstorescheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_BookingDtls_forconsultationstatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_BookingDtls_forconsultationstatus" />
+  </wsdl:message>
+  <wsdl:message name="Get_BookingDtls_forconsultationstatusSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_BookingDtls_forconsultationstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_BookingDtls_forconfirmationSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_BookingDtls_forconfirmation" />
+  </wsdl:message>
+  <wsdl:message name="Get_BookingDtls_forconfirmationSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_BookingDtls_forconfirmationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_BookingDtls_foreditSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_BookingDtls_foredit" />
+  </wsdl:message>
+  <wsdl:message name="Get_BookingDtls_foreditSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_BookingDtls_foreditResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_BookingDtlsSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_BookingDtls" />
+  </wsdl:message>
+  <wsdl:message name="Get_BookingDtlsSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_BookingDtlsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_BookingDtls_TodaybookingSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_BookingDtls_Todaybooking" />
+  </wsdl:message>
+  <wsdl:message name="Get_BookingDtls_TodaybookingSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_BookingDtls_TodaybookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Report_TodaybookingSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Report_Todaybooking" />
+  </wsdl:message>
+  <wsdl:message name="Get_Report_TodaybookingSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Report_TodaybookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_PatientDtlsSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_PatientDtls" />
+  </wsdl:message>
+  <wsdl:message name="Get_PatientDtlsSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_PatientDtlsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_BookingReportSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_BookingReport" />
+  </wsdl:message>
+  <wsdl:message name="Get_BookingReportSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_BookingReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_UsageSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_Usage" />
+  </wsdl:message>
+  <wsdl:message name="Insert_UsageSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_UsageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService_CRMSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_login">
+      <wsdl:input message="tns:Get_loginSoapIn" />
+      <wsdl:output message="tns:Get_loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_NewBooking">
+      <wsdl:input message="tns:Insert_NewBookingSoapIn" />
+      <wsdl:output message="tns:Insert_NewBookingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Doctor">
+      <wsdl:input message="tns:Insert_DoctorSoapIn" />
+      <wsdl:output message="tns:Insert_DoctorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_RescheduledBooking">
+      <wsdl:input message="tns:Insert_RescheduledBookingSoapIn" />
+      <wsdl:output message="tns:Insert_RescheduledBookingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_CRMBooking">
+      <wsdl:input message="tns:Update_CRMBookingSoapIn" />
+      <wsdl:output message="tns:Update_CRMBookingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Bookingdtl">
+      <wsdl:input message="tns:Update_BookingdtlSoapIn" />
+      <wsdl:output message="tns:Update_BookingdtlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_BookingStatus_Arrived">
+      <wsdl:input message="tns:Update_BookingStatus_ArrivedSoapIn" />
+      <wsdl:output message="tns:Update_BookingStatus_ArrivedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_BookingStatus_Confirm">
+      <wsdl:input message="tns:Update_BookingStatus_ConfirmSoapIn" />
+      <wsdl:output message="tns:Update_BookingStatus_ConfirmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_BookingStatus_Cancel">
+      <wsdl:input message="tns:Add_BookingStatus_CancelSoapIn" />
+      <wsdl:output message="tns:Add_BookingStatus_CancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_BookingStatus_Reschedule">
+      <wsdl:input message="tns:Add_BookingStatus_RescheduleSoapIn" />
+      <wsdl:output message="tns:Add_BookingStatus_RescheduleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Branch">
+      <wsdl:input message="tns:Get_BranchSoapIn" />
+      <wsdl:output message="tns:Get_BranchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Registereddoctors">
+      <wsdl:input message="tns:Get_RegistereddoctorsSoapIn" />
+      <wsdl:output message="tns:Get_RegistereddoctorsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="delete_select">
+      <wsdl:input message="tns:delete_selectSoapIn" />
+      <wsdl:output message="tns:delete_selectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Department">
+      <wsdl:input message="tns:Get_DepartmentSoapIn" />
+      <wsdl:output message="tns:Get_DepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor">
+      <wsdl:input message="tns:Get_DoctorSoapIn" />
+      <wsdl:output message="tns:Get_DoctorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor1">
+      <wsdl:input message="tns:Get_Doctor1SoapIn" />
+      <wsdl:output message="tns:Get_Doctor1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctorfrmdrrreg">
+      <wsdl:input message="tns:Get_DoctorfrmdrrregSoapIn" />
+      <wsdl:output message="tns:Get_DoctorfrmdrrregSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctorattendance_avail">
+      <wsdl:input message="tns:Get_Doctorattendance_availSoapIn" />
+      <wsdl:output message="tns:Get_Doctorattendance_availSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor_availability">
+      <wsdl:input message="tns:Get_Doctor_availabilitySoapIn" />
+      <wsdl:output message="tns:Get_Doctor_availabilitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor_availabilityattend">
+      <wsdl:input message="tns:Get_Doctor_availabilityattendSoapIn" />
+      <wsdl:output message="tns:Get_Doctor_availabilityattendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor_departmentforconfirmation">
+      <wsdl:input message="tns:Get_Doctor_departmentforconfirmationSoapIn" />
+      <wsdl:output message="tns:Get_Doctor_departmentforconfirmationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Report">
+      <wsdl:input message="tns:Get_ReportSoapIn" />
+      <wsdl:output message="tns:Get_ReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_NextToken">
+      <wsdl:input message="tns:Get_NextTokenSoapIn" />
+      <wsdl:output message="tns:Get_NextTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_VisitTime">
+      <wsdl:input message="tns:Get_VisitTimeSoapIn" />
+      <wsdl:output message="tns:Get_VisitTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtlstoreschedule">
+      <wsdl:input message="tns:Get_BookingDtlstorescheduleSoapIn" />
+      <wsdl:output message="tns:Get_BookingDtlstorescheduleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls_forconsultationstatus">
+      <wsdl:input message="tns:Get_BookingDtls_forconsultationstatusSoapIn" />
+      <wsdl:output message="tns:Get_BookingDtls_forconsultationstatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls_forconfirmation">
+      <wsdl:input message="tns:Get_BookingDtls_forconfirmationSoapIn" />
+      <wsdl:output message="tns:Get_BookingDtls_forconfirmationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls_foredit">
+      <wsdl:input message="tns:Get_BookingDtls_foreditSoapIn" />
+      <wsdl:output message="tns:Get_BookingDtls_foreditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls">
+      <wsdl:input message="tns:Get_BookingDtlsSoapIn" />
+      <wsdl:output message="tns:Get_BookingDtlsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls_Todaybooking">
+      <wsdl:input message="tns:Get_BookingDtls_TodaybookingSoapIn" />
+      <wsdl:output message="tns:Get_BookingDtls_TodaybookingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Report_Todaybooking">
+      <wsdl:input message="tns:Get_Report_TodaybookingSoapIn" />
+      <wsdl:output message="tns:Get_Report_TodaybookingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PatientDtls">
+      <wsdl:input message="tns:Get_PatientDtlsSoapIn" />
+      <wsdl:output message="tns:Get_PatientDtlsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingReport">
+      <wsdl:input message="tns:Get_BookingReportSoapIn" />
+      <wsdl:output message="tns:Get_BookingReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Usage">
+      <wsdl:input message="tns:Insert_UsageSoapIn" />
+      <wsdl:output message="tns:Insert_UsageSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService_CRMSoap" type="tns:WebService_CRMSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_login">
+      <soap:operation soapAction="http://tempuri.org/Get_login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_NewBooking">
+      <soap:operation soapAction="http://tempuri.org/Insert_NewBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Doctor">
+      <soap:operation soapAction="http://tempuri.org/Insert_Doctor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_RescheduledBooking">
+      <soap:operation soapAction="http://tempuri.org/Insert_RescheduledBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_CRMBooking">
+      <soap:operation soapAction="http://tempuri.org/Update_CRMBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Bookingdtl">
+      <soap:operation soapAction="http://tempuri.org/Update_Bookingdtl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_BookingStatus_Arrived">
+      <soap:operation soapAction="http://tempuri.org/Update_BookingStatus_Arrived" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_BookingStatus_Confirm">
+      <soap:operation soapAction="http://tempuri.org/Update_BookingStatus_Confirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_BookingStatus_Cancel">
+      <soap:operation soapAction="http://tempuri.org/Add_BookingStatus_Cancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_BookingStatus_Reschedule">
+      <soap:operation soapAction="http://tempuri.org/Add_BookingStatus_Reschedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Branch">
+      <soap:operation soapAction="http://tempuri.org/Get_Branch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Registereddoctors">
+      <soap:operation soapAction="http://tempuri.org/Get_Registereddoctors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete_select">
+      <soap:operation soapAction="http://tempuri.org/delete_select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Department">
+      <soap:operation soapAction="http://tempuri.org/Get_Department" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor">
+      <soap:operation soapAction="http://tempuri.org/Get_Doctor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor1">
+      <soap:operation soapAction="http://tempuri.org/Get_Doctor1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctorfrmdrrreg">
+      <soap:operation soapAction="http://tempuri.org/Get_Doctorfrmdrrreg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctorattendance_avail">
+      <soap:operation soapAction="http://tempuri.org/Get_Doctorattendance_avail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor_availability">
+      <soap:operation soapAction="http://tempuri.org/Get_Doctor_availability" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor_availabilityattend">
+      <soap:operation soapAction="http://tempuri.org/Get_Doctor_availabilityattend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor_departmentforconfirmation">
+      <soap:operation soapAction="http://tempuri.org/Get_Doctor_departmentforconfirmation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Report">
+      <soap:operation soapAction="http://tempuri.org/Get_Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_NextToken">
+      <soap:operation soapAction="http://tempuri.org/Get_NextToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_VisitTime">
+      <soap:operation soapAction="http://tempuri.org/Get_VisitTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtlstoreschedule">
+      <soap:operation soapAction="http://tempuri.org/Get_BookingDtlstoreschedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls_forconsultationstatus">
+      <soap:operation soapAction="http://tempuri.org/Get_BookingDtls_forconsultationstatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls_forconfirmation">
+      <soap:operation soapAction="http://tempuri.org/Get_BookingDtls_forconfirmation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls_foredit">
+      <soap:operation soapAction="http://tempuri.org/Get_BookingDtls_foredit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls">
+      <soap:operation soapAction="http://tempuri.org/Get_BookingDtls" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls_Todaybooking">
+      <soap:operation soapAction="http://tempuri.org/Get_BookingDtls_Todaybooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Report_Todaybooking">
+      <soap:operation soapAction="http://tempuri.org/Get_Report_Todaybooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PatientDtls">
+      <soap:operation soapAction="http://tempuri.org/Get_PatientDtls" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingReport">
+      <soap:operation soapAction="http://tempuri.org/Get_BookingReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Usage">
+      <soap:operation soapAction="http://tempuri.org/Insert_Usage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_CRMSoap12" type="tns:WebService_CRMSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_login">
+      <soap12:operation soapAction="http://tempuri.org/Get_login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_NewBooking">
+      <soap12:operation soapAction="http://tempuri.org/Insert_NewBooking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Doctor">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Doctor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_RescheduledBooking">
+      <soap12:operation soapAction="http://tempuri.org/Insert_RescheduledBooking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_CRMBooking">
+      <soap12:operation soapAction="http://tempuri.org/Update_CRMBooking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Bookingdtl">
+      <soap12:operation soapAction="http://tempuri.org/Update_Bookingdtl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_BookingStatus_Arrived">
+      <soap12:operation soapAction="http://tempuri.org/Update_BookingStatus_Arrived" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_BookingStatus_Confirm">
+      <soap12:operation soapAction="http://tempuri.org/Update_BookingStatus_Confirm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_BookingStatus_Cancel">
+      <soap12:operation soapAction="http://tempuri.org/Add_BookingStatus_Cancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_BookingStatus_Reschedule">
+      <soap12:operation soapAction="http://tempuri.org/Add_BookingStatus_Reschedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Branch">
+      <soap12:operation soapAction="http://tempuri.org/Get_Branch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Registereddoctors">
+      <soap12:operation soapAction="http://tempuri.org/Get_Registereddoctors" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete_select">
+      <soap12:operation soapAction="http://tempuri.org/delete_select" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Department">
+      <soap12:operation soapAction="http://tempuri.org/Get_Department" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor">
+      <soap12:operation soapAction="http://tempuri.org/Get_Doctor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor1">
+      <soap12:operation soapAction="http://tempuri.org/Get_Doctor1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctorfrmdrrreg">
+      <soap12:operation soapAction="http://tempuri.org/Get_Doctorfrmdrrreg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctorattendance_avail">
+      <soap12:operation soapAction="http://tempuri.org/Get_Doctorattendance_avail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor_availability">
+      <soap12:operation soapAction="http://tempuri.org/Get_Doctor_availability" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor_availabilityattend">
+      <soap12:operation soapAction="http://tempuri.org/Get_Doctor_availabilityattend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Doctor_departmentforconfirmation">
+      <soap12:operation soapAction="http://tempuri.org/Get_Doctor_departmentforconfirmation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Report">
+      <soap12:operation soapAction="http://tempuri.org/Get_Report" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_NextToken">
+      <soap12:operation soapAction="http://tempuri.org/Get_NextToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_VisitTime">
+      <soap12:operation soapAction="http://tempuri.org/Get_VisitTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtlstoreschedule">
+      <soap12:operation soapAction="http://tempuri.org/Get_BookingDtlstoreschedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls_forconsultationstatus">
+      <soap12:operation soapAction="http://tempuri.org/Get_BookingDtls_forconsultationstatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls_forconfirmation">
+      <soap12:operation soapAction="http://tempuri.org/Get_BookingDtls_forconfirmation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls_foredit">
+      <soap12:operation soapAction="http://tempuri.org/Get_BookingDtls_foredit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls">
+      <soap12:operation soapAction="http://tempuri.org/Get_BookingDtls" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingDtls_Todaybooking">
+      <soap12:operation soapAction="http://tempuri.org/Get_BookingDtls_Todaybooking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Report_Todaybooking">
+      <soap12:operation soapAction="http://tempuri.org/Get_Report_Todaybooking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PatientDtls">
+      <soap12:operation soapAction="http://tempuri.org/Get_PatientDtls" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BookingReport">
+      <soap12:operation soapAction="http://tempuri.org/Get_BookingReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Usage">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Usage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService_CRM">
+    <wsdl:port name="WebService_CRMSoap" binding="tns:WebService_CRMSoap">
+      <soap:address location="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_CRM/WebService_CRM.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService_CRMSoap12" binding="tns:WebService_CRMSoap12">
+      <soap12:address location="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_CRM/WebService_CRM.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
