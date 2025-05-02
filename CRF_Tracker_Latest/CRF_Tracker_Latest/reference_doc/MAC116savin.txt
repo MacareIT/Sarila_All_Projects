@@ -1,0 +1,7 @@
+select branch.branch_name,itm.item_name item_name, itm.Hsncode Hsncode,b.supplier_name, a.invoice_no invoice_no, 
+to_char(a.invoice_dt, 'DD-MM-YYYY') InvDate, (c.amount-c.discount) TaxableValue,
+(c.total-(c.tax+c.cess+c.igst_value+c.cgst_value+c.sgst_value)+c.discount) purchasevalue, c.Igst_Rate Igst_Rate,c.Igst_Value Igst_Value, 
+c.sgst_rate sgst_rate, c.sgst_value sgst_value, c.cgst_rate cgst_rate, c.cgst_value cgst_value,C.TAX, C.DISCOUNT from hospital.pharma_invoice_master a, 
+hospital.pharma_supplier_master b, hospital.pharma_invoice_Dtl c, hospital.pharma_item_master itm, 
+hospital.pharmacy_master branch where to_date(a.tra_dt) between to_date('01-01-2023','dd-MM-yyyy') And To_Date('31-01-2023','dd-MM-yyyy') 
+and a.supplier_id = b.supplier_id and a.invoice_id = c.invoice_id and itm.item_id = c.item_id and branch.branch_id = a.branch_id  Order by b.supplier_name

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="18d996ae-b45a-4022-b132-a33c0b132f0e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://macare.mactech.net.in/MACARE_MIS_Service/ServicePurchasecommittee/Service_PurchaseCommittee.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service_PurchaseCommittee1.wsdl" MetadataType="Wsdl" ID="f63ba2de-64f0-4a58-9162-567762f50565" SourceId="1" SourceUrl="https://macare.mactech.net.in/MACARE_MIS_Service/ServicePurchasecommittee/Service_PurchaseCommittee.asmx?wsdl" />
+    <MetadataFile FileName="Service_PurchaseCommittee1.disco" MetadataType="Disco" ID="6adacd14-6878-4d82-9b7a-1562e2f384cb" SourceId="1" SourceUrl="https://macare.mactech.net.in/MACARE_MIS_Service/ServicePurchasecommittee/Service_PurchaseCommittee.asmx?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

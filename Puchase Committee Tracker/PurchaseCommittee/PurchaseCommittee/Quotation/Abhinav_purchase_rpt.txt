@@ -1,0 +1,7 @@
+select invoice_no,item_Name,v_name,Amount,Rate,Quantity,to_char(invoice_dt, 'dd-MM-yyyy') as Invoice_date,to_char(tra_dt, 'dd-MM-yyyy') as tra_date,
+to_char(verified_date, 'dd-MM-yyyy') as Invoice_date,to_char(approve_dt, 'dd-MM-yyyy') as Invoice_date
+           from hospital.Clinstore_item_master join hospital.clinstore_invoice_dtl on Clinstore_item_master.item_id=clinstore_invoice_dtl.item_id 
+           join hospital.clinstore_invoice_master on clinstore_invoice_dtl.invoice_id=clinstore_invoice_master.invoice_id 
+           join hospital.CLINSTORE_VENDOR_MST on CLINSTORE_VENDOR_MST.vendor_id= clinstore_invoice_master.vendor_id
+           where to_date(invoice_dt, 'dd-MM-yyyy')  between to_date('10-02-2024', 'dd-MM-yyyy') and to_date('19-02-2024', 'dd-MM-yyyy')+1  
+           and CLINSTORE_INVOICE_MASTER.firm_id=16 order by invoice_dt

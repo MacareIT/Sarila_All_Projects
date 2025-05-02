@@ -1,0 +1,12 @@
+D:\Works\Customer_Feedback\bin\Debug\Customer_Feedback.exe.config
+D:\Works\Customer_Feedback\bin\Debug\Customer_Feedback.exe
+D:\Works\Customer_Feedback\bin\Debug\Customer_Feedback.pdb
+D:\Works\Customer_Feedback\obj\Debug\Customer_Feedback.Properties.Resources.resources
+D:\Works\Customer_Feedback\obj\Debug\Customer_Feedback.csproj.GenerateResource.cache
+D:\Works\Customer_Feedback\obj\Debug\Customer_Feedback.csproj.CoreCompileInputs.cache
+D:\Works\Customer_Feedback\obj\Debug\Customer_Feedback.exe
+D:\Works\Customer_Feedback\obj\Debug\Customer_Feedback.pdb
+D:\Works\Customer_Feedback\obj\Debug\Customer_Feedback.Form1.resources
+D:\Works\Customer_Feedback\obj\Debug\Customer_Feedback.Login.resources
+D:\Works\Customer_Feedback\obj\Debug\Customer_Feedback.View_Complaints.resources
+D:\Works\Customer_Feedback\obj\Debug\Customer_Feedback.Home.resources

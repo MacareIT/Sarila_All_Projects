@@ -1,0 +1,313 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="accounts.master.cs" Inherits="AccountsApp.accounts" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ACCOUNTS</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="wrapper">
+
+                <!-- Sidebar -->
+                <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
+
+                    <!-- Nav Item - Dashboard -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="accountsdash.aspx">
+                            <i class="fas fa-fw fa-tachometer-alt"></i>
+                            <span>ACCOUNTS</span></a>
+                    </li>
+
+                    <!-- Heading -->
+                   
+
+                    <!-- Nav Item - Pages Collapse Menu -->
+                  <%--  <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="true" aria-controls="collapseTwo">
+                            <i class="fas fa-fw fa-cog"></i>
+                            <span>Create</span>
+                        </a>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">PRM Users</h6>
+                                <a class="collapse-item" href="CreateUser.aspx">New</a>
+                                <a class="collapse-item" href="cards.html">Edit</a>
+                                 <a class="collapse-item" href="cards.html">List</a>
+                            </div>
+                        </div>
+                    </li>--%>
+
+                    <!-- Nav Item - Utilities Collapse Menu -->
+                   <%-- <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                            aria-expanded="true" aria-controls="collapseUtilities">
+                            <i class="fas fa-fw fa-wrench"></i>
+                            <span>PRM Schedule</span>
+                        </a>
+                        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                            data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Schedule</h6>
+                                <a class="collapse-item" href="CreatePRM.aspx">Add New</a>
+                                <a class="collapse-item" href="Assignattendees.aspx">Assign ttendees</a>
+                                <a class="collapse-item" href="utilities-animation.html">Add ATR Points</a>
+                            </div>
+                        </div>
+                    </li>--%>
+
+                    <!-- Divider -->
+                    <hr class="sidebar-divider">
+
+                    <!-- Heading -->
+                    <div class="sidebar-heading">
+                        Addons
+           
+                    </div>
+                    <!-- Nav Item - Pages Collapse Menu -->
+                  <%--  <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1"
+                            aria-expanded="true" aria-controls="collapsePages1">
+                            <i class="fas fa-fw fa-folder"></i>
+                            <span>Incentive</span>
+                        </a>
+                        <div id="collapsePages1" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Create</h6>
+                               <a class="collapse-item" href="StaffAccount_details.aspx">Staff Accountdetails</a>    
+                                <div class="collapse-divider"></div>
+                                <h6 class="collapse-header">Report</h6>
+                                <a class="collapse-item" href="IncentiveReport.aspx">View Incentive</a>
+                                <a class="collapse-item" href="#">Report2</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Nav Item - Pages Collapse Menu -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2"
+                            aria-expanded="true" aria-controls="collapsePages2">
+                            <i class="fas fa-fw fa-folder"></i>
+                            <span>Accounts</span>
+                        </a>
+                        <div id="collapsePages2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Report</h6>
+                                <a class="collapse-item" href="DebitCreditNoteReport.aspx">Creditnote Report</a> 
+                                <a class="collapse-item" href="CreditNote_transfer.aspx">Creditnote Transfer</a>
+                                <a class="collapse-item" href="CreditNote_receive.aspx">Creditnote Receive</a>
+                                <a class="collapse-item" href="Supplier_authorized_payments.aspx">Authorization Report</a>                                
+                                <a class="collapse-item" href="OpticalPO_ConfirmReport.aspx">Optical Invoice Confirmation</a>                                
+
+                                <%--<div class="collapse-divider"></div>
+                               
+                            </div>
+                        </div>
+                    </li>--%>
+                            <% if (Session["USERTYPE"].ToString() == "accounts" || Session["USERTYPE"].ToString() == "accountshead")
+                        { %>
+                   <%-- <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1"
+                            aria-expanded="true" aria-controls="collapsePages1">
+                            <i class="fas fa-fw fa-folder"></i>
+                            <span>Incentive</span>
+                        </a>
+                        <div id="collapsePages1" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Create</h6>
+                               <a class="collapse-item" href="StaffAccount_details.aspx">Staff Accountdetails</a>    
+                                <div class="collapse-divider"></div>
+                                <h6 class="collapse-header">Report</h6>
+                                <a class="collapse-item" href="IncentiveReport.aspx">View Incentive</a>
+                                <a class="collapse-item" href="#">Report2</a>
+                            </div>
+                        </div>
+                    </li>--%>
+                    <!-- Nav Item - Pages Collapse Menu -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2"
+                            aria-expanded="true" aria-controls="collapsePages2">
+                            <i class="fas fa-fw fa-folder"></i>
+                            <span>Accounts</span>
+                        </a>
+                        <div id="collapsePages2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Report</h6>
+                                <%--<a class="collapse-item" href="DebitCreditNoteReport.aspx">Creditnote Report</a> --%>
+                                <a class="collapse-item" href="CreditNote_receive.aspx">Creditnote Receive</a>
+                                <a class="collapse-item" href="Supplier_authorized_payments.aspx">Authorization Report</a>                                
+                                <a class="collapse-item" href="OpticalPO_ConfirmReport.aspx">Optical Invoice Confirmation</a>                                
+                                <a class="collapse-item" href="CreditNote_TransferReport.aspx">Creditnote Transfer Report</a>
+                                <a class="collapse-item" href="Login.aspx">Logout</a>
+                                <%--<div class="collapse-divider"></div>--%>
+                            </div>
+                        </div>
+                    </li>
+                    <%} %>
+                    <% if (Session["USERTYPE"].ToString() == "purchasestaff")
+                        { %>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2"
+                            aria-expanded="true" aria-controls="collapsePages2">
+                            <i class="fas fa-fw fa-folder"></i>
+                            <span>Accounts</span>
+                        </a>
+                        <div id="collapsePages2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Report</h6> 
+                                <a class="collapse-item" href="CreditNote_transfer.aspx">Creditnote Transfer</a>     
+                                <a class="collapse-item" href="Login.aspx">Logout</a>
+                                <%--<div class="collapse-divider"></div>--%>
+                               
+                            </div>
+                        </div>
+                    </li>
+
+                    <%} %>
+                    <% if (Session["USERTYPE"].ToString() == "techlead")
+                        { %>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2"
+                            aria-expanded="true" aria-controls="collapsePages2">
+                            <i class="fas fa-fw fa-folder"></i>
+                            <span>Accounts</span>
+                        </a>
+                        <div id="collapsePages2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Report</h6> 
+                                <%--<a class="collapse-item" href="DebitCreditNoteReport.aspx">Creditnote Report</a>--%> 
+                                <a class="collapse-item" href="CreditNote_transfer.aspx">Creditnote Transfer</a> 
+                                <a class="collapse-item" href="CreditNote_receive.aspx">Creditnote Receive</a>
+                                <a class="collapse-item" href="Supplier_authorized_payments.aspx">Authorization Report</a>                                
+                                <a class="collapse-item" href="OpticalPO_ConfirmReport.aspx">Optical Invoice Confirmation</a>                                
+                                <a class="collapse-item" href="CreditNote_TransferReport.aspx">Creditnote Transfer Report</a>
+                                <a class="collapse-item" href="Login.aspx">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <%} %>
+
+                    <!-- Nav Item - Charts -->
+                  <%--  <li class="nav-item">
+                        <a class="nav-link" href="charts.html">
+                            <i class="fas fa-fw fa-chart-area"></i>
+                            <span>Charts</span></a>
+                    </li>--%>
+
+                </ul>
+
+
+                <!-- End of Sidebar -->
+
+                <!-- Content Wrapper -->
+                <div id="content-wrapper" class="d-flex flex-column">
+
+                    <!-- Main Content -->
+                    <div id="content">
+
+                        <!-- Topbar -->
+                        <nav class="navbar navbar-expand navbar-light bg-grey topbar mb-4 static-top shadow">
+                       <%--  <img  src="img/logo.JPG"  alt="" style="width: 250px; height: 60px;">--%>
+
+                            <!-- Sidebar Toggle (Topbar) -->
+                            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                                <i class="fa fa-bars"></i>
+                            </button>
+
+                            <!-- Topbar Search -->
+                            <%--<h1>MAcare Accounts Module</h1>--%>
+
+                            <!-- Topbar Navbar -->
+                            <ul class="navbar-nav ml-auto">
+
+
+                                <!-- Nav Item - User Information -->
+                                <%--<li class="nav-item dropdown no-arrow">
+                                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                            <asp:Label ID="lbluser" runat="server" Font-Bold="True" ></asp:Label></span>
+                                        <img class="img-profile rounded-circle"
+                                            src="img/undraw_profile.svg">
+                                    </a>
+                                    <!-- Dropdown - User Information -->
+                                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                        aria-labelledby="userDropdown">
+                                    </div>
+                                </li>--%>
+
+                            </ul>
+
+                        </nav>
+                        <!-- End of Topbar -->
+<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    </div>
+                    <!-- End of Main Content -->
+                    
+                    <!-- Footer -->
+                    <footer class="sticky-footer bg-white">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <span>Macare.in&copy; Macare IT 2022</span>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- End of Footer -->
+
+                </div>
+                <!-- End of Content Wrapper -->
+
+            </div>
+            <!-- End of Page Wrapper -->
+
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
+
+        </div>
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
+
+        <!-- Page level plugins -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
+
+        <!-- Page level custom scripts -->
+        <script src="js/demo/chart-area-demo.js"></script>
+        <script src="js/demo/chart-pie-demo.js"></script>
+
+       
+
+    </form>
+</body>
+</html>
+

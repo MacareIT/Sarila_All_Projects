@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>E:\WORK\WorkingDirectory\Publish\Service\UAT\PharmaService</_PublishTargetUrl>
+    <History>True|2022-06-28T11:58:12.4439900Z;True|2022-06-27T12:24:50.3171979+05:30;True|2022-06-25T10:18:36.0196166+05:30;True|2022-06-24T14:37:48.4977639+05:30;True|2022-06-24T10:53:30.2093463+05:30;True|2022-06-23T12:36:55.5350413+05:30;True|2022-06-23T12:36:38.1652722+05:30;True|2022-06-23T09:18:58.0599119+05:30;True|2022-06-08T15:57:24.3096507+05:30;True|2022-06-06T15:17:17.0751844+05:30;True|2022-06-06T15:11:26.9732360+05:30;True|2022-06-04T11:36:44.2154949+05:30;True|2022-06-04T09:47:31.0256838+05:30;True|2022-06-04T08:57:49.7189485+05:30;True|2022-06-03T10:41:03.8790514+05:30;True|2022-06-03T10:40:28.2855192+05:30;True|2022-06-02T15:08:13.7414098+05:30;True|2022-05-31T11:26:31.1486126+05:30;True|2022-05-31T10:20:36.2724009+05:30;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>09/05/2018 16:10:50</publishTime>
+    </File>
+    <File Include="bin/Pharmacy_Service.dll">
+      <publishTime>06/28/2022 12:04:56</publishTime>
+    </File>
+    <File Include="bin/Pharmacy_Service.pdb">
+      <publishTime>06/28/2022 12:04:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/27/2016 21:50:24</publishTime>
+    </File>
+    <File Include="ClinicService.asmx">
+      <publishTime>03/17/2022 11:43:30</publishTime>
+    </File>
+    <File Include="CRFService.asmx">
+      <publishTime>05/27/2022 14:31:29</publishTime>
+    </File>
+    <File Include="DoctorsService.asmx">
+      <publishTime>03/01/2022 11:19:37</publishTime>
+    </File>
+    <File Include="MicrolabService.asmx">
+      <publishTime>05/19/2022 15:17:15</publishTime>
+    </File>
+    <File Include="Pharma_Service.asmx">
+      <publishTime>02/28/2022 10:53:01</publishTime>
+    </File>
+    <File Include="VisionPlusService.asmx">
+      <publishTime>06/02/2022 12:33:02</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/31/2022 10:20:35</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

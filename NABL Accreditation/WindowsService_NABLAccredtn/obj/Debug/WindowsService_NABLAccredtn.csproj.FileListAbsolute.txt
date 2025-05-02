@@ -1,0 +1,8 @@
+D:\WorkingDirectory\SorceCode\NABL Accreditation\WindowsService_NABLAccredtn\bin\Debug\WindowsService_NABLAccredtn.exe.config
+D:\WorkingDirectory\SorceCode\NABL Accreditation\WindowsService_NABLAccredtn\bin\Debug\WindowsService_NABLAccredtn.exe
+D:\WorkingDirectory\SorceCode\NABL Accreditation\WindowsService_NABLAccredtn\bin\Debug\WindowsService_NABLAccredtn.pdb
+D:\WorkingDirectory\SorceCode\NABL Accreditation\WindowsService_NABLAccredtn\obj\Debug\WindowsService_NABLAccredtn.ProjectInstaller.resources
+D:\WorkingDirectory\SorceCode\NABL Accreditation\WindowsService_NABLAccredtn\obj\Debug\WindowsService_NABLAccredtn.csproj.GenerateResource.cache
+D:\WorkingDirectory\SorceCode\NABL Accreditation\WindowsService_NABLAccredtn\obj\Debug\WindowsService_NABLAccredtn.csproj.CoreCompileInputs.cache
+D:\WorkingDirectory\SorceCode\NABL Accreditation\WindowsService_NABLAccredtn\obj\Debug\WindowsService_NABLAccredtn.exe
+D:\WorkingDirectory\SorceCode\NABL Accreditation\WindowsService_NABLAccredtn\obj\Debug\WindowsService_NABLAccredtn.pdb

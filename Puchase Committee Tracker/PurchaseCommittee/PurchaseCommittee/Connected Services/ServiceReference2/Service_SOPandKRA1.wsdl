@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_loginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_dapartment">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_dapartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_dapartmentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_Sopkra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopkraid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dep_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="designation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sop_doc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kra_doc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_SopkraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Add_SopkraResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_sopkraid">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_sopkraidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_sopkraidResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_viewsopkra">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_viewsopkraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_viewsopkraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_registerddesignation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dep_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_registerddesignationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_registerddesignationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_registerdsopkra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sop_kra_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_registerdsopkraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_registerdsopkraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_sop">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sop_kra_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sop_doc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_sopResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update_sopResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_kra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sop_kra_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kra_doc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_kraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update_kraResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_sopkra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sop_kra_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sop_doc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kra_doc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_sopkraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update_sopkraResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateUsage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateUsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateUsageResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_loginSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_login" />
+  </wsdl:message>
+  <wsdl:message name="Get_loginSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_dapartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_dapartment" />
+  </wsdl:message>
+  <wsdl:message name="Get_dapartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_dapartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add_SopkraSoapIn">
+    <wsdl:part name="parameters" element="tns:Add_Sopkra" />
+  </wsdl:message>
+  <wsdl:message name="Add_SopkraSoapOut">
+    <wsdl:part name="parameters" element="tns:Add_SopkraResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_sopkraidSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_sopkraid" />
+  </wsdl:message>
+  <wsdl:message name="Get_sopkraidSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_sopkraidResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_viewsopkraSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_viewsopkra" />
+  </wsdl:message>
+  <wsdl:message name="Get_viewsopkraSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_viewsopkraResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_registerddesignationSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_registerddesignation" />
+  </wsdl:message>
+  <wsdl:message name="Get_registerddesignationSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_registerddesignationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_registerdsopkraSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_registerdsopkra" />
+  </wsdl:message>
+  <wsdl:message name="Get_registerdsopkraSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_registerdsopkraResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_sopSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_sop" />
+  </wsdl:message>
+  <wsdl:message name="Update_sopSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_sopResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_kraSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_kra" />
+  </wsdl:message>
+  <wsdl:message name="Update_kraSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_kraResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_sopkraSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_sopkra" />
+  </wsdl:message>
+  <wsdl:message name="Update_sopkraSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_sopkraResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateUsageSoapIn">
+    <wsdl:part name="parameters" element="tns:updateUsage" />
+  </wsdl:message>
+  <wsdl:message name="updateUsageSoapOut">
+    <wsdl:part name="parameters" element="tns:updateUsageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service_SOPandKRASoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_login">
+      <wsdl:input message="tns:Get_loginSoapIn" />
+      <wsdl:output message="tns:Get_loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_dapartment">
+      <wsdl:input message="tns:Get_dapartmentSoapIn" />
+      <wsdl:output message="tns:Get_dapartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_Sopkra">
+      <wsdl:input message="tns:Add_SopkraSoapIn" />
+      <wsdl:output message="tns:Add_SopkraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_sopkraid">
+      <wsdl:input message="tns:Get_sopkraidSoapIn" />
+      <wsdl:output message="tns:Get_sopkraidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_viewsopkra">
+      <wsdl:input message="tns:Get_viewsopkraSoapIn" />
+      <wsdl:output message="tns:Get_viewsopkraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_registerddesignation">
+      <wsdl:input message="tns:Get_registerddesignationSoapIn" />
+      <wsdl:output message="tns:Get_registerddesignationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_registerdsopkra">
+      <wsdl:input message="tns:Get_registerdsopkraSoapIn" />
+      <wsdl:output message="tns:Get_registerdsopkraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_sop">
+      <wsdl:input message="tns:Update_sopSoapIn" />
+      <wsdl:output message="tns:Update_sopSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_kra">
+      <wsdl:input message="tns:Update_kraSoapIn" />
+      <wsdl:output message="tns:Update_kraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_sopkra">
+      <wsdl:input message="tns:Update_sopkraSoapIn" />
+      <wsdl:output message="tns:Update_sopkraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUsage">
+      <wsdl:input message="tns:updateUsageSoapIn" />
+      <wsdl:output message="tns:updateUsageSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service_SOPandKRASoap" type="tns:Service_SOPandKRASoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_login">
+      <soap:operation soapAction="http://tempuri.org/Get_login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_dapartment">
+      <soap:operation soapAction="http://tempuri.org/Get_dapartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_Sopkra">
+      <soap:operation soapAction="http://tempuri.org/Add_Sopkra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_sopkraid">
+      <soap:operation soapAction="http://tempuri.org/Get_sopkraid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_viewsopkra">
+      <soap:operation soapAction="http://tempuri.org/Get_viewsopkra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_registerddesignation">
+      <soap:operation soapAction="http://tempuri.org/Get_registerddesignation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_registerdsopkra">
+      <soap:operation soapAction="http://tempuri.org/Get_registerdsopkra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_sop">
+      <soap:operation soapAction="http://tempuri.org/Update_sop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_kra">
+      <soap:operation soapAction="http://tempuri.org/Update_kra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_sopkra">
+      <soap:operation soapAction="http://tempuri.org/Update_sopkra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUsage">
+      <soap:operation soapAction="http://tempuri.org/updateUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service_SOPandKRASoap12" type="tns:Service_SOPandKRASoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_login">
+      <soap12:operation soapAction="http://tempuri.org/Get_login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_dapartment">
+      <soap12:operation soapAction="http://tempuri.org/Get_dapartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_Sopkra">
+      <soap12:operation soapAction="http://tempuri.org/Add_Sopkra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_sopkraid">
+      <soap12:operation soapAction="http://tempuri.org/Get_sopkraid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_viewsopkra">
+      <soap12:operation soapAction="http://tempuri.org/Get_viewsopkra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_registerddesignation">
+      <soap12:operation soapAction="http://tempuri.org/Get_registerddesignation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_registerdsopkra">
+      <soap12:operation soapAction="http://tempuri.org/Get_registerdsopkra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_sop">
+      <soap12:operation soapAction="http://tempuri.org/Update_sop" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_kra">
+      <soap12:operation soapAction="http://tempuri.org/Update_kra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_sopkra">
+      <soap12:operation soapAction="http://tempuri.org/Update_sopkra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUsage">
+      <soap12:operation soapAction="http://tempuri.org/updateUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service_SOPandKRA">
+    <wsdl:port name="Service_SOPandKRASoap" binding="tns:Service_SOPandKRASoap">
+      <soap:address location="https://localhost:44361/Service_SOPandKRA.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service_SOPandKRASoap12" binding="tns:Service_SOPandKRASoap12">
+      <soap12:address location="https://localhost:44361/Service_SOPandKRA.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,21 @@
+﻿Installing assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsServiceExpiryKtr\bin\Debug\WindowsServiceExpiryKtr.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsServiceExpiryKtr\bin\Debug\WindowsServiceExpiryKtr.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsServiceExpiryKtr\bin\Debug\WindowsServiceExpiryKtr.exe
+Installing service Scheduler_MedicineExpiry_Ktr...
+Service Scheduler_MedicineExpiry_Ktr has been successfully installed.
+Creating EventLog source Scheduler_MedicineExpiry_Ktr in log Application...
+Committing assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsServiceExpiryKtr\bin\Debug\WindowsServiceExpiryKtr.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsServiceExpiryKtr\bin\Debug\WindowsServiceExpiryKtr.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsServiceExpiryKtr\bin\Debug\WindowsServiceExpiryKtr.exe
+Uninstalling assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsServiceExpiryKtr\bin\Debug\WindowsServiceExpiryKtr.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsServiceExpiryKtr\bin\Debug\WindowsServiceExpiryKtr.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsServiceExpiryKtr\bin\Debug\WindowsServiceExpiryKtr.exe
+Removing EventLog source Scheduler_MedicineExpiry_Ktr.
+Service Scheduler_MedicineExpiry_Ktr is being removed from the system...
+Service Scheduler_MedicineExpiry_Ktr was successfully removed from the system.

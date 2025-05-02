@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="875e422d-be06-4a88-8a84-77c900b2edab" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_OperationDashboard/WebService_OperationDashboard.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WebService_OperationDashboard1.wsdl" MetadataType="Wsdl" ID="60ba4aa8-508e-4018-a7fe-7ef9814bf70e" SourceId="1" SourceUrl="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_OperationDashboard/WebService_OperationDashboard.asmx?wsdl" />
+    <MetadataFile FileName="WebService_OperationDashboard1.disco" MetadataType="Disco" ID="af9eaff2-464a-4148-8263-570f610eec4e" SourceId="1" SourceUrl="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_OperationDashboard/WebService_OperationDashboard.asmx?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

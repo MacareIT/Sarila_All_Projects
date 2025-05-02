@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32407.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web_OperationDashboard", "Web_OperationDashboard.csproj", "{9C0FA513-4EDF-4F42-8979-D1E20F1F40BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C0FA513-4EDF-4F42-8979-D1E20F1F40BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0FA513-4EDF-4F42-8979-D1E20F1F40BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0FA513-4EDF-4F42-8979-D1E20F1F40BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0FA513-4EDF-4F42-8979-D1E20F1F40BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4747FEC0-9553-4CE0-BF6A-B45482D3507D}
+	EndGlobalSection
+EndGlobal

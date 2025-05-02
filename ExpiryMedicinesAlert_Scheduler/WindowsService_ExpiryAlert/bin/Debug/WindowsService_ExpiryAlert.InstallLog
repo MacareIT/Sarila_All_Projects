@@ -1,0 +1,87 @@
+﻿Installing assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe
+Installing service Scheduler_MedicineExpiry...
+Service Scheduler_MedicineExpiry has been successfully installed.
+Creating EventLog source Scheduler_MedicineExpiry in log Application...
+Committing assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe
+Uninstalling assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe
+Removing EventLog source Scheduler_MedicineExpiry_Vlpd.
+Warning: The source Scheduler_MedicineExpiry_Vlpd is not registered on the local machine.
+Service Scheduler_MedicineExpiry_Vlpd is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe
+Installing service Scheduler_MedicineExpiry_Vlpd...
+Service Scheduler_MedicineExpiry_Vlpd has been successfully installed.
+Creating EventLog source Scheduler_MedicineExpiry_Vlpd in log Application...
+Committing assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe
+Uninstalling assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe
+Removing EventLog source Scheduler_MedicineExpiry_Vlpd.
+Service Scheduler_MedicineExpiry_Vlpd is being removed from the system...
+Service Scheduler_MedicineExpiry_Vlpd was successfully removed from the system.
+Installing assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe
+Installing service Scheduler_MedicineExpiry_Vlpd...
+Service Scheduler_MedicineExpiry_Vlpd has been successfully installed.
+Creating EventLog source Scheduler_MedicineExpiry_Vlpd in log Application...
+Committing assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe
+Uninstalling assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe
+Removing EventLog source Scheduler_MedicineExpiry_Vlpd.
+Service Scheduler_MedicineExpiry_Vlpd is being removed from the system...
+Service Scheduler_MedicineExpiry_Vlpd was successfully removed from the system.
+Installing assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe
+Installing service Scheduler_MedicineExpiry_Vlpd...
+Service Scheduler_MedicineExpiry_Vlpd has been successfully installed.
+Creating EventLog source Scheduler_MedicineExpiry_Vlpd in log Application...
+Committing assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe
+Uninstalling assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryAlert\bin\Debug\WindowsService_ExpiryAlert.exe
+Removing EventLog source Scheduler_MedicineExpiry_Vlpd.
+Service Scheduler_MedicineExpiry_Vlpd is being removed from the system...
+Service Scheduler_MedicineExpiry_Vlpd was successfully removed from the system.

@@ -1,0 +1,568 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{440E34FE-FAF1-4FB8-9F29-1DF2BFF057DE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MISApplication</RootNamespace>
+    <AssemblyName>MISApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44387</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\APPLICATION\web\MIS_Web\WebApp1\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddCamp.aspx" />
+    <Content Include="AddHead.aspx" />
+    <Content Include="AddHeadPercent.aspx" />
+    <Content Include="AddPercent.aspx" />
+    <Content Include="AddPharmacyMargin.aspx" />
+    <Content Include="AddSubHead.aspx" />
+    <Content Include="AddTemporary_Staff.aspx" />
+    <Content Include="AgewiseStockReport.aspx" />
+    <Content Include="assets\demo\chart-area-demo.js" />
+    <Content Include="assets\demo\chart-bar-demo.js" />
+    <Content Include="assets\demo\chart-pie-demo.js" />
+    <Content Include="assets\demo\datatables-demo.js" />
+    <Content Include="assets\img\error-404-monochrome.svg" />
+    <Content Include="AssignEmployees.aspx" />
+    <Content Include="AssignHead.aspx" />
+    <Content Include="CampReport.aspx" />
+    <Content Include="Camp_Patients.aspx" />
+    <Content Include="ClinicDashboard.aspx" />
+    <None Include="Connected Services\ServiceReference1\ClinicService1.disco" />
+    <Content Include="EditCamp.aspx" />
+    <Content Include="ItemTransfer_store.aspx" />
+    <Content Include="LedgerAccountDetails.aspx" />
+    <Content Include="MISCampConversionRpt.aspx" />
+    <Content Include="MIS_IndentReport.aspx" />
+    <Content Include="PatientCount_Report.aspx" />
+    <Content Include="Purchasedash.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="_images\close.png" />
+    <Content Include="DecreaseInSale.aspx" />
+    <Content Include="IncentiveAmountReport.aspx" />
+    <Content Include="IncentiveCalculationPhase3.aspx" />
+    <Content Include="IncentiveDashboard.aspx" />
+    <Content Include="IncentiveStaffList.aspx" />
+    <Content Include="MonthlyIncentiveCollection.aspx" />
+    <Content Include="PatientCountReport.aspx" />
+    <Content Include="PatientCount_byCriteria.aspx" />
+    <Content Include="Percent_slab.aspx" />
+    <Content Include="PurcahseIndentDetails.aspx" />
+    <Content Include="PurchaseReport.aspx" />
+    <Content Include="SalesProfitability.aspx" />
+    <Content Include="testpopup.aspx" />
+    <Content Include="_images\calender.png" />
+    <None Include="Connected Services\ServiceReference1\ClinicService1.wsdl" />
+    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="css\styles.css" />
+    <Content Include="js\datatables-simple-demo.js" />
+    <Content Include="js\scripts.js" />
+    <Content Include="PharmacyVisit_Variation.aspx" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Incentive.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCamp.aspx.cs">
+      <DependentUpon>AddCamp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCamp.aspx.designer.cs">
+      <DependentUpon>AddCamp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddHead.aspx.cs">
+      <DependentUpon>AddHead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddHead.aspx.designer.cs">
+      <DependentUpon>AddHead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddHeadPercent.aspx.cs">
+      <DependentUpon>AddHeadPercent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddHeadPercent.aspx.designer.cs">
+      <DependentUpon>AddHeadPercent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddPercent.aspx.cs">
+      <DependentUpon>AddPercent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddPercent.aspx.designer.cs">
+      <DependentUpon>AddPercent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddPharmacyMargin.aspx.cs">
+      <DependentUpon>AddPharmacyMargin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddPharmacyMargin.aspx.designer.cs">
+      <DependentUpon>AddPharmacyMargin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddSubHead.aspx.cs">
+      <DependentUpon>AddSubHead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddSubHead.aspx.designer.cs">
+      <DependentUpon>AddSubHead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddTemporary_Staff.aspx.cs">
+      <DependentUpon>AddTemporary_Staff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddTemporary_Staff.aspx.designer.cs">
+      <DependentUpon>AddTemporary_Staff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgewiseStockReport.aspx.cs">
+      <DependentUpon>AgewiseStockReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgewiseStockReport.aspx.designer.cs">
+      <DependentUpon>AgewiseStockReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssignEmployees.aspx.cs">
+      <DependentUpon>AssignEmployees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignEmployees.aspx.designer.cs">
+      <DependentUpon>AssignEmployees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssignHead.aspx.cs">
+      <DependentUpon>AssignHead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignHead.aspx.designer.cs">
+      <DependentUpon>AssignHead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CampReport.aspx.cs">
+      <DependentUpon>CampReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CampReport.aspx.designer.cs">
+      <DependentUpon>CampReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Camp_Patients.aspx.cs">
+      <DependentUpon>Camp_Patients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Camp_Patients.aspx.designer.cs">
+      <DependentUpon>Camp_Patients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicDashboard.aspx.cs">
+      <DependentUpon>ClinicDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClinicDashboard.aspx.designer.cs">
+      <DependentUpon>ClinicDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DecreaseInSale.aspx.cs">
+      <DependentUpon>DecreaseInSale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DecreaseInSale.aspx.designer.cs">
+      <DependentUpon>DecreaseInSale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DSclinic.Designer.cs" />
+    <Compile Include="DSclinic1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSclinic.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsMIS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMIS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EditCamp.aspx.cs">
+      <DependentUpon>EditCamp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditCamp.aspx.designer.cs">
+      <DependentUpon>EditCamp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incentive.Master.cs">
+      <DependentUpon>Incentive.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Incentive.Master.designer.cs">
+      <DependentUpon>Incentive.Master</DependentUpon>
+    </Compile>
+    <Compile Include="IncentiveAmountReport.aspx.cs">
+      <DependentUpon>IncentiveAmountReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncentiveAmountReport.aspx.designer.cs">
+      <DependentUpon>IncentiveAmountReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IncentiveCalculationPhase3.aspx.cs">
+      <DependentUpon>IncentiveCalculationPhase3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncentiveCalculationPhase3.aspx.designer.cs">
+      <DependentUpon>IncentiveCalculationPhase3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IncentiveDashboard.aspx.cs">
+      <DependentUpon>IncentiveDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncentiveDashboard.aspx.designer.cs">
+      <DependentUpon>IncentiveDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IncentiveStaffList.aspx.cs">
+      <DependentUpon>IncentiveStaffList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncentiveStaffList.aspx.designer.cs">
+      <DependentUpon>IncentiveStaffList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemTransfer_store.aspx.cs">
+      <DependentUpon>ItemTransfer_store.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemTransfer_store.aspx.designer.cs">
+      <DependentUpon>ItemTransfer_store.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerAccountDetails.aspx.cs">
+      <DependentUpon>LedgerAccountDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LedgerAccountDetails.aspx.designer.cs">
+      <DependentUpon>LedgerAccountDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MIS.Master.cs">
+      <DependentUpon>MIS.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MIS.Master.designer.cs">
+      <DependentUpon>MIS.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MISCampConversionRpt.aspx.cs">
+      <DependentUpon>MISCampConversionRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MISCampConversionRpt.aspx.designer.cs">
+      <DependentUpon>MISCampConversionRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MIS_IndentReport.aspx.cs">
+      <DependentUpon>MIS_IndentReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MIS_IndentReport.aspx.designer.cs">
+      <DependentUpon>MIS_IndentReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonthlyIncentiveCollection.aspx.cs">
+      <DependentUpon>MonthlyIncentiveCollection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonthlyIncentiveCollection.aspx.designer.cs">
+      <DependentUpon>MonthlyIncentiveCollection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientCountReport.aspx.cs">
+      <DependentUpon>PatientCountReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientCountReport.aspx.designer.cs">
+      <DependentUpon>PatientCountReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientCount_byCriteria.aspx.cs">
+      <DependentUpon>PatientCount_byCriteria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientCount_byCriteria.aspx.designer.cs">
+      <DependentUpon>PatientCount_byCriteria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientCount_Report.aspx.cs">
+      <DependentUpon>PatientCount_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientCount_Report.aspx.designer.cs">
+      <DependentUpon>PatientCount_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Percent_slab.aspx.cs">
+      <DependentUpon>Percent_slab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Percent_slab.aspx.designer.cs">
+      <DependentUpon>Percent_slab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacyVisit_Variation.aspx.cs">
+      <DependentUpon>PharmacyVisit_Variation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PharmacyVisit_Variation.aspx.designer.cs">
+      <DependentUpon>PharmacyVisit_Variation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PurcahseIndentDetails.aspx.cs">
+      <DependentUpon>PurcahseIndentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurcahseIndentDetails.aspx.designer.cs">
+      <DependentUpon>PurcahseIndentDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase.Master.cs">
+      <DependentUpon>Purchase.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase.Master.designer.cs">
+      <DependentUpon>Purchase.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasedash.aspx.cs">
+      <DependentUpon>Purchasedash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchasedash.aspx.designer.cs">
+      <DependentUpon>Purchasedash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseReport.aspx.cs">
+      <DependentUpon>PurchaseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport.aspx.designer.cs">
+      <DependentUpon>PurchaseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesProfitability.aspx.cs">
+      <DependentUpon>SalesProfitability.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesProfitability.aspx.designer.cs">
+      <DependentUpon>SalesProfitability.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="testpopup.aspx.cs">
+      <DependentUpon>testpopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testpopup.aspx.designer.cs">
+      <DependentUpon>testpopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MIS.Master" />
+    <Content Include="DSclinic.xsc">
+      <DependentUpon>DSclinic.xsd</DependentUpon>
+    </Content>
+    <None Include="DSclinic.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSclinic1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DSclinic.xss">
+      <DependentUpon>DSclinic.xsd</DependentUpon>
+    </Content>
+    <Content Include="dsMIS.xsc">
+      <DependentUpon>dsMIS.xsd</DependentUpon>
+    </Content>
+    <None Include="dsMIS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMIS.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsMIS.xss">
+      <DependentUpon>dsMIS.xsd</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="Purchase.Master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\AgewiseStockReport.rdlc" />
+    <EmbeddedResource Include="Reports\Agewisestock_Dayswise.rdlc" />
+    <EmbeddedResource Include="Reports\CampConversionList.rdlc" />
+    <EmbeddedResource Include="Reports\CampConversionReport.rdlc" />
+    <EmbeddedResource Include="Reports\CampPatientList.rdlc" />
+    <EmbeddedResource Include="Reports\DecrSalesValue.rdlc" />
+    <EmbeddedResource Include="Reports\DoctorPatientVisit.rdlc" />
+    <EmbeddedResource Include="Reports\DoctorVisitCount.rdlc" />
+    <EmbeddedResource Include="Reports\Dsales.rdlc" />
+    <EmbeddedResource Include="Reports\IncentiveCollection.rdlc" />
+    <EmbeddedResource Include="Reports\IncentiveStaffList.rdlc" />
+    <EmbeddedResource Include="Reports\IndentReport.rdlc" />
+    <EmbeddedResource Include="Reports\ItemTransfertoStore.rdlc" />
+    <EmbeddedResource Include="Reports\LedgerDetails.rdlc" />
+    <EmbeddedResource Include="Reports\MicrolabIncentive.rdlc" />
+    <EmbeddedResource Include="Reports\MonthlyIncentiveCollection.rdlc" />
+    <EmbeddedResource Include="Reports\Newpurchase.rdlc" />
+    <EmbeddedResource Include="Reports\PharmacynotVisit.rdlc" />
+    <EmbeddedResource Include="Reports\PharmaSales.rdlc" />
+    <EmbeddedResource Include="Reports\PurchaseReport.rdlc" />
+    <EmbeddedResource Include="Reports\Report1.rdlc" />
+    <EmbeddedResource Include="Reports\IncentiveStaffDetails.rdlc" />
+    <EmbeddedResource Include="Reports\VisitDetails.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Excel\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54009</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44387/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

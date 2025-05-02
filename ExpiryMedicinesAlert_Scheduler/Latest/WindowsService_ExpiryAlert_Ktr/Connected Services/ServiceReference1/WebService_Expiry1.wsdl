@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Get_ExpiryMedicines_Valapad">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_ExpiryMedicines_ValapadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ExpiryMedicines_ValapadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ExpiryMedicines_Valapad_New">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_ExpiryMedicines_Valapad_NewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ExpiryMedicines_Valapad_NewResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ExpiryMedicines_Vdply">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_ExpiryMedicines_VdplyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ExpiryMedicines_VdplyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ExpiryMedicines_Cherpu">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_ExpiryMedicines_CherpuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ExpiryMedicines_CherpuResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ExpiryMedicines_Kanjany">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_ExpiryMedicines_KanjanyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ExpiryMedicines_KanjanyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ExpiryMedicines_Kattoor">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_ExpiryMedicines_KattoorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ExpiryMedicines_KattoorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ExpiryMedicines_Wholesale">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_ExpiryMedicines_WholesaleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ExpiryMedicines_WholesaleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_ExpiryMedicines_ValapadSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ExpiryMedicines_Valapad" />
+  </wsdl:message>
+  <wsdl:message name="Get_ExpiryMedicines_ValapadSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ExpiryMedicines_ValapadResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ExpiryMedicines_Valapad_NewSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ExpiryMedicines_Valapad_New" />
+  </wsdl:message>
+  <wsdl:message name="Get_ExpiryMedicines_Valapad_NewSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ExpiryMedicines_Valapad_NewResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ExpiryMedicines_VdplySoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ExpiryMedicines_Vdply" />
+  </wsdl:message>
+  <wsdl:message name="Get_ExpiryMedicines_VdplySoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ExpiryMedicines_VdplyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ExpiryMedicines_CherpuSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ExpiryMedicines_Cherpu" />
+  </wsdl:message>
+  <wsdl:message name="Get_ExpiryMedicines_CherpuSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ExpiryMedicines_CherpuResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ExpiryMedicines_KanjanySoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ExpiryMedicines_Kanjany" />
+  </wsdl:message>
+  <wsdl:message name="Get_ExpiryMedicines_KanjanySoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ExpiryMedicines_KanjanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ExpiryMedicines_KattoorSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ExpiryMedicines_Kattoor" />
+  </wsdl:message>
+  <wsdl:message name="Get_ExpiryMedicines_KattoorSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ExpiryMedicines_KattoorResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ExpiryMedicines_WholesaleSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ExpiryMedicines_Wholesale" />
+  </wsdl:message>
+  <wsdl:message name="Get_ExpiryMedicines_WholesaleSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ExpiryMedicines_WholesaleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService_ExpirySoap">
+    <wsdl:operation name="Get_ExpiryMedicines_Valapad">
+      <wsdl:input message="tns:Get_ExpiryMedicines_ValapadSoapIn" />
+      <wsdl:output message="tns:Get_ExpiryMedicines_ValapadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Valapad_New">
+      <wsdl:input message="tns:Get_ExpiryMedicines_Valapad_NewSoapIn" />
+      <wsdl:output message="tns:Get_ExpiryMedicines_Valapad_NewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Vdply">
+      <wsdl:input message="tns:Get_ExpiryMedicines_VdplySoapIn" />
+      <wsdl:output message="tns:Get_ExpiryMedicines_VdplySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Cherpu">
+      <wsdl:input message="tns:Get_ExpiryMedicines_CherpuSoapIn" />
+      <wsdl:output message="tns:Get_ExpiryMedicines_CherpuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Kanjany">
+      <wsdl:input message="tns:Get_ExpiryMedicines_KanjanySoapIn" />
+      <wsdl:output message="tns:Get_ExpiryMedicines_KanjanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Kattoor">
+      <wsdl:input message="tns:Get_ExpiryMedicines_KattoorSoapIn" />
+      <wsdl:output message="tns:Get_ExpiryMedicines_KattoorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Wholesale">
+      <wsdl:input message="tns:Get_ExpiryMedicines_WholesaleSoapIn" />
+      <wsdl:output message="tns:Get_ExpiryMedicines_WholesaleSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService_ExpirySoap" type="tns:WebService_ExpirySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_ExpiryMedicines_Valapad">
+      <soap:operation soapAction="http://tempuri.org/Get_ExpiryMedicines_Valapad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Valapad_New">
+      <soap:operation soapAction="http://tempuri.org/Get_ExpiryMedicines_Valapad_New" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Vdply">
+      <soap:operation soapAction="http://tempuri.org/Get_ExpiryMedicines_Vdply" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Cherpu">
+      <soap:operation soapAction="http://tempuri.org/Get_ExpiryMedicines_Cherpu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Kanjany">
+      <soap:operation soapAction="http://tempuri.org/Get_ExpiryMedicines_Kanjany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Kattoor">
+      <soap:operation soapAction="http://tempuri.org/Get_ExpiryMedicines_Kattoor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Wholesale">
+      <soap:operation soapAction="http://tempuri.org/Get_ExpiryMedicines_Wholesale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_ExpirySoap12" type="tns:WebService_ExpirySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_ExpiryMedicines_Valapad">
+      <soap12:operation soapAction="http://tempuri.org/Get_ExpiryMedicines_Valapad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Valapad_New">
+      <soap12:operation soapAction="http://tempuri.org/Get_ExpiryMedicines_Valapad_New" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Vdply">
+      <soap12:operation soapAction="http://tempuri.org/Get_ExpiryMedicines_Vdply" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Cherpu">
+      <soap12:operation soapAction="http://tempuri.org/Get_ExpiryMedicines_Cherpu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Kanjany">
+      <soap12:operation soapAction="http://tempuri.org/Get_ExpiryMedicines_Kanjany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Kattoor">
+      <soap12:operation soapAction="http://tempuri.org/Get_ExpiryMedicines_Kattoor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ExpiryMedicines_Wholesale">
+      <soap12:operation soapAction="http://tempuri.org/Get_ExpiryMedicines_Wholesale" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService_Expiry">
+    <wsdl:port name="WebService_ExpirySoap" binding="tns:WebService_ExpirySoap">
+      <soap:address location="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_Expiry/WebService_Expiry.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService_ExpirySoap12" binding="tns:WebService_ExpirySoap12">
+      <soap12:address location="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_Expiry/WebService_Expiry.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

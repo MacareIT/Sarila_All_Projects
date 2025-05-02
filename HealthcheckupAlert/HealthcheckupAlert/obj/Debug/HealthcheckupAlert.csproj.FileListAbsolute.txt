@@ -1,0 +1,9 @@
+E:\Work\Application\HealthcheckupAlert\HealthcheckupAlert\bin\Debug\HealthcheckupAlert.exe.config
+E:\Work\Application\HealthcheckupAlert\HealthcheckupAlert\bin\Debug\HealthcheckupAlert.exe
+E:\Work\Application\HealthcheckupAlert\HealthcheckupAlert\bin\Debug\HealthcheckupAlert.pdb
+E:\Work\Application\HealthcheckupAlert\HealthcheckupAlert\obj\Debug\HealthcheckupAlert.ProjectInstaller.resources
+E:\Work\Application\HealthcheckupAlert\HealthcheckupAlert\obj\Debug\HealthcheckupAlert.csproj.GenerateResource.cache
+E:\Work\Application\HealthcheckupAlert\HealthcheckupAlert\obj\Debug\HealthcheckupAlert.csproj.CoreCompileInputs.cache
+E:\Work\Application\HealthcheckupAlert\HealthcheckupAlert\obj\Debug\HealthcheckupAlert.exe
+E:\Work\Application\HealthcheckupAlert\HealthcheckupAlert\obj\Debug\HealthcheckupAlert.pdb
+E:\Work\Application\HealthcheckupAlert\HealthcheckupAlert\obj\Debug\HealthcheckupAlert.csprojAssemblyReference.cache

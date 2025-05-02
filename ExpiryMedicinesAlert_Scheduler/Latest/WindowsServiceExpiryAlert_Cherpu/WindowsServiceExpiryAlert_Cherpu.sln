@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32407.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsServiceExpiryAlert_Cherpu", "WindowsServiceExpiryAlert_Cherpu.csproj", "{5E97DA44-490B-4D9F-A498-19C0E325E8AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E97DA44-490B-4D9F-A498-19C0E325E8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E97DA44-490B-4D9F-A498-19C0E325E8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E97DA44-490B-4D9F-A498-19C0E325E8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E97DA44-490B-4D9F-A498-19C0E325E8AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0CE2A94-F240-4735-A98A-A5F2D193BB43}
+	EndGlobalSection
+EndGlobal

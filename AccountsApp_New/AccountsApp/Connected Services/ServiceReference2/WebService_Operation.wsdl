@@ -1,0 +1,2527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateUsage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateUsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateUsageResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="u_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pswd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Micro_Incharge_Select">
+        <s:complexType />
+      </s:element>
+      <s:element name="Micro_Incharge_SelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Micro_Incharge_SelectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Branch">
+        <s:complexType />
+      </s:element>
+      <s:element name="Select_BranchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_BranchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Microlab">
+        <s:complexType />
+      </s:element>
+      <s:element name="Select_MicrolabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_MicrolabResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Ambience">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="amb_Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_AmbienceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_AmbienceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ambience_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="amb_Id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="amb_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ambience_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Ambience_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_AmbienceCondition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Month_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Year_" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_AmbienceConditionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_AmbienceConditionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_AmbienceCondition_WithId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AMB_CONDTNID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_AmbienceCondition_WithIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_AmbienceCondition_WithIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbienceCondtn_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="amb_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="count" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="condtn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remarks" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Month_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="year_" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Amb_Date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Amb_Entered" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbienceCondtn_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AmbienceCondtn_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbienceCondtn_StatusUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="amb_CondtnId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="reason" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="checked_" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbienceCondtn_StatusUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AmbienceCondtn_StatusUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_AmbienceReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="month_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="year_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="branchId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_AmbienceReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_AmbienceReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbienceCondtn_Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Month_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Year_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Branch_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbienceCondtn_DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AmbienceCondtn_DeleteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbienceCondtn_VerifyStatusUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Month_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Year_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Branch_Id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Verifn_Entered" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbienceCondtn_VerifyStatusUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AmbienceCondtn_VerifyStatusUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_AmbienceConditionWithExcessAmbID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Month_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Year_" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_AmbienceConditionWithExcessAmbIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_AmbienceConditionWithExcessAmbIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Year">
+        <s:complexType />
+      </s:element>
+      <s:element name="Select_YearResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_YearResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_VerifiedAmbience">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Month_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Year_" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_VerifiedAmbienceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_VerifiedAmbienceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Change_Pswd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pswd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newpswd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Change_PswdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Change_PswdResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbiencePic_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="amb_PicId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="amb_pic_path" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amb_pic_name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="month_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbiencePic_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AmbiencePic_InsertUpdateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbiencePic_Select">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="month_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbiencePic_SelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AmbiencePic_SelectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbiencePic_VerifyStatusUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Month_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Year_" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Branch_Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AmbiencePic_VerifyStatusUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AmbiencePic_VerifyStatusUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OperationStatus_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branch_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dept_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="month" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OperationStatus_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OperationStatus_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InventoryStatus_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="File_name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_By" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Checked_By" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InventoryStatus_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InventoryStatus_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Inventory_StatusUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="File_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Checked_By" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Inventory_StatusUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Inventory_StatusUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Department">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_DepartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_DepartmentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Inventory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="deptid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_InventoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_InventoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_BranchVisir_RegType">
+        <s:complexType />
+      </s:element>
+      <s:element name="Select_BranchVisir_RegTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_BranchVisir_RegTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_BranchVisir_AsstVerfn">
+        <s:complexType />
+      </s:element>
+      <s:element name="Select_BranchVisir_AsstVerfnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_BranchVisir_AsstVerfnResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InventoryRegister_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="department" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Month_" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Year_" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Itemname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Stock" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Measurement" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Unitrate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TotalAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalStock" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Deviation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="month_type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InventoryRegister_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InventoryRegister_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_InventoryStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="month" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="month_type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_InventoryStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_InventoryStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BranchVisit_Asset_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Month_" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Year_" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssetVerifn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkingStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remarks" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BranchVisit_Asset_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchVisit_Asset_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Branchvisit_Asset">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="month" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Branchvisit_AssetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_Branchvisit_AssetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BranchVisit_CashPosition_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Month_" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Year_" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="physicalcash1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemcash1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="diff1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="physicalcash2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemcash2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="diff2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BranchVisit_CashPosition_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchVisit_CashPosition_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Branchvisit_Cashposition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="month" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Branchvisit_CashpositionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_Branchvisit_CashpositionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BranchVisit_Registers_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Month_" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Year_" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updateregister" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remarks" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BranchVisit_Registers_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchVisit_Registers_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Branchvisit_Registers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="month" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Branchvisit_RegistersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_Branchvisit_RegistersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeRpt_Asset_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Asset_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Asset_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="item" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="make" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeRpt_Asset_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChargeRpt_Asset_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_ChargeRpt_Asset">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="entered_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_ChargeRpt_AssetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_ChargeRpt_AssetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeRpt_Cash_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Physical1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="System1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Diff1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remarks1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Physical2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="System2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Diff2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remarks2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeRpt_Cash_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChargeRpt_Cash_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_ChargeRpt_Cash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_ChargeRpt_CashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_ChargeRpt_CashResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeRpt_Registers_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateReg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remarks" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeRpt_Registers_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChargeRpt_Registers_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_ChargeRpt_Registers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="entered_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_ChargeRpt_RegistersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_ChargeRpt_RegistersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeRpt_Doctors_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Department" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Specialyst" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Visitday" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeRpt_Doctors_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChargeRpt_Doctors_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_ChargeRpt_Doctors">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="entered_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_ChargeRpt_DoctorsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_ChargeRpt_DoctorsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeRpt_Key_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Count" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Missing" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remarks" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeRpt_Key_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChargeRpt_Key_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_ChargeRpt_Key">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="entered_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_ChargeRpt_KeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_ChargeRpt_KeyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeRpt_Vertical_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BranchID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entered_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Service" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Machine_Status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkingCondition" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Remarks" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeRpt_Vertical_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChargeRpt_Vertical_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_ChargeRpt_Vertical">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="entered_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_ChargeRpt_VerticalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_ChargeRpt_VerticalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Branchvisit_EnteredStaff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="month" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Branchvisit_EnteredStaffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_Branchvisit_EnteredStaffResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_ChargeRpt_EnteredStaff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_ChargeRpt_EnteredStaffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_ChargeRpt_EnteredStaffResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_AmbienceRpt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="branch_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="month" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_AmbienceRptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_AmbienceRptResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateUsageSoapIn">
+    <wsdl:part name="parameters" element="tns:updateUsage" />
+  </wsdl:message>
+  <wsdl:message name="updateUsageSoapOut">
+    <wsdl:part name="parameters" element="tns:updateUsageResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Micro_Incharge_SelectSoapIn">
+    <wsdl:part name="parameters" element="tns:Micro_Incharge_Select" />
+  </wsdl:message>
+  <wsdl:message name="Micro_Incharge_SelectSoapOut">
+    <wsdl:part name="parameters" element="tns:Micro_Incharge_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_BranchSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Branch" />
+  </wsdl:message>
+  <wsdl:message name="Select_BranchSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_BranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_MicrolabSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Microlab" />
+  </wsdl:message>
+  <wsdl:message name="Select_MicrolabSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_MicrolabResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_AmbienceSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Ambience" />
+  </wsdl:message>
+  <wsdl:message name="Select_AmbienceSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_AmbienceResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ambience_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Ambience_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="Ambience_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:Ambience_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_AmbienceConditionSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_AmbienceCondition" />
+  </wsdl:message>
+  <wsdl:message name="Select_AmbienceConditionSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_AmbienceConditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_AmbienceCondition_WithIdSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_AmbienceCondition_WithId" />
+  </wsdl:message>
+  <wsdl:message name="Select_AmbienceCondition_WithIdSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_AmbienceCondition_WithIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AmbienceCondtn_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:AmbienceCondtn_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="AmbienceCondtn_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:AmbienceCondtn_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="AmbienceCondtn_StatusUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:AmbienceCondtn_StatusUpdate" />
+  </wsdl:message>
+  <wsdl:message name="AmbienceCondtn_StatusUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:AmbienceCondtn_StatusUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_AmbienceReportSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_AmbienceReport" />
+  </wsdl:message>
+  <wsdl:message name="Select_AmbienceReportSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_AmbienceReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="AmbienceCondtn_DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:AmbienceCondtn_Delete" />
+  </wsdl:message>
+  <wsdl:message name="AmbienceCondtn_DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:AmbienceCondtn_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="AmbienceCondtn_VerifyStatusUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:AmbienceCondtn_VerifyStatusUpdate" />
+  </wsdl:message>
+  <wsdl:message name="AmbienceCondtn_VerifyStatusUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:AmbienceCondtn_VerifyStatusUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_AmbienceConditionWithExcessAmbIDSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_AmbienceConditionWithExcessAmbID" />
+  </wsdl:message>
+  <wsdl:message name="Select_AmbienceConditionWithExcessAmbIDSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_AmbienceConditionWithExcessAmbIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_YearSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Year" />
+  </wsdl:message>
+  <wsdl:message name="Select_YearSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_YearResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_VerifiedAmbienceSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_VerifiedAmbience" />
+  </wsdl:message>
+  <wsdl:message name="Select_VerifiedAmbienceSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_VerifiedAmbienceResponse" />
+  </wsdl:message>
+  <wsdl:message name="Change_PswdSoapIn">
+    <wsdl:part name="parameters" element="tns:Change_Pswd" />
+  </wsdl:message>
+  <wsdl:message name="Change_PswdSoapOut">
+    <wsdl:part name="parameters" element="tns:Change_PswdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AmbiencePic_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:AmbiencePic_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="AmbiencePic_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:AmbiencePic_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="AmbiencePic_SelectSoapIn">
+    <wsdl:part name="parameters" element="tns:AmbiencePic_Select" />
+  </wsdl:message>
+  <wsdl:message name="AmbiencePic_SelectSoapOut">
+    <wsdl:part name="parameters" element="tns:AmbiencePic_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="AmbiencePic_VerifyStatusUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:AmbiencePic_VerifyStatusUpdate" />
+  </wsdl:message>
+  <wsdl:message name="AmbiencePic_VerifyStatusUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:AmbiencePic_VerifyStatusUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="OperationStatus_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:OperationStatus_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="OperationStatus_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:OperationStatus_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="InventoryStatus_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:InventoryStatus_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="InventoryStatus_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:InventoryStatus_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Inventory_StatusUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Inventory_StatusUpdate" />
+  </wsdl:message>
+  <wsdl:message name="Inventory_StatusUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:Inventory_StatusUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_DepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Department" />
+  </wsdl:message>
+  <wsdl:message name="Select_DepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_DepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_InventorySoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Inventory" />
+  </wsdl:message>
+  <wsdl:message name="Select_InventorySoapOut">
+    <wsdl:part name="parameters" element="tns:Select_InventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_BranchVisir_RegTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_BranchVisir_RegType" />
+  </wsdl:message>
+  <wsdl:message name="Select_BranchVisir_RegTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_BranchVisir_RegTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_BranchVisir_AsstVerfnSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_BranchVisir_AsstVerfn" />
+  </wsdl:message>
+  <wsdl:message name="Select_BranchVisir_AsstVerfnSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_BranchVisir_AsstVerfnResponse" />
+  </wsdl:message>
+  <wsdl:message name="InventoryRegister_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:InventoryRegister_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="InventoryRegister_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:InventoryRegister_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_InventoryStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_InventoryStatus" />
+  </wsdl:message>
+  <wsdl:message name="Select_InventoryStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_InventoryStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="BranchVisit_Asset_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:BranchVisit_Asset_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="BranchVisit_Asset_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:BranchVisit_Asset_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_Branchvisit_AssetSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Branchvisit_Asset" />
+  </wsdl:message>
+  <wsdl:message name="Select_Branchvisit_AssetSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_Branchvisit_AssetResponse" />
+  </wsdl:message>
+  <wsdl:message name="BranchVisit_CashPosition_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:BranchVisit_CashPosition_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="BranchVisit_CashPosition_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:BranchVisit_CashPosition_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_Branchvisit_CashpositionSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Branchvisit_Cashposition" />
+  </wsdl:message>
+  <wsdl:message name="Select_Branchvisit_CashpositionSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_Branchvisit_CashpositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="BranchVisit_Registers_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:BranchVisit_Registers_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="BranchVisit_Registers_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:BranchVisit_Registers_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_Branchvisit_RegistersSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Branchvisit_Registers" />
+  </wsdl:message>
+  <wsdl:message name="Select_Branchvisit_RegistersSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_Branchvisit_RegistersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChargeRpt_Asset_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:ChargeRpt_Asset_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ChargeRpt_Asset_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:ChargeRpt_Asset_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_ChargeRpt_AssetSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_ChargeRpt_Asset" />
+  </wsdl:message>
+  <wsdl:message name="Select_ChargeRpt_AssetSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_ChargeRpt_AssetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChargeRpt_Cash_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:ChargeRpt_Cash_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ChargeRpt_Cash_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:ChargeRpt_Cash_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_ChargeRpt_CashSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_ChargeRpt_Cash" />
+  </wsdl:message>
+  <wsdl:message name="Select_ChargeRpt_CashSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_ChargeRpt_CashResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChargeRpt_Registers_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:ChargeRpt_Registers_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ChargeRpt_Registers_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:ChargeRpt_Registers_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_ChargeRpt_RegistersSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_ChargeRpt_Registers" />
+  </wsdl:message>
+  <wsdl:message name="Select_ChargeRpt_RegistersSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_ChargeRpt_RegistersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChargeRpt_Doctors_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:ChargeRpt_Doctors_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ChargeRpt_Doctors_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:ChargeRpt_Doctors_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_ChargeRpt_DoctorsSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_ChargeRpt_Doctors" />
+  </wsdl:message>
+  <wsdl:message name="Select_ChargeRpt_DoctorsSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_ChargeRpt_DoctorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChargeRpt_Key_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:ChargeRpt_Key_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ChargeRpt_Key_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:ChargeRpt_Key_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_ChargeRpt_KeySoapIn">
+    <wsdl:part name="parameters" element="tns:Select_ChargeRpt_Key" />
+  </wsdl:message>
+  <wsdl:message name="Select_ChargeRpt_KeySoapOut">
+    <wsdl:part name="parameters" element="tns:Select_ChargeRpt_KeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChargeRpt_Vertical_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:ChargeRpt_Vertical_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ChargeRpt_Vertical_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:ChargeRpt_Vertical_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_ChargeRpt_VerticalSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_ChargeRpt_Vertical" />
+  </wsdl:message>
+  <wsdl:message name="Select_ChargeRpt_VerticalSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_ChargeRpt_VerticalResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_Branchvisit_EnteredStaffSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Branchvisit_EnteredStaff" />
+  </wsdl:message>
+  <wsdl:message name="Select_Branchvisit_EnteredStaffSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_Branchvisit_EnteredStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_ChargeRpt_EnteredStaffSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_ChargeRpt_EnteredStaff" />
+  </wsdl:message>
+  <wsdl:message name="Select_ChargeRpt_EnteredStaffSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_ChargeRpt_EnteredStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_AmbienceRptSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_AmbienceRpt" />
+  </wsdl:message>
+  <wsdl:message name="Select_AmbienceRptSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_AmbienceRptResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService_OperationSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUsage">
+      <wsdl:input message="tns:updateUsageSoapIn" />
+      <wsdl:output message="tns:updateUsageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Micro_Incharge_Select">
+      <wsdl:input message="tns:Micro_Incharge_SelectSoapIn" />
+      <wsdl:output message="tns:Micro_Incharge_SelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branch">
+      <wsdl:input message="tns:Select_BranchSoapIn" />
+      <wsdl:output message="tns:Select_BranchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Microlab">
+      <wsdl:input message="tns:Select_MicrolabSoapIn" />
+      <wsdl:output message="tns:Select_MicrolabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Ambience">
+      <wsdl:input message="tns:Select_AmbienceSoapIn" />
+      <wsdl:output message="tns:Select_AmbienceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ambience_InsertUpdate">
+      <wsdl:input message="tns:Ambience_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:Ambience_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceCondition">
+      <wsdl:input message="tns:Select_AmbienceConditionSoapIn" />
+      <wsdl:output message="tns:Select_AmbienceConditionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceCondition_WithId">
+      <wsdl:input message="tns:Select_AmbienceCondition_WithIdSoapIn" />
+      <wsdl:output message="tns:Select_AmbienceCondition_WithIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AmbienceCondtn_InsertUpdate">
+      <wsdl:input message="tns:AmbienceCondtn_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:AmbienceCondtn_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AmbienceCondtn_StatusUpdate">
+      <wsdl:input message="tns:AmbienceCondtn_StatusUpdateSoapIn" />
+      <wsdl:output message="tns:AmbienceCondtn_StatusUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceReport">
+      <wsdl:input message="tns:Select_AmbienceReportSoapIn" />
+      <wsdl:output message="tns:Select_AmbienceReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AmbienceCondtn_Delete">
+      <wsdl:input message="tns:AmbienceCondtn_DeleteSoapIn" />
+      <wsdl:output message="tns:AmbienceCondtn_DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AmbienceCondtn_VerifyStatusUpdate">
+      <wsdl:input message="tns:AmbienceCondtn_VerifyStatusUpdateSoapIn" />
+      <wsdl:output message="tns:AmbienceCondtn_VerifyStatusUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceConditionWithExcessAmbID">
+      <wsdl:input message="tns:Select_AmbienceConditionWithExcessAmbIDSoapIn" />
+      <wsdl:output message="tns:Select_AmbienceConditionWithExcessAmbIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Year">
+      <wsdl:input message="tns:Select_YearSoapIn" />
+      <wsdl:output message="tns:Select_YearSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_VerifiedAmbience">
+      <wsdl:input message="tns:Select_VerifiedAmbienceSoapIn" />
+      <wsdl:output message="tns:Select_VerifiedAmbienceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Change_Pswd">
+      <wsdl:input message="tns:Change_PswdSoapIn" />
+      <wsdl:output message="tns:Change_PswdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AmbiencePic_InsertUpdate">
+      <wsdl:input message="tns:AmbiencePic_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:AmbiencePic_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AmbiencePic_Select">
+      <wsdl:input message="tns:AmbiencePic_SelectSoapIn" />
+      <wsdl:output message="tns:AmbiencePic_SelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AmbiencePic_VerifyStatusUpdate">
+      <wsdl:input message="tns:AmbiencePic_VerifyStatusUpdateSoapIn" />
+      <wsdl:output message="tns:AmbiencePic_VerifyStatusUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OperationStatus_InsertUpdate">
+      <wsdl:input message="tns:OperationStatus_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:OperationStatus_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InventoryStatus_InsertUpdate">
+      <wsdl:input message="tns:InventoryStatus_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:InventoryStatus_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Inventory_StatusUpdate">
+      <wsdl:input message="tns:Inventory_StatusUpdateSoapIn" />
+      <wsdl:output message="tns:Inventory_StatusUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Department">
+      <wsdl:input message="tns:Select_DepartmentSoapIn" />
+      <wsdl:output message="tns:Select_DepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Inventory">
+      <wsdl:input message="tns:Select_InventorySoapIn" />
+      <wsdl:output message="tns:Select_InventorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_BranchVisir_RegType">
+      <wsdl:input message="tns:Select_BranchVisir_RegTypeSoapIn" />
+      <wsdl:output message="tns:Select_BranchVisir_RegTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_BranchVisir_AsstVerfn">
+      <wsdl:input message="tns:Select_BranchVisir_AsstVerfnSoapIn" />
+      <wsdl:output message="tns:Select_BranchVisir_AsstVerfnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InventoryRegister_InsertUpdate">
+      <wsdl:input message="tns:InventoryRegister_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:InventoryRegister_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_InventoryStatus">
+      <wsdl:input message="tns:Select_InventoryStatusSoapIn" />
+      <wsdl:output message="tns:Select_InventoryStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BranchVisit_Asset_InsertUpdate">
+      <wsdl:input message="tns:BranchVisit_Asset_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:BranchVisit_Asset_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branchvisit_Asset">
+      <wsdl:input message="tns:Select_Branchvisit_AssetSoapIn" />
+      <wsdl:output message="tns:Select_Branchvisit_AssetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BranchVisit_CashPosition_InsertUpdate">
+      <wsdl:input message="tns:BranchVisit_CashPosition_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:BranchVisit_CashPosition_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branchvisit_Cashposition">
+      <wsdl:input message="tns:Select_Branchvisit_CashpositionSoapIn" />
+      <wsdl:output message="tns:Select_Branchvisit_CashpositionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BranchVisit_Registers_InsertUpdate">
+      <wsdl:input message="tns:BranchVisit_Registers_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:BranchVisit_Registers_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branchvisit_Registers">
+      <wsdl:input message="tns:Select_Branchvisit_RegistersSoapIn" />
+      <wsdl:output message="tns:Select_Branchvisit_RegistersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Asset_InsertUpdate">
+      <wsdl:input message="tns:ChargeRpt_Asset_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:ChargeRpt_Asset_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Asset">
+      <wsdl:input message="tns:Select_ChargeRpt_AssetSoapIn" />
+      <wsdl:output message="tns:Select_ChargeRpt_AssetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Cash_InsertUpdate">
+      <wsdl:input message="tns:ChargeRpt_Cash_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:ChargeRpt_Cash_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Cash">
+      <wsdl:input message="tns:Select_ChargeRpt_CashSoapIn" />
+      <wsdl:output message="tns:Select_ChargeRpt_CashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Registers_InsertUpdate">
+      <wsdl:input message="tns:ChargeRpt_Registers_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:ChargeRpt_Registers_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Registers">
+      <wsdl:input message="tns:Select_ChargeRpt_RegistersSoapIn" />
+      <wsdl:output message="tns:Select_ChargeRpt_RegistersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Doctors_InsertUpdate">
+      <wsdl:input message="tns:ChargeRpt_Doctors_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:ChargeRpt_Doctors_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Doctors">
+      <wsdl:input message="tns:Select_ChargeRpt_DoctorsSoapIn" />
+      <wsdl:output message="tns:Select_ChargeRpt_DoctorsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Key_InsertUpdate">
+      <wsdl:input message="tns:ChargeRpt_Key_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:ChargeRpt_Key_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Key">
+      <wsdl:input message="tns:Select_ChargeRpt_KeySoapIn" />
+      <wsdl:output message="tns:Select_ChargeRpt_KeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Vertical_InsertUpdate">
+      <wsdl:input message="tns:ChargeRpt_Vertical_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:ChargeRpt_Vertical_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Vertical">
+      <wsdl:input message="tns:Select_ChargeRpt_VerticalSoapIn" />
+      <wsdl:output message="tns:Select_ChargeRpt_VerticalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branchvisit_EnteredStaff">
+      <wsdl:input message="tns:Select_Branchvisit_EnteredStaffSoapIn" />
+      <wsdl:output message="tns:Select_Branchvisit_EnteredStaffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_EnteredStaff">
+      <wsdl:input message="tns:Select_ChargeRpt_EnteredStaffSoapIn" />
+      <wsdl:output message="tns:Select_ChargeRpt_EnteredStaffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceRpt">
+      <wsdl:input message="tns:Select_AmbienceRptSoapIn" />
+      <wsdl:output message="tns:Select_AmbienceRptSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService_OperationSoap" type="tns:WebService_OperationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUsage">
+      <soap:operation soapAction="http://tempuri.org/updateUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Micro_Incharge_Select">
+      <soap:operation soapAction="http://tempuri.org/Micro_Incharge_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branch">
+      <soap:operation soapAction="http://tempuri.org/Select_Branch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Microlab">
+      <soap:operation soapAction="http://tempuri.org/Select_Microlab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Ambience">
+      <soap:operation soapAction="http://tempuri.org/Select_Ambience" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ambience_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/Ambience_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceCondition">
+      <soap:operation soapAction="http://tempuri.org/Select_AmbienceCondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceCondition_WithId">
+      <soap:operation soapAction="http://tempuri.org/Select_AmbienceCondition_WithId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbienceCondtn_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/AmbienceCondtn_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbienceCondtn_StatusUpdate">
+      <soap:operation soapAction="http://tempuri.org/AmbienceCondtn_StatusUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceReport">
+      <soap:operation soapAction="http://tempuri.org/Select_AmbienceReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbienceCondtn_Delete">
+      <soap:operation soapAction="http://tempuri.org/AmbienceCondtn_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbienceCondtn_VerifyStatusUpdate">
+      <soap:operation soapAction="http://tempuri.org/AmbienceCondtn_VerifyStatusUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceConditionWithExcessAmbID">
+      <soap:operation soapAction="http://tempuri.org/Select_AmbienceConditionWithExcessAmbID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Year">
+      <soap:operation soapAction="http://tempuri.org/Select_Year" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_VerifiedAmbience">
+      <soap:operation soapAction="http://tempuri.org/Select_VerifiedAmbience" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Change_Pswd">
+      <soap:operation soapAction="http://tempuri.org/Change_Pswd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbiencePic_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/AmbiencePic_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbiencePic_Select">
+      <soap:operation soapAction="http://tempuri.org/AmbiencePic_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbiencePic_VerifyStatusUpdate">
+      <soap:operation soapAction="http://tempuri.org/AmbiencePic_VerifyStatusUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperationStatus_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/OperationStatus_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryStatus_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/InventoryStatus_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inventory_StatusUpdate">
+      <soap:operation soapAction="http://tempuri.org/Inventory_StatusUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Department">
+      <soap:operation soapAction="http://tempuri.org/Select_Department" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Inventory">
+      <soap:operation soapAction="http://tempuri.org/Select_Inventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_BranchVisir_RegType">
+      <soap:operation soapAction="http://tempuri.org/Select_BranchVisir_RegType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_BranchVisir_AsstVerfn">
+      <soap:operation soapAction="http://tempuri.org/Select_BranchVisir_AsstVerfn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryRegister_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/InventoryRegister_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_InventoryStatus">
+      <soap:operation soapAction="http://tempuri.org/Select_InventoryStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BranchVisit_Asset_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/BranchVisit_Asset_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branchvisit_Asset">
+      <soap:operation soapAction="http://tempuri.org/Select_Branchvisit_Asset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BranchVisit_CashPosition_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/BranchVisit_CashPosition_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branchvisit_Cashposition">
+      <soap:operation soapAction="http://tempuri.org/Select_Branchvisit_Cashposition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BranchVisit_Registers_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/BranchVisit_Registers_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branchvisit_Registers">
+      <soap:operation soapAction="http://tempuri.org/Select_Branchvisit_Registers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Asset_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/ChargeRpt_Asset_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Asset">
+      <soap:operation soapAction="http://tempuri.org/Select_ChargeRpt_Asset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Cash_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/ChargeRpt_Cash_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Cash">
+      <soap:operation soapAction="http://tempuri.org/Select_ChargeRpt_Cash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Registers_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/ChargeRpt_Registers_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Registers">
+      <soap:operation soapAction="http://tempuri.org/Select_ChargeRpt_Registers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Doctors_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/ChargeRpt_Doctors_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Doctors">
+      <soap:operation soapAction="http://tempuri.org/Select_ChargeRpt_Doctors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Key_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/ChargeRpt_Key_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Key">
+      <soap:operation soapAction="http://tempuri.org/Select_ChargeRpt_Key" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Vertical_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/ChargeRpt_Vertical_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Vertical">
+      <soap:operation soapAction="http://tempuri.org/Select_ChargeRpt_Vertical" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branchvisit_EnteredStaff">
+      <soap:operation soapAction="http://tempuri.org/Select_Branchvisit_EnteredStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_EnteredStaff">
+      <soap:operation soapAction="http://tempuri.org/Select_ChargeRpt_EnteredStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceRpt">
+      <soap:operation soapAction="http://tempuri.org/Select_AmbienceRpt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_OperationSoap12" type="tns:WebService_OperationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUsage">
+      <soap12:operation soapAction="http://tempuri.org/updateUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Micro_Incharge_Select">
+      <soap12:operation soapAction="http://tempuri.org/Micro_Incharge_Select" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branch">
+      <soap12:operation soapAction="http://tempuri.org/Select_Branch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Microlab">
+      <soap12:operation soapAction="http://tempuri.org/Select_Microlab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Ambience">
+      <soap12:operation soapAction="http://tempuri.org/Select_Ambience" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ambience_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/Ambience_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceCondition">
+      <soap12:operation soapAction="http://tempuri.org/Select_AmbienceCondition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceCondition_WithId">
+      <soap12:operation soapAction="http://tempuri.org/Select_AmbienceCondition_WithId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbienceCondtn_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/AmbienceCondtn_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbienceCondtn_StatusUpdate">
+      <soap12:operation soapAction="http://tempuri.org/AmbienceCondtn_StatusUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceReport">
+      <soap12:operation soapAction="http://tempuri.org/Select_AmbienceReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbienceCondtn_Delete">
+      <soap12:operation soapAction="http://tempuri.org/AmbienceCondtn_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbienceCondtn_VerifyStatusUpdate">
+      <soap12:operation soapAction="http://tempuri.org/AmbienceCondtn_VerifyStatusUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceConditionWithExcessAmbID">
+      <soap12:operation soapAction="http://tempuri.org/Select_AmbienceConditionWithExcessAmbID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Year">
+      <soap12:operation soapAction="http://tempuri.org/Select_Year" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_VerifiedAmbience">
+      <soap12:operation soapAction="http://tempuri.org/Select_VerifiedAmbience" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Change_Pswd">
+      <soap12:operation soapAction="http://tempuri.org/Change_Pswd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbiencePic_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/AmbiencePic_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbiencePic_Select">
+      <soap12:operation soapAction="http://tempuri.org/AmbiencePic_Select" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmbiencePic_VerifyStatusUpdate">
+      <soap12:operation soapAction="http://tempuri.org/AmbiencePic_VerifyStatusUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OperationStatus_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/OperationStatus_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryStatus_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/InventoryStatus_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inventory_StatusUpdate">
+      <soap12:operation soapAction="http://tempuri.org/Inventory_StatusUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Department">
+      <soap12:operation soapAction="http://tempuri.org/Select_Department" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Inventory">
+      <soap12:operation soapAction="http://tempuri.org/Select_Inventory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_BranchVisir_RegType">
+      <soap12:operation soapAction="http://tempuri.org/Select_BranchVisir_RegType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_BranchVisir_AsstVerfn">
+      <soap12:operation soapAction="http://tempuri.org/Select_BranchVisir_AsstVerfn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryRegister_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/InventoryRegister_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_InventoryStatus">
+      <soap12:operation soapAction="http://tempuri.org/Select_InventoryStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BranchVisit_Asset_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/BranchVisit_Asset_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branchvisit_Asset">
+      <soap12:operation soapAction="http://tempuri.org/Select_Branchvisit_Asset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BranchVisit_CashPosition_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/BranchVisit_CashPosition_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branchvisit_Cashposition">
+      <soap12:operation soapAction="http://tempuri.org/Select_Branchvisit_Cashposition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BranchVisit_Registers_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/BranchVisit_Registers_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branchvisit_Registers">
+      <soap12:operation soapAction="http://tempuri.org/Select_Branchvisit_Registers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Asset_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/ChargeRpt_Asset_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Asset">
+      <soap12:operation soapAction="http://tempuri.org/Select_ChargeRpt_Asset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Cash_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/ChargeRpt_Cash_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Cash">
+      <soap12:operation soapAction="http://tempuri.org/Select_ChargeRpt_Cash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Registers_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/ChargeRpt_Registers_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Registers">
+      <soap12:operation soapAction="http://tempuri.org/Select_ChargeRpt_Registers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Doctors_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/ChargeRpt_Doctors_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Doctors">
+      <soap12:operation soapAction="http://tempuri.org/Select_ChargeRpt_Doctors" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Key_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/ChargeRpt_Key_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Key">
+      <soap12:operation soapAction="http://tempuri.org/Select_ChargeRpt_Key" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeRpt_Vertical_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/ChargeRpt_Vertical_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_Vertical">
+      <soap12:operation soapAction="http://tempuri.org/Select_ChargeRpt_Vertical" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Branchvisit_EnteredStaff">
+      <soap12:operation soapAction="http://tempuri.org/Select_Branchvisit_EnteredStaff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_ChargeRpt_EnteredStaff">
+      <soap12:operation soapAction="http://tempuri.org/Select_ChargeRpt_EnteredStaff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_AmbienceRpt">
+      <soap12:operation soapAction="http://tempuri.org/Select_AmbienceRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService_Operation">
+    <wsdl:port name="WebService_OperationSoap" binding="tns:WebService_OperationSoap">
+      <soap:address location="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_Operation/WebService_Operation.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService_OperationSoap12" binding="tns:WebService_OperationSoap12">
+      <soap12:address location="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_Operation/WebService_Operation.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

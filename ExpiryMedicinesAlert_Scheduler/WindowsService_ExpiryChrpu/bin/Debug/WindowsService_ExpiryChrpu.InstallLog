@@ -1,0 +1,31 @@
+﻿Installing assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.exe
+Rolling back assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.exe
+Installing assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.exe
+Installing service Scheduler_MedicineExpiry_Cherp...
+Service Scheduler_MedicineExpiry_Cherp has been successfully installed.
+Creating EventLog source Scheduler_MedicineExpiry_Cherp in log Application...
+Committing assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.exe
+Uninstalling assembly 'D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.InstallLog
+   assemblypath = D:\WorkingDirectory\SorceCode\ExpiryMedicinesAlert_Scheduler\WindowsService_ExpiryChrpu\bin\Debug\WindowsService_ExpiryChrpu.exe
+Removing EventLog source Scheduler_MedicineExpiry_Cherp.
+Service Scheduler_MedicineExpiry_Cherp is being removed from the system...
+Service Scheduler_MedicineExpiry_Cherp was successfully removed from the system.

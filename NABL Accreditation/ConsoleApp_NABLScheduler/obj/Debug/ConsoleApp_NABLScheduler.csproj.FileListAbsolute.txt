@@ -1,0 +1,6 @@
+D:\WorkingDirectory\SorceCode\NABL Accreditation\ConsoleApp_NABLScheduler\bin\Debug\ConsoleApp_NABLScheduler.exe.config
+D:\WorkingDirectory\SorceCode\NABL Accreditation\ConsoleApp_NABLScheduler\bin\Debug\ConsoleApp_NABLScheduler.exe
+D:\WorkingDirectory\SorceCode\NABL Accreditation\ConsoleApp_NABLScheduler\bin\Debug\ConsoleApp_NABLScheduler.pdb
+D:\WorkingDirectory\SorceCode\NABL Accreditation\ConsoleApp_NABLScheduler\obj\Debug\ConsoleApp_NABLScheduler.csproj.CoreCompileInputs.cache
+D:\WorkingDirectory\SorceCode\NABL Accreditation\ConsoleApp_NABLScheduler\obj\Debug\ConsoleApp_NABLScheduler.exe
+D:\WorkingDirectory\SorceCode\NABL Accreditation\ConsoleApp_NABLScheduler\obj\Debug\ConsoleApp_NABLScheduler.pdb

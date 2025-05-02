@@ -1,0 +1,4594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Validate_TaskLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Validate_TaskLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Validate_TaskLoginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_medicines">
+        <s:complexType />
+      </s:element>
+      <s:element name="List_medicinesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="List_medicinesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Hospital_Clinic_MicrolabList">
+        <s:complexType />
+      </s:element>
+      <s:element name="Hospital_Clinic_MicrolabListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Hospital_Clinic_MicrolabListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Hospital_pharmacy_Branch">
+        <s:complexType />
+      </s:element>
+      <s:element name="Hospital_pharmacy_BranchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Hospital_pharmacy_BranchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListClinic">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListClinicResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListClinicResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListClinic_Microlab">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListClinic_MicrolabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListClinic_MicrolabResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MacareClinic_Microlab">
+        <s:complexType />
+      </s:element>
+      <s:element name="MacareClinic_MicrolabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MacareClinic_MicrolabResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Listdepartment">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListdepartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListdepartmentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListPharmacy">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListPharmacyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListPharmacyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Hospital_Departments">
+        <s:complexType />
+      </s:element>
+      <s:element name="Hospital_DepartmentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Hospital_DepartmentsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListDoctors_VisitCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="frmdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListDoctors_VisitCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListDoctors_VisitCountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListDoctors_VisitCount_Datewise">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="frmdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="option" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="value" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListDoctors_VisitCount_DatewiseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListDoctors_VisitCount_DatewiseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_Visit_Doctorwise">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="frmdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="staffid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clinicid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_Visit_DoctorwiseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="List_Visit_DoctorwiseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PatientsList_NotVisitPharma">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clinicid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PatientsList_NotVisitPharmaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PatientsList_NotVisitPharmaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incentive_calc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opticalid1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dentalid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incentive_calcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Incentive_calcResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incentive_calcMicrolab">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incentive_calcMicrolabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Incentive_calcMicrolabResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesDecr_Billvalue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesDecr_BillvalueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MIS_SalesDecr_BillvalueResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesDecr_visitcount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesDecr_visitcountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MIS_SalesDecr_visitcountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesDecr_noncount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesDecr_noncountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MIS_SalesDecr_noncountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesDecr_totpat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesDecr_totpatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MIS_SalesDecr_totpatResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_PharmacyBillvalue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clinicid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_PharmacyBillvalueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MIS_PharmacyBillvalueResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesDecr_TotalCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesDecr_TotalCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MIS_SalesDecr_TotalCountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesDecr_ValueRPT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clinicid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesDecr_ValueRPTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MIS_SalesDecr_ValueRPTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_PurchaseRPT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flag" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_PurchaseRPTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MIS_PurchaseRPTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesValueLoss_Report">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clinicid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesValueLoss_ReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MIS_SalesValueLoss_ReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesRPT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="frmdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_SalesRPTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MIS_SalesRPTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuppliersList">
+        <s:complexType />
+      </s:element>
+      <s:element name="SuppliersListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuppliersListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateUsage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateUsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateUsageResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddincentiveHead">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="headname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddincentiveHeadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddincentiveHeadResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListIncentiveHead">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListIncentiveHeadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListIncentiveHeadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddincentiveSubHead">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="headid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="headname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddincentiveSubHeadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddincentiveSubHeadResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incentive_StaffList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="headid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="incentivedate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phramid1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmid2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opticid1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dentid1" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incentive_StaffListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Incentive_StaffListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListIncentiveStaff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListIncentiveStaffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListIncentiveStaffResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListIncentiveSubHead">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="headid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListIncentiveSubHeadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListIncentiveSubHeadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddincentivePercent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="depid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="percnt1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="percnt2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="percent3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="targetcollection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="uptdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddincentivePercentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddincentivePercentResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddincentiveAmountPercent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="percnt1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="percnt2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="percent3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddincentiveAmountPercentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddincentiveAmountPercentResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListPercentage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListPercentageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListPercentageResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListMainDepartment">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListMainDepartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListMainDepartmentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListDepartment_Staff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deptid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="search" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListDepartment_StaffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListDepartment_StaffResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListDepartment_Staffcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deptid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="search" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListDepartment_StaffcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListDepartment_StaffcodeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveData_details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveData_detailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IncentiveData_detailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incentive_details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="incentivedate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incentive_detailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Incentive_detailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PunchingStaff_List">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dentalid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opticalid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacynew" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PunchingStaff_ListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PunchingStaff_ListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveStaff_ListAmount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dentalid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opticalid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacynew" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveStaff_ListAmountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IncentiveStaff_ListAmountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveHeadAmount_details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="incentivedate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveHeadAmount_detailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IncentiveHeadAmount_detailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveStaffAmount_details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="incentivedate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="headid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveStaffAmount_detailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IncentiveStaffAmount_detailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveMicrolabStaffAmount_details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="incentivedate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveMicrolabStaffAmount_detailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IncentiveMicrolabStaffAmount_detailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveAmount_reportHead">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="frmdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveAmount_reportHeadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IncentiveAmount_reportHeadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveAmount_reportstaff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="frmdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveAmount_reportstaffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IncentiveAmount_reportstaffResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveMonthlyCollection_details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncentiveMonthlyCollection_detailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IncentiveMonthlyCollection_detailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incentive_assignstaff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="headid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="empname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="percent" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incentive_assignstaffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Incentive_assignstaffResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incentive_calc_phase3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opticalid1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dentalid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incentive_calc_phase3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Incentive_calc_phase3Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incentive_calcamount_phase3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyid2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dentalid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opticalid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Incentive_calcamount_phase3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Incentive_calcamount_phase3Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LabBilldetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LabBilldetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LabBilldetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IndentReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IndentReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IndentReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Transfered_PendingRpt">
+        <s:complexType />
+      </s:element>
+      <s:element name="Transfered_PendingRptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Transfered_PendingRptResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_IndentReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="frmdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="indentid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MIS_IndentReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MIS_IndentReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCamp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="conducton" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="place" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ftime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ttime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="unitid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCampResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddCampResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCampPatient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="campid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="age" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bloodgroup" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCampPatientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddCampPatientResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campdetails">
+        <s:complexType />
+      </s:element>
+      <s:element name="CampdetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CampdetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campdetails_ID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Campdetails_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Campdetails_IDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCamp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="conductdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="place" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ftime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ttime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="unitid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCampResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateCampResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCampPatient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="campid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="age" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bloodgroup" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCampPatientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateCampPatientResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CampPatientdetails_ID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="patientid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CampPatientdetails_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CampPatientdetails_IDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CampPatientdetails_campId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="campid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="frmdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CampPatientdetails_campIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CampPatientdetails_campIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CampPatient_ConversionReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="campid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="frmdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CampPatient_ConversionReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CampPatient_ConversionReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Allcamp_ConversionReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Allcamp_ConversionReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Allcamp_ConversionReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Supplier_AuthorizationReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Supplier_AuthorizationReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Supplier_AuthorizationReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Debit_Credit_note_Report">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Debit_Credit_note_ReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Debit_Credit_note_ReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_incentiveheadstaff_percent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="frmdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="percent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="percentid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_incentiveheadstaff_percentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Add_incentiveheadstaff_percentResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadHeadPercentDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadHeadPercentDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadHeadPercentDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadHeadPercentDetails_ID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="percentid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadHeadPercentDetails_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadHeadPercentDetails_IDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadIncentive_dep_staff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="headid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadIncentive_dep_staffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadIncentive_dep_staffResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateStaffAccountDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ifsccode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accountno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateStaffAccountDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateStaffAccountDetailsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMicrolab_incentive">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="frmdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMicrolab_incentiveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadMicrolab_incentiveResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fill_pharmacymargin">
+        <s:complexType />
+      </s:element>
+      <s:element name="Fill_pharmacymarginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fill_pharmacymarginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPharmacymargin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="amtbelow" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amtabove" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="percent3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="percent1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="percent2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updatedate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="targetmargin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPharmacymarginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddPharmacymarginResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agewise_stockReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agewise_stockReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Agewise_stockReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Optical_Invoice_confirmation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="frmdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Optical_Invoice_confirmationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Optical_Invoice_confirmationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ItemTransfer_tostore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="frmdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ItemTransfer_tostoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ItemTransfer_tostoreResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agewise_stock_criteria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Agewise_stock_criteriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Agewise_stock_criteriaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VendorsList">
+        <s:complexType />
+      </s:element>
+      <s:element name="VendorsListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VendorsListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Vendor_Ledgerdetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vendorid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Vendor_LedgerdetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Vendor_LedgerdetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Pharma_punch_alert">
+        <s:complexType />
+      </s:element>
+      <s:element name="Pharma_punch_alertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pharma_punch_alertResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_PRNo_StatusChange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cr_no" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tran_status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tran_userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tran_date" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rec_status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_PRNo_StatusChangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Add_PRNo_StatusChangeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Pr_No_details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pr_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Pr_No_detailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pr_No_detailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Accounts_PR_Status_select">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Accounts_PR_Status_selectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Accounts_PR_Status_selectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Accounts_PR_Status_transfer_select">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Accounts_PR_Status_transfer_selectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Accounts_PR_Status_transfer_selectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete_AccountsPRStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cr_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete_AccountsPRStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Delete_AccountsPRStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_AccountsPRStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cr_no" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="transfered" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tran_userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_AccountsPRStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Add_AccountsPRStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_AccountsPRStatus_receive">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cr_no" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="received" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="rec_userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_AccountsPRStatus_receiveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update_AccountsPRStatus_receiveResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Accounts_CR_transfer_Report">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Accounts_CR_transfer_ReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Accounts_CR_transfer_ReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Accounts_CR_Receive_Report">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Accounts_CR_Receive_ReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Accounts_CR_Receive_ReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="Validate_TaskLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Validate_TaskLogin" />
+  </wsdl:message>
+  <wsdl:message name="Validate_TaskLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:Validate_TaskLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="List_medicinesSoapIn">
+    <wsdl:part name="parameters" element="tns:List_medicines" />
+  </wsdl:message>
+  <wsdl:message name="List_medicinesSoapOut">
+    <wsdl:part name="parameters" element="tns:List_medicinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Hospital_Clinic_MicrolabListSoapIn">
+    <wsdl:part name="parameters" element="tns:Hospital_Clinic_MicrolabList" />
+  </wsdl:message>
+  <wsdl:message name="Hospital_Clinic_MicrolabListSoapOut">
+    <wsdl:part name="parameters" element="tns:Hospital_Clinic_MicrolabListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Hospital_pharmacy_BranchSoapIn">
+    <wsdl:part name="parameters" element="tns:Hospital_pharmacy_Branch" />
+  </wsdl:message>
+  <wsdl:message name="Hospital_pharmacy_BranchSoapOut">
+    <wsdl:part name="parameters" element="tns:Hospital_pharmacy_BranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListClinicSoapIn">
+    <wsdl:part name="parameters" element="tns:ListClinic" />
+  </wsdl:message>
+  <wsdl:message name="ListClinicSoapOut">
+    <wsdl:part name="parameters" element="tns:ListClinicResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListClinic_MicrolabSoapIn">
+    <wsdl:part name="parameters" element="tns:ListClinic_Microlab" />
+  </wsdl:message>
+  <wsdl:message name="ListClinic_MicrolabSoapOut">
+    <wsdl:part name="parameters" element="tns:ListClinic_MicrolabResponse" />
+  </wsdl:message>
+  <wsdl:message name="MacareClinic_MicrolabSoapIn">
+    <wsdl:part name="parameters" element="tns:MacareClinic_Microlab" />
+  </wsdl:message>
+  <wsdl:message name="MacareClinic_MicrolabSoapOut">
+    <wsdl:part name="parameters" element="tns:MacareClinic_MicrolabResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListdepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:Listdepartment" />
+  </wsdl:message>
+  <wsdl:message name="ListdepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:ListdepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListPharmacySoapIn">
+    <wsdl:part name="parameters" element="tns:ListPharmacy" />
+  </wsdl:message>
+  <wsdl:message name="ListPharmacySoapOut">
+    <wsdl:part name="parameters" element="tns:ListPharmacyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Hospital_DepartmentsSoapIn">
+    <wsdl:part name="parameters" element="tns:Hospital_Departments" />
+  </wsdl:message>
+  <wsdl:message name="Hospital_DepartmentsSoapOut">
+    <wsdl:part name="parameters" element="tns:Hospital_DepartmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListDoctors_VisitCountSoapIn">
+    <wsdl:part name="parameters" element="tns:ListDoctors_VisitCount" />
+  </wsdl:message>
+  <wsdl:message name="ListDoctors_VisitCountSoapOut">
+    <wsdl:part name="parameters" element="tns:ListDoctors_VisitCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListDoctors_VisitCount_DatewiseSoapIn">
+    <wsdl:part name="parameters" element="tns:ListDoctors_VisitCount_Datewise" />
+  </wsdl:message>
+  <wsdl:message name="ListDoctors_VisitCount_DatewiseSoapOut">
+    <wsdl:part name="parameters" element="tns:ListDoctors_VisitCount_DatewiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="List_Visit_DoctorwiseSoapIn">
+    <wsdl:part name="parameters" element="tns:List_Visit_Doctorwise" />
+  </wsdl:message>
+  <wsdl:message name="List_Visit_DoctorwiseSoapOut">
+    <wsdl:part name="parameters" element="tns:List_Visit_DoctorwiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="PatientsList_NotVisitPharmaSoapIn">
+    <wsdl:part name="parameters" element="tns:PatientsList_NotVisitPharma" />
+  </wsdl:message>
+  <wsdl:message name="PatientsList_NotVisitPharmaSoapOut">
+    <wsdl:part name="parameters" element="tns:PatientsList_NotVisitPharmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Incentive_calcSoapIn">
+    <wsdl:part name="parameters" element="tns:Incentive_calc" />
+  </wsdl:message>
+  <wsdl:message name="Incentive_calcSoapOut">
+    <wsdl:part name="parameters" element="tns:Incentive_calcResponse" />
+  </wsdl:message>
+  <wsdl:message name="Incentive_calcMicrolabSoapIn">
+    <wsdl:part name="parameters" element="tns:Incentive_calcMicrolab" />
+  </wsdl:message>
+  <wsdl:message name="Incentive_calcMicrolabSoapOut">
+    <wsdl:part name="parameters" element="tns:Incentive_calcMicrolabResponse" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesDecr_BillvalueSoapIn">
+    <wsdl:part name="parameters" element="tns:MIS_SalesDecr_Billvalue" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesDecr_BillvalueSoapOut">
+    <wsdl:part name="parameters" element="tns:MIS_SalesDecr_BillvalueResponse" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesDecr_visitcountSoapIn">
+    <wsdl:part name="parameters" element="tns:MIS_SalesDecr_visitcount" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesDecr_visitcountSoapOut">
+    <wsdl:part name="parameters" element="tns:MIS_SalesDecr_visitcountResponse" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesDecr_noncountSoapIn">
+    <wsdl:part name="parameters" element="tns:MIS_SalesDecr_noncount" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesDecr_noncountSoapOut">
+    <wsdl:part name="parameters" element="tns:MIS_SalesDecr_noncountResponse" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesDecr_totpatSoapIn">
+    <wsdl:part name="parameters" element="tns:MIS_SalesDecr_totpat" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesDecr_totpatSoapOut">
+    <wsdl:part name="parameters" element="tns:MIS_SalesDecr_totpatResponse" />
+  </wsdl:message>
+  <wsdl:message name="MIS_PharmacyBillvalueSoapIn">
+    <wsdl:part name="parameters" element="tns:MIS_PharmacyBillvalue" />
+  </wsdl:message>
+  <wsdl:message name="MIS_PharmacyBillvalueSoapOut">
+    <wsdl:part name="parameters" element="tns:MIS_PharmacyBillvalueResponse" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesDecr_TotalCountSoapIn">
+    <wsdl:part name="parameters" element="tns:MIS_SalesDecr_TotalCount" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesDecr_TotalCountSoapOut">
+    <wsdl:part name="parameters" element="tns:MIS_SalesDecr_TotalCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesDecr_ValueRPTSoapIn">
+    <wsdl:part name="parameters" element="tns:MIS_SalesDecr_ValueRPT" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesDecr_ValueRPTSoapOut">
+    <wsdl:part name="parameters" element="tns:MIS_SalesDecr_ValueRPTResponse" />
+  </wsdl:message>
+  <wsdl:message name="MIS_PurchaseRPTSoapIn">
+    <wsdl:part name="parameters" element="tns:MIS_PurchaseRPT" />
+  </wsdl:message>
+  <wsdl:message name="MIS_PurchaseRPTSoapOut">
+    <wsdl:part name="parameters" element="tns:MIS_PurchaseRPTResponse" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesValueLoss_ReportSoapIn">
+    <wsdl:part name="parameters" element="tns:MIS_SalesValueLoss_Report" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesValueLoss_ReportSoapOut">
+    <wsdl:part name="parameters" element="tns:MIS_SalesValueLoss_ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesRPTSoapIn">
+    <wsdl:part name="parameters" element="tns:MIS_SalesRPT" />
+  </wsdl:message>
+  <wsdl:message name="MIS_SalesRPTSoapOut">
+    <wsdl:part name="parameters" element="tns:MIS_SalesRPTResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuppliersListSoapIn">
+    <wsdl:part name="parameters" element="tns:SuppliersList" />
+  </wsdl:message>
+  <wsdl:message name="SuppliersListSoapOut">
+    <wsdl:part name="parameters" element="tns:SuppliersListResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateUsageSoapIn">
+    <wsdl:part name="parameters" element="tns:updateUsage" />
+  </wsdl:message>
+  <wsdl:message name="updateUsageSoapOut">
+    <wsdl:part name="parameters" element="tns:updateUsageResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddincentiveHeadSoapIn">
+    <wsdl:part name="parameters" element="tns:AddincentiveHead" />
+  </wsdl:message>
+  <wsdl:message name="AddincentiveHeadSoapOut">
+    <wsdl:part name="parameters" element="tns:AddincentiveHeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListIncentiveHeadSoapIn">
+    <wsdl:part name="parameters" element="tns:ListIncentiveHead" />
+  </wsdl:message>
+  <wsdl:message name="ListIncentiveHeadSoapOut">
+    <wsdl:part name="parameters" element="tns:ListIncentiveHeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddincentiveSubHeadSoapIn">
+    <wsdl:part name="parameters" element="tns:AddincentiveSubHead" />
+  </wsdl:message>
+  <wsdl:message name="AddincentiveSubHeadSoapOut">
+    <wsdl:part name="parameters" element="tns:AddincentiveSubHeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="Incentive_StaffListSoapIn">
+    <wsdl:part name="parameters" element="tns:Incentive_StaffList" />
+  </wsdl:message>
+  <wsdl:message name="Incentive_StaffListSoapOut">
+    <wsdl:part name="parameters" element="tns:Incentive_StaffListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListIncentiveStaffSoapIn">
+    <wsdl:part name="parameters" element="tns:ListIncentiveStaff" />
+  </wsdl:message>
+  <wsdl:message name="ListIncentiveStaffSoapOut">
+    <wsdl:part name="parameters" element="tns:ListIncentiveStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListIncentiveSubHeadSoapIn">
+    <wsdl:part name="parameters" element="tns:ListIncentiveSubHead" />
+  </wsdl:message>
+  <wsdl:message name="ListIncentiveSubHeadSoapOut">
+    <wsdl:part name="parameters" element="tns:ListIncentiveSubHeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddincentivePercentSoapIn">
+    <wsdl:part name="parameters" element="tns:AddincentivePercent" />
+  </wsdl:message>
+  <wsdl:message name="AddincentivePercentSoapOut">
+    <wsdl:part name="parameters" element="tns:AddincentivePercentResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddincentiveAmountPercentSoapIn">
+    <wsdl:part name="parameters" element="tns:AddincentiveAmountPercent" />
+  </wsdl:message>
+  <wsdl:message name="AddincentiveAmountPercentSoapOut">
+    <wsdl:part name="parameters" element="tns:AddincentiveAmountPercentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListPercentageSoapIn">
+    <wsdl:part name="parameters" element="tns:ListPercentage" />
+  </wsdl:message>
+  <wsdl:message name="ListPercentageSoapOut">
+    <wsdl:part name="parameters" element="tns:ListPercentageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListMainDepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:ListMainDepartment" />
+  </wsdl:message>
+  <wsdl:message name="ListMainDepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:ListMainDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListDepartment_StaffSoapIn">
+    <wsdl:part name="parameters" element="tns:ListDepartment_Staff" />
+  </wsdl:message>
+  <wsdl:message name="ListDepartment_StaffSoapOut">
+    <wsdl:part name="parameters" element="tns:ListDepartment_StaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListDepartment_StaffcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:ListDepartment_Staffcode" />
+  </wsdl:message>
+  <wsdl:message name="ListDepartment_StaffcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:ListDepartment_StaffcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveData_detailsSoapIn">
+    <wsdl:part name="parameters" element="tns:IncentiveData_details" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveData_detailsSoapOut">
+    <wsdl:part name="parameters" element="tns:IncentiveData_detailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Incentive_detailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Incentive_details" />
+  </wsdl:message>
+  <wsdl:message name="Incentive_detailsSoapOut">
+    <wsdl:part name="parameters" element="tns:Incentive_detailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PunchingStaff_ListSoapIn">
+    <wsdl:part name="parameters" element="tns:PunchingStaff_List" />
+  </wsdl:message>
+  <wsdl:message name="PunchingStaff_ListSoapOut">
+    <wsdl:part name="parameters" element="tns:PunchingStaff_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveStaff_ListAmountSoapIn">
+    <wsdl:part name="parameters" element="tns:IncentiveStaff_ListAmount" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveStaff_ListAmountSoapOut">
+    <wsdl:part name="parameters" element="tns:IncentiveStaff_ListAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveHeadAmount_detailsSoapIn">
+    <wsdl:part name="parameters" element="tns:IncentiveHeadAmount_details" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveHeadAmount_detailsSoapOut">
+    <wsdl:part name="parameters" element="tns:IncentiveHeadAmount_detailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveStaffAmount_detailsSoapIn">
+    <wsdl:part name="parameters" element="tns:IncentiveStaffAmount_details" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveStaffAmount_detailsSoapOut">
+    <wsdl:part name="parameters" element="tns:IncentiveStaffAmount_detailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveMicrolabStaffAmount_detailsSoapIn">
+    <wsdl:part name="parameters" element="tns:IncentiveMicrolabStaffAmount_details" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveMicrolabStaffAmount_detailsSoapOut">
+    <wsdl:part name="parameters" element="tns:IncentiveMicrolabStaffAmount_detailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveAmount_reportHeadSoapIn">
+    <wsdl:part name="parameters" element="tns:IncentiveAmount_reportHead" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveAmount_reportHeadSoapOut">
+    <wsdl:part name="parameters" element="tns:IncentiveAmount_reportHeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveAmount_reportstaffSoapIn">
+    <wsdl:part name="parameters" element="tns:IncentiveAmount_reportstaff" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveAmount_reportstaffSoapOut">
+    <wsdl:part name="parameters" element="tns:IncentiveAmount_reportstaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveMonthlyCollection_detailsSoapIn">
+    <wsdl:part name="parameters" element="tns:IncentiveMonthlyCollection_details" />
+  </wsdl:message>
+  <wsdl:message name="IncentiveMonthlyCollection_detailsSoapOut">
+    <wsdl:part name="parameters" element="tns:IncentiveMonthlyCollection_detailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Incentive_assignstaffSoapIn">
+    <wsdl:part name="parameters" element="tns:Incentive_assignstaff" />
+  </wsdl:message>
+  <wsdl:message name="Incentive_assignstaffSoapOut">
+    <wsdl:part name="parameters" element="tns:Incentive_assignstaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="Incentive_calc_phase3SoapIn">
+    <wsdl:part name="parameters" element="tns:Incentive_calc_phase3" />
+  </wsdl:message>
+  <wsdl:message name="Incentive_calc_phase3SoapOut">
+    <wsdl:part name="parameters" element="tns:Incentive_calc_phase3Response" />
+  </wsdl:message>
+  <wsdl:message name="Incentive_calcamount_phase3SoapIn">
+    <wsdl:part name="parameters" element="tns:Incentive_calcamount_phase3" />
+  </wsdl:message>
+  <wsdl:message name="Incentive_calcamount_phase3SoapOut">
+    <wsdl:part name="parameters" element="tns:Incentive_calcamount_phase3Response" />
+  </wsdl:message>
+  <wsdl:message name="LabBilldetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:LabBilldetails" />
+  </wsdl:message>
+  <wsdl:message name="LabBilldetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:LabBilldetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IndentReportSoapIn">
+    <wsdl:part name="parameters" element="tns:IndentReport" />
+  </wsdl:message>
+  <wsdl:message name="IndentReportSoapOut">
+    <wsdl:part name="parameters" element="tns:IndentReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transfered_PendingRptSoapIn">
+    <wsdl:part name="parameters" element="tns:Transfered_PendingRpt" />
+  </wsdl:message>
+  <wsdl:message name="Transfered_PendingRptSoapOut">
+    <wsdl:part name="parameters" element="tns:Transfered_PendingRptResponse" />
+  </wsdl:message>
+  <wsdl:message name="MIS_IndentReportSoapIn">
+    <wsdl:part name="parameters" element="tns:MIS_IndentReport" />
+  </wsdl:message>
+  <wsdl:message name="MIS_IndentReportSoapOut">
+    <wsdl:part name="parameters" element="tns:MIS_IndentReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCampSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCamp" />
+  </wsdl:message>
+  <wsdl:message name="AddCampSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCampResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCampPatientSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCampPatient" />
+  </wsdl:message>
+  <wsdl:message name="AddCampPatientSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCampPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="CampdetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Campdetails" />
+  </wsdl:message>
+  <wsdl:message name="CampdetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:CampdetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Campdetails_IDSoapIn">
+    <wsdl:part name="parameters" element="tns:Campdetails_ID" />
+  </wsdl:message>
+  <wsdl:message name="Campdetails_IDSoapOut">
+    <wsdl:part name="parameters" element="tns:Campdetails_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCampSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCamp" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCampSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCampResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCampPatientSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCampPatient" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCampPatientSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCampPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="CampPatientdetails_IDSoapIn">
+    <wsdl:part name="parameters" element="tns:CampPatientdetails_ID" />
+  </wsdl:message>
+  <wsdl:message name="CampPatientdetails_IDSoapOut">
+    <wsdl:part name="parameters" element="tns:CampPatientdetails_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CampPatientdetails_campIdSoapIn">
+    <wsdl:part name="parameters" element="tns:CampPatientdetails_campId" />
+  </wsdl:message>
+  <wsdl:message name="CampPatientdetails_campIdSoapOut">
+    <wsdl:part name="parameters" element="tns:CampPatientdetails_campIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CampPatient_ConversionReportSoapIn">
+    <wsdl:part name="parameters" element="tns:CampPatient_ConversionReport" />
+  </wsdl:message>
+  <wsdl:message name="CampPatient_ConversionReportSoapOut">
+    <wsdl:part name="parameters" element="tns:CampPatient_ConversionReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="Allcamp_ConversionReportSoapIn">
+    <wsdl:part name="parameters" element="tns:Allcamp_ConversionReport" />
+  </wsdl:message>
+  <wsdl:message name="Allcamp_ConversionReportSoapOut">
+    <wsdl:part name="parameters" element="tns:Allcamp_ConversionReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="Supplier_AuthorizationReportSoapIn">
+    <wsdl:part name="parameters" element="tns:Supplier_AuthorizationReport" />
+  </wsdl:message>
+  <wsdl:message name="Supplier_AuthorizationReportSoapOut">
+    <wsdl:part name="parameters" element="tns:Supplier_AuthorizationReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="Debit_Credit_note_ReportSoapIn">
+    <wsdl:part name="parameters" element="tns:Debit_Credit_note_Report" />
+  </wsdl:message>
+  <wsdl:message name="Debit_Credit_note_ReportSoapOut">
+    <wsdl:part name="parameters" element="tns:Debit_Credit_note_ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add_incentiveheadstaff_percentSoapIn">
+    <wsdl:part name="parameters" element="tns:Add_incentiveheadstaff_percent" />
+  </wsdl:message>
+  <wsdl:message name="Add_incentiveheadstaff_percentSoapOut">
+    <wsdl:part name="parameters" element="tns:Add_incentiveheadstaff_percentResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadHeadPercentDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadHeadPercentDetails" />
+  </wsdl:message>
+  <wsdl:message name="LoadHeadPercentDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadHeadPercentDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadHeadPercentDetails_IDSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadHeadPercentDetails_ID" />
+  </wsdl:message>
+  <wsdl:message name="LoadHeadPercentDetails_IDSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadHeadPercentDetails_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadIncentive_dep_staffSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadIncentive_dep_staff" />
+  </wsdl:message>
+  <wsdl:message name="LoadIncentive_dep_staffSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadIncentive_dep_staffResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStaffAccountDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateStaffAccountDetails" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStaffAccountDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateStaffAccountDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadMicrolab_incentiveSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadMicrolab_incentive" />
+  </wsdl:message>
+  <wsdl:message name="LoadMicrolab_incentiveSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadMicrolab_incentiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fill_pharmacymarginSoapIn">
+    <wsdl:part name="parameters" element="tns:Fill_pharmacymargin" />
+  </wsdl:message>
+  <wsdl:message name="Fill_pharmacymarginSoapOut">
+    <wsdl:part name="parameters" element="tns:Fill_pharmacymarginResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPharmacymarginSoapIn">
+    <wsdl:part name="parameters" element="tns:AddPharmacymargin" />
+  </wsdl:message>
+  <wsdl:message name="AddPharmacymarginSoapOut">
+    <wsdl:part name="parameters" element="tns:AddPharmacymarginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Agewise_stockReportSoapIn">
+    <wsdl:part name="parameters" element="tns:Agewise_stockReport" />
+  </wsdl:message>
+  <wsdl:message name="Agewise_stockReportSoapOut">
+    <wsdl:part name="parameters" element="tns:Agewise_stockReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="Optical_Invoice_confirmationSoapIn">
+    <wsdl:part name="parameters" element="tns:Optical_Invoice_confirmation" />
+  </wsdl:message>
+  <wsdl:message name="Optical_Invoice_confirmationSoapOut">
+    <wsdl:part name="parameters" element="tns:Optical_Invoice_confirmationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ItemTransfer_tostoreSoapIn">
+    <wsdl:part name="parameters" element="tns:ItemTransfer_tostore" />
+  </wsdl:message>
+  <wsdl:message name="ItemTransfer_tostoreSoapOut">
+    <wsdl:part name="parameters" element="tns:ItemTransfer_tostoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="Agewise_stock_criteriaSoapIn">
+    <wsdl:part name="parameters" element="tns:Agewise_stock_criteria" />
+  </wsdl:message>
+  <wsdl:message name="Agewise_stock_criteriaSoapOut">
+    <wsdl:part name="parameters" element="tns:Agewise_stock_criteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="VendorsListSoapIn">
+    <wsdl:part name="parameters" element="tns:VendorsList" />
+  </wsdl:message>
+  <wsdl:message name="VendorsListSoapOut">
+    <wsdl:part name="parameters" element="tns:VendorsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Vendor_LedgerdetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Vendor_Ledgerdetails" />
+  </wsdl:message>
+  <wsdl:message name="Vendor_LedgerdetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:Vendor_LedgerdetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Pharma_punch_alertSoapIn">
+    <wsdl:part name="parameters" element="tns:Pharma_punch_alert" />
+  </wsdl:message>
+  <wsdl:message name="Pharma_punch_alertSoapOut">
+    <wsdl:part name="parameters" element="tns:Pharma_punch_alertResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add_PRNo_StatusChangeSoapIn">
+    <wsdl:part name="parameters" element="tns:Add_PRNo_StatusChange" />
+  </wsdl:message>
+  <wsdl:message name="Add_PRNo_StatusChangeSoapOut">
+    <wsdl:part name="parameters" element="tns:Add_PRNo_StatusChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Pr_No_detailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Pr_No_details" />
+  </wsdl:message>
+  <wsdl:message name="Pr_No_detailsSoapOut">
+    <wsdl:part name="parameters" element="tns:Pr_No_detailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Accounts_PR_Status_selectSoapIn">
+    <wsdl:part name="parameters" element="tns:Accounts_PR_Status_select" />
+  </wsdl:message>
+  <wsdl:message name="Accounts_PR_Status_selectSoapOut">
+    <wsdl:part name="parameters" element="tns:Accounts_PR_Status_selectResponse" />
+  </wsdl:message>
+  <wsdl:message name="Accounts_PR_Status_transfer_selectSoapIn">
+    <wsdl:part name="parameters" element="tns:Accounts_PR_Status_transfer_select" />
+  </wsdl:message>
+  <wsdl:message name="Accounts_PR_Status_transfer_selectSoapOut">
+    <wsdl:part name="parameters" element="tns:Accounts_PR_Status_transfer_selectResponse" />
+  </wsdl:message>
+  <wsdl:message name="Delete_AccountsPRStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Delete_AccountsPRStatus" />
+  </wsdl:message>
+  <wsdl:message name="Delete_AccountsPRStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:Delete_AccountsPRStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add_AccountsPRStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Add_AccountsPRStatus" />
+  </wsdl:message>
+  <wsdl:message name="Add_AccountsPRStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:Add_AccountsPRStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_AccountsPRStatus_receiveSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_AccountsPRStatus_receive" />
+  </wsdl:message>
+  <wsdl:message name="Update_AccountsPRStatus_receiveSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_AccountsPRStatus_receiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="Accounts_CR_transfer_ReportSoapIn">
+    <wsdl:part name="parameters" element="tns:Accounts_CR_transfer_Report" />
+  </wsdl:message>
+  <wsdl:message name="Accounts_CR_transfer_ReportSoapOut">
+    <wsdl:part name="parameters" element="tns:Accounts_CR_transfer_ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="Accounts_CR_Receive_ReportSoapIn">
+    <wsdl:part name="parameters" element="tns:Accounts_CR_Receive_Report" />
+  </wsdl:message>
+  <wsdl:message name="Accounts_CR_Receive_ReportSoapOut">
+    <wsdl:part name="parameters" element="tns:Accounts_CR_Receive_ReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ClinicServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Validate_TaskLogin">
+      <wsdl:input message="tns:Validate_TaskLoginSoapIn" />
+      <wsdl:output message="tns:Validate_TaskLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_medicines">
+      <wsdl:input message="tns:List_medicinesSoapIn" />
+      <wsdl:output message="tns:List_medicinesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_Clinic_MicrolabList">
+      <wsdl:input message="tns:Hospital_Clinic_MicrolabListSoapIn" />
+      <wsdl:output message="tns:Hospital_Clinic_MicrolabListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_pharmacy_Branch">
+      <wsdl:input message="tns:Hospital_pharmacy_BranchSoapIn" />
+      <wsdl:output message="tns:Hospital_pharmacy_BranchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListClinic">
+      <wsdl:input message="tns:ListClinicSoapIn" />
+      <wsdl:output message="tns:ListClinicSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListClinic_Microlab">
+      <wsdl:input message="tns:ListClinic_MicrolabSoapIn" />
+      <wsdl:output message="tns:ListClinic_MicrolabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MacareClinic_Microlab">
+      <wsdl:input message="tns:MacareClinic_MicrolabSoapIn" />
+      <wsdl:output message="tns:MacareClinic_MicrolabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Listdepartment">
+      <wsdl:input message="tns:ListdepartmentSoapIn" />
+      <wsdl:output message="tns:ListdepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListPharmacy">
+      <wsdl:input message="tns:ListPharmacySoapIn" />
+      <wsdl:output message="tns:ListPharmacySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_Departments">
+      <wsdl:input message="tns:Hospital_DepartmentsSoapIn" />
+      <wsdl:output message="tns:Hospital_DepartmentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListDoctors_VisitCount">
+      <wsdl:input message="tns:ListDoctors_VisitCountSoapIn" />
+      <wsdl:output message="tns:ListDoctors_VisitCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListDoctors_VisitCount_Datewise">
+      <wsdl:input message="tns:ListDoctors_VisitCount_DatewiseSoapIn" />
+      <wsdl:output message="tns:ListDoctors_VisitCount_DatewiseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_Visit_Doctorwise">
+      <wsdl:input message="tns:List_Visit_DoctorwiseSoapIn" />
+      <wsdl:output message="tns:List_Visit_DoctorwiseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PatientsList_NotVisitPharma">
+      <wsdl:input message="tns:PatientsList_NotVisitPharmaSoapIn" />
+      <wsdl:output message="tns:PatientsList_NotVisitPharmaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_calc">
+      <wsdl:input message="tns:Incentive_calcSoapIn" />
+      <wsdl:output message="tns:Incentive_calcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_calcMicrolab">
+      <wsdl:input message="tns:Incentive_calcMicrolabSoapIn" />
+      <wsdl:output message="tns:Incentive_calcMicrolabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_Billvalue">
+      <wsdl:input message="tns:MIS_SalesDecr_BillvalueSoapIn" />
+      <wsdl:output message="tns:MIS_SalesDecr_BillvalueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_visitcount">
+      <wsdl:input message="tns:MIS_SalesDecr_visitcountSoapIn" />
+      <wsdl:output message="tns:MIS_SalesDecr_visitcountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_noncount">
+      <wsdl:input message="tns:MIS_SalesDecr_noncountSoapIn" />
+      <wsdl:output message="tns:MIS_SalesDecr_noncountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_totpat">
+      <wsdl:input message="tns:MIS_SalesDecr_totpatSoapIn" />
+      <wsdl:output message="tns:MIS_SalesDecr_totpatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MIS_PharmacyBillvalue">
+      <wsdl:input message="tns:MIS_PharmacyBillvalueSoapIn" />
+      <wsdl:output message="tns:MIS_PharmacyBillvalueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_TotalCount">
+      <wsdl:input message="tns:MIS_SalesDecr_TotalCountSoapIn" />
+      <wsdl:output message="tns:MIS_SalesDecr_TotalCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_ValueRPT">
+      <wsdl:input message="tns:MIS_SalesDecr_ValueRPTSoapIn" />
+      <wsdl:output message="tns:MIS_SalesDecr_ValueRPTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MIS_PurchaseRPT">
+      <wsdl:input message="tns:MIS_PurchaseRPTSoapIn" />
+      <wsdl:output message="tns:MIS_PurchaseRPTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesValueLoss_Report">
+      <wsdl:input message="tns:MIS_SalesValueLoss_ReportSoapIn" />
+      <wsdl:output message="tns:MIS_SalesValueLoss_ReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesRPT">
+      <wsdl:input message="tns:MIS_SalesRPTSoapIn" />
+      <wsdl:output message="tns:MIS_SalesRPTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuppliersList">
+      <wsdl:input message="tns:SuppliersListSoapIn" />
+      <wsdl:output message="tns:SuppliersListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUsage">
+      <wsdl:input message="tns:updateUsageSoapIn" />
+      <wsdl:output message="tns:updateUsageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddincentiveHead">
+      <wsdl:input message="tns:AddincentiveHeadSoapIn" />
+      <wsdl:output message="tns:AddincentiveHeadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListIncentiveHead">
+      <wsdl:input message="tns:ListIncentiveHeadSoapIn" />
+      <wsdl:output message="tns:ListIncentiveHeadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddincentiveSubHead">
+      <wsdl:input message="tns:AddincentiveSubHeadSoapIn" />
+      <wsdl:output message="tns:AddincentiveSubHeadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_StaffList">
+      <wsdl:input message="tns:Incentive_StaffListSoapIn" />
+      <wsdl:output message="tns:Incentive_StaffListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListIncentiveStaff">
+      <wsdl:input message="tns:ListIncentiveStaffSoapIn" />
+      <wsdl:output message="tns:ListIncentiveStaffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListIncentiveSubHead">
+      <wsdl:input message="tns:ListIncentiveSubHeadSoapIn" />
+      <wsdl:output message="tns:ListIncentiveSubHeadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddincentivePercent">
+      <wsdl:input message="tns:AddincentivePercentSoapIn" />
+      <wsdl:output message="tns:AddincentivePercentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddincentiveAmountPercent">
+      <wsdl:input message="tns:AddincentiveAmountPercentSoapIn" />
+      <wsdl:output message="tns:AddincentiveAmountPercentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListPercentage">
+      <wsdl:input message="tns:ListPercentageSoapIn" />
+      <wsdl:output message="tns:ListPercentageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListMainDepartment">
+      <wsdl:input message="tns:ListMainDepartmentSoapIn" />
+      <wsdl:output message="tns:ListMainDepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListDepartment_Staff">
+      <wsdl:input message="tns:ListDepartment_StaffSoapIn" />
+      <wsdl:output message="tns:ListDepartment_StaffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListDepartment_Staffcode">
+      <wsdl:input message="tns:ListDepartment_StaffcodeSoapIn" />
+      <wsdl:output message="tns:ListDepartment_StaffcodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveData_details">
+      <wsdl:input message="tns:IncentiveData_detailsSoapIn" />
+      <wsdl:output message="tns:IncentiveData_detailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_details">
+      <wsdl:input message="tns:Incentive_detailsSoapIn" />
+      <wsdl:output message="tns:Incentive_detailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PunchingStaff_List">
+      <wsdl:input message="tns:PunchingStaff_ListSoapIn" />
+      <wsdl:output message="tns:PunchingStaff_ListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveStaff_ListAmount">
+      <wsdl:input message="tns:IncentiveStaff_ListAmountSoapIn" />
+      <wsdl:output message="tns:IncentiveStaff_ListAmountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveHeadAmount_details">
+      <wsdl:input message="tns:IncentiveHeadAmount_detailsSoapIn" />
+      <wsdl:output message="tns:IncentiveHeadAmount_detailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveStaffAmount_details">
+      <wsdl:input message="tns:IncentiveStaffAmount_detailsSoapIn" />
+      <wsdl:output message="tns:IncentiveStaffAmount_detailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveMicrolabStaffAmount_details">
+      <wsdl:input message="tns:IncentiveMicrolabStaffAmount_detailsSoapIn" />
+      <wsdl:output message="tns:IncentiveMicrolabStaffAmount_detailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveAmount_reportHead">
+      <wsdl:input message="tns:IncentiveAmount_reportHeadSoapIn" />
+      <wsdl:output message="tns:IncentiveAmount_reportHeadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveAmount_reportstaff">
+      <wsdl:input message="tns:IncentiveAmount_reportstaffSoapIn" />
+      <wsdl:output message="tns:IncentiveAmount_reportstaffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveMonthlyCollection_details">
+      <wsdl:input message="tns:IncentiveMonthlyCollection_detailsSoapIn" />
+      <wsdl:output message="tns:IncentiveMonthlyCollection_detailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_assignstaff">
+      <wsdl:input message="tns:Incentive_assignstaffSoapIn" />
+      <wsdl:output message="tns:Incentive_assignstaffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_calc_phase3">
+      <wsdl:input message="tns:Incentive_calc_phase3SoapIn" />
+      <wsdl:output message="tns:Incentive_calc_phase3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_calcamount_phase3">
+      <wsdl:input message="tns:Incentive_calcamount_phase3SoapIn" />
+      <wsdl:output message="tns:Incentive_calcamount_phase3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LabBilldetails">
+      <wsdl:input message="tns:LabBilldetailsSoapIn" />
+      <wsdl:output message="tns:LabBilldetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IndentReport">
+      <wsdl:input message="tns:IndentReportSoapIn" />
+      <wsdl:output message="tns:IndentReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Transfered_PendingRpt">
+      <wsdl:input message="tns:Transfered_PendingRptSoapIn" />
+      <wsdl:output message="tns:Transfered_PendingRptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MIS_IndentReport">
+      <wsdl:input message="tns:MIS_IndentReportSoapIn" />
+      <wsdl:output message="tns:MIS_IndentReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCamp">
+      <wsdl:input message="tns:AddCampSoapIn" />
+      <wsdl:output message="tns:AddCampSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCampPatient">
+      <wsdl:input message="tns:AddCampPatientSoapIn" />
+      <wsdl:output message="tns:AddCampPatientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Campdetails">
+      <wsdl:input message="tns:CampdetailsSoapIn" />
+      <wsdl:output message="tns:CampdetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Campdetails_ID">
+      <wsdl:input message="tns:Campdetails_IDSoapIn" />
+      <wsdl:output message="tns:Campdetails_IDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCamp">
+      <wsdl:input message="tns:UpdateCampSoapIn" />
+      <wsdl:output message="tns:UpdateCampSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCampPatient">
+      <wsdl:input message="tns:UpdateCampPatientSoapIn" />
+      <wsdl:output message="tns:UpdateCampPatientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CampPatientdetails_ID">
+      <wsdl:input message="tns:CampPatientdetails_IDSoapIn" />
+      <wsdl:output message="tns:CampPatientdetails_IDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CampPatientdetails_campId">
+      <wsdl:input message="tns:CampPatientdetails_campIdSoapIn" />
+      <wsdl:output message="tns:CampPatientdetails_campIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CampPatient_ConversionReport">
+      <wsdl:input message="tns:CampPatient_ConversionReportSoapIn" />
+      <wsdl:output message="tns:CampPatient_ConversionReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Allcamp_ConversionReport">
+      <wsdl:input message="tns:Allcamp_ConversionReportSoapIn" />
+      <wsdl:output message="tns:Allcamp_ConversionReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Supplier_AuthorizationReport">
+      <wsdl:input message="tns:Supplier_AuthorizationReportSoapIn" />
+      <wsdl:output message="tns:Supplier_AuthorizationReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Debit_Credit_note_Report">
+      <wsdl:input message="tns:Debit_Credit_note_ReportSoapIn" />
+      <wsdl:output message="tns:Debit_Credit_note_ReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_incentiveheadstaff_percent">
+      <wsdl:input message="tns:Add_incentiveheadstaff_percentSoapIn" />
+      <wsdl:output message="tns:Add_incentiveheadstaff_percentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadHeadPercentDetails">
+      <wsdl:input message="tns:LoadHeadPercentDetailsSoapIn" />
+      <wsdl:output message="tns:LoadHeadPercentDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadHeadPercentDetails_ID">
+      <wsdl:input message="tns:LoadHeadPercentDetails_IDSoapIn" />
+      <wsdl:output message="tns:LoadHeadPercentDetails_IDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadIncentive_dep_staff">
+      <wsdl:input message="tns:LoadIncentive_dep_staffSoapIn" />
+      <wsdl:output message="tns:LoadIncentive_dep_staffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStaffAccountDetails">
+      <wsdl:input message="tns:UpdateStaffAccountDetailsSoapIn" />
+      <wsdl:output message="tns:UpdateStaffAccountDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadMicrolab_incentive">
+      <wsdl:input message="tns:LoadMicrolab_incentiveSoapIn" />
+      <wsdl:output message="tns:LoadMicrolab_incentiveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fill_pharmacymargin">
+      <wsdl:input message="tns:Fill_pharmacymarginSoapIn" />
+      <wsdl:output message="tns:Fill_pharmacymarginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPharmacymargin">
+      <wsdl:input message="tns:AddPharmacymarginSoapIn" />
+      <wsdl:output message="tns:AddPharmacymarginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Agewise_stockReport">
+      <wsdl:input message="tns:Agewise_stockReportSoapIn" />
+      <wsdl:output message="tns:Agewise_stockReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Optical_Invoice_confirmation">
+      <wsdl:input message="tns:Optical_Invoice_confirmationSoapIn" />
+      <wsdl:output message="tns:Optical_Invoice_confirmationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ItemTransfer_tostore">
+      <wsdl:input message="tns:ItemTransfer_tostoreSoapIn" />
+      <wsdl:output message="tns:ItemTransfer_tostoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Agewise_stock_criteria">
+      <wsdl:input message="tns:Agewise_stock_criteriaSoapIn" />
+      <wsdl:output message="tns:Agewise_stock_criteriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VendorsList">
+      <wsdl:input message="tns:VendorsListSoapIn" />
+      <wsdl:output message="tns:VendorsListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Vendor_Ledgerdetails">
+      <wsdl:input message="tns:Vendor_LedgerdetailsSoapIn" />
+      <wsdl:output message="tns:Vendor_LedgerdetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Pharma_punch_alert">
+      <wsdl:input message="tns:Pharma_punch_alertSoapIn" />
+      <wsdl:output message="tns:Pharma_punch_alertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_PRNo_StatusChange">
+      <wsdl:input message="tns:Add_PRNo_StatusChangeSoapIn" />
+      <wsdl:output message="tns:Add_PRNo_StatusChangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Pr_No_details">
+      <wsdl:input message="tns:Pr_No_detailsSoapIn" />
+      <wsdl:output message="tns:Pr_No_detailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Accounts_PR_Status_select">
+      <wsdl:input message="tns:Accounts_PR_Status_selectSoapIn" />
+      <wsdl:output message="tns:Accounts_PR_Status_selectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Accounts_PR_Status_transfer_select">
+      <wsdl:input message="tns:Accounts_PR_Status_transfer_selectSoapIn" />
+      <wsdl:output message="tns:Accounts_PR_Status_transfer_selectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_AccountsPRStatus">
+      <wsdl:input message="tns:Delete_AccountsPRStatusSoapIn" />
+      <wsdl:output message="tns:Delete_AccountsPRStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_AccountsPRStatus">
+      <wsdl:input message="tns:Add_AccountsPRStatusSoapIn" />
+      <wsdl:output message="tns:Add_AccountsPRStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_AccountsPRStatus_receive">
+      <wsdl:input message="tns:Update_AccountsPRStatus_receiveSoapIn" />
+      <wsdl:output message="tns:Update_AccountsPRStatus_receiveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Accounts_CR_transfer_Report">
+      <wsdl:input message="tns:Accounts_CR_transfer_ReportSoapIn" />
+      <wsdl:output message="tns:Accounts_CR_transfer_ReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Accounts_CR_Receive_Report">
+      <wsdl:input message="tns:Accounts_CR_Receive_ReportSoapIn" />
+      <wsdl:output message="tns:Accounts_CR_Receive_ReportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ClinicServiceSoap" type="tns:ClinicServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Validate_TaskLogin">
+      <soap:operation soapAction="http://tempuri.org/Validate_TaskLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_medicines">
+      <soap:operation soapAction="http://tempuri.org/List_medicines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_Clinic_MicrolabList">
+      <soap:operation soapAction="http://tempuri.org/Hospital_Clinic_MicrolabList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_pharmacy_Branch">
+      <soap:operation soapAction="http://tempuri.org/Hospital_pharmacy_Branch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListClinic">
+      <soap:operation soapAction="http://tempuri.org/ListClinic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListClinic_Microlab">
+      <soap:operation soapAction="http://tempuri.org/ListClinic_Microlab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MacareClinic_Microlab">
+      <soap:operation soapAction="http://tempuri.org/MacareClinic_Microlab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listdepartment">
+      <soap:operation soapAction="http://tempuri.org/Listdepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPharmacy">
+      <soap:operation soapAction="http://tempuri.org/ListPharmacy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_Departments">
+      <soap:operation soapAction="http://tempuri.org/Hospital_Departments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListDoctors_VisitCount">
+      <soap:operation soapAction="http://tempuri.org/ListDoctors_VisitCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListDoctors_VisitCount_Datewise">
+      <soap:operation soapAction="http://tempuri.org/ListDoctors_VisitCount_Datewise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_Visit_Doctorwise">
+      <soap:operation soapAction="http://tempuri.org/List_Visit_Doctorwise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatientsList_NotVisitPharma">
+      <soap:operation soapAction="http://tempuri.org/PatientsList_NotVisitPharma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_calc">
+      <soap:operation soapAction="http://tempuri.org/Incentive_calc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_calcMicrolab">
+      <soap:operation soapAction="http://tempuri.org/Incentive_calcMicrolab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_Billvalue">
+      <soap:operation soapAction="http://tempuri.org/MIS_SalesDecr_Billvalue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_visitcount">
+      <soap:operation soapAction="http://tempuri.org/MIS_SalesDecr_visitcount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_noncount">
+      <soap:operation soapAction="http://tempuri.org/MIS_SalesDecr_noncount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_totpat">
+      <soap:operation soapAction="http://tempuri.org/MIS_SalesDecr_totpat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_PharmacyBillvalue">
+      <soap:operation soapAction="http://tempuri.org/MIS_PharmacyBillvalue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_TotalCount">
+      <soap:operation soapAction="http://tempuri.org/MIS_SalesDecr_TotalCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_ValueRPT">
+      <soap:operation soapAction="http://tempuri.org/MIS_SalesDecr_ValueRPT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_PurchaseRPT">
+      <soap:operation soapAction="http://tempuri.org/MIS_PurchaseRPT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesValueLoss_Report">
+      <soap:operation soapAction="http://tempuri.org/MIS_SalesValueLoss_Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesRPT">
+      <soap:operation soapAction="http://tempuri.org/MIS_SalesRPT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuppliersList">
+      <soap:operation soapAction="http://tempuri.org/SuppliersList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUsage">
+      <soap:operation soapAction="http://tempuri.org/updateUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddincentiveHead">
+      <soap:operation soapAction="http://tempuri.org/AddincentiveHead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListIncentiveHead">
+      <soap:operation soapAction="http://tempuri.org/ListIncentiveHead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddincentiveSubHead">
+      <soap:operation soapAction="http://tempuri.org/AddincentiveSubHead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_StaffList">
+      <soap:operation soapAction="http://tempuri.org/Incentive_StaffList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListIncentiveStaff">
+      <soap:operation soapAction="http://tempuri.org/ListIncentiveStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListIncentiveSubHead">
+      <soap:operation soapAction="http://tempuri.org/ListIncentiveSubHead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddincentivePercent">
+      <soap:operation soapAction="http://tempuri.org/AddincentivePercent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddincentiveAmountPercent">
+      <soap:operation soapAction="http://tempuri.org/AddincentiveAmountPercent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPercentage">
+      <soap:operation soapAction="http://tempuri.org/ListPercentage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListMainDepartment">
+      <soap:operation soapAction="http://tempuri.org/ListMainDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListDepartment_Staff">
+      <soap:operation soapAction="http://tempuri.org/ListDepartment_Staff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListDepartment_Staffcode">
+      <soap:operation soapAction="http://tempuri.org/ListDepartment_Staffcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveData_details">
+      <soap:operation soapAction="http://tempuri.org/IncentiveData_details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_details">
+      <soap:operation soapAction="http://tempuri.org/Incentive_details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PunchingStaff_List">
+      <soap:operation soapAction="http://tempuri.org/PunchingStaff_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveStaff_ListAmount">
+      <soap:operation soapAction="http://tempuri.org/IncentiveStaff_ListAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveHeadAmount_details">
+      <soap:operation soapAction="http://tempuri.org/IncentiveHeadAmount_details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveStaffAmount_details">
+      <soap:operation soapAction="http://tempuri.org/IncentiveStaffAmount_details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveMicrolabStaffAmount_details">
+      <soap:operation soapAction="http://tempuri.org/IncentiveMicrolabStaffAmount_details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveAmount_reportHead">
+      <soap:operation soapAction="http://tempuri.org/IncentiveAmount_reportHead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveAmount_reportstaff">
+      <soap:operation soapAction="http://tempuri.org/IncentiveAmount_reportstaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveMonthlyCollection_details">
+      <soap:operation soapAction="http://tempuri.org/IncentiveMonthlyCollection_details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_assignstaff">
+      <soap:operation soapAction="http://tempuri.org/Incentive_assignstaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_calc_phase3">
+      <soap:operation soapAction="http://tempuri.org/Incentive_calc_phase3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_calcamount_phase3">
+      <soap:operation soapAction="http://tempuri.org/Incentive_calcamount_phase3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabBilldetails">
+      <soap:operation soapAction="http://tempuri.org/LabBilldetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IndentReport">
+      <soap:operation soapAction="http://tempuri.org/IndentReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transfered_PendingRpt">
+      <soap:operation soapAction="http://tempuri.org/Transfered_PendingRpt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_IndentReport">
+      <soap:operation soapAction="http://tempuri.org/MIS_IndentReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCamp">
+      <soap:operation soapAction="http://tempuri.org/AddCamp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCampPatient">
+      <soap:operation soapAction="http://tempuri.org/AddCampPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Campdetails">
+      <soap:operation soapAction="http://tempuri.org/Campdetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Campdetails_ID">
+      <soap:operation soapAction="http://tempuri.org/Campdetails_ID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCamp">
+      <soap:operation soapAction="http://tempuri.org/UpdateCamp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCampPatient">
+      <soap:operation soapAction="http://tempuri.org/UpdateCampPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CampPatientdetails_ID">
+      <soap:operation soapAction="http://tempuri.org/CampPatientdetails_ID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CampPatientdetails_campId">
+      <soap:operation soapAction="http://tempuri.org/CampPatientdetails_campId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CampPatient_ConversionReport">
+      <soap:operation soapAction="http://tempuri.org/CampPatient_ConversionReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Allcamp_ConversionReport">
+      <soap:operation soapAction="http://tempuri.org/Allcamp_ConversionReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Supplier_AuthorizationReport">
+      <soap:operation soapAction="http://tempuri.org/Supplier_AuthorizationReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Debit_Credit_note_Report">
+      <soap:operation soapAction="http://tempuri.org/Debit_Credit_note_Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_incentiveheadstaff_percent">
+      <soap:operation soapAction="http://tempuri.org/Add_incentiveheadstaff_percent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadHeadPercentDetails">
+      <soap:operation soapAction="http://tempuri.org/LoadHeadPercentDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadHeadPercentDetails_ID">
+      <soap:operation soapAction="http://tempuri.org/LoadHeadPercentDetails_ID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadIncentive_dep_staff">
+      <soap:operation soapAction="http://tempuri.org/LoadIncentive_dep_staff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStaffAccountDetails">
+      <soap:operation soapAction="http://tempuri.org/UpdateStaffAccountDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMicrolab_incentive">
+      <soap:operation soapAction="http://tempuri.org/LoadMicrolab_incentive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fill_pharmacymargin">
+      <soap:operation soapAction="http://tempuri.org/Fill_pharmacymargin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPharmacymargin">
+      <soap:operation soapAction="http://tempuri.org/AddPharmacymargin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agewise_stockReport">
+      <soap:operation soapAction="http://tempuri.org/Agewise_stockReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Optical_Invoice_confirmation">
+      <soap:operation soapAction="http://tempuri.org/Optical_Invoice_confirmation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ItemTransfer_tostore">
+      <soap:operation soapAction="http://tempuri.org/ItemTransfer_tostore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agewise_stock_criteria">
+      <soap:operation soapAction="http://tempuri.org/Agewise_stock_criteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VendorsList">
+      <soap:operation soapAction="http://tempuri.org/VendorsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Vendor_Ledgerdetails">
+      <soap:operation soapAction="http://tempuri.org/Vendor_Ledgerdetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pharma_punch_alert">
+      <soap:operation soapAction="http://tempuri.org/Pharma_punch_alert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_PRNo_StatusChange">
+      <soap:operation soapAction="http://tempuri.org/Add_PRNo_StatusChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pr_No_details">
+      <soap:operation soapAction="http://tempuri.org/Pr_No_details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Accounts_PR_Status_select">
+      <soap:operation soapAction="http://tempuri.org/Accounts_PR_Status_select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Accounts_PR_Status_transfer_select">
+      <soap:operation soapAction="http://tempuri.org/Accounts_PR_Status_transfer_select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_AccountsPRStatus">
+      <soap:operation soapAction="http://tempuri.org/Delete_AccountsPRStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_AccountsPRStatus">
+      <soap:operation soapAction="http://tempuri.org/Add_AccountsPRStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_AccountsPRStatus_receive">
+      <soap:operation soapAction="http://tempuri.org/Update_AccountsPRStatus_receive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Accounts_CR_transfer_Report">
+      <soap:operation soapAction="http://tempuri.org/Accounts_CR_transfer_Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Accounts_CR_Receive_Report">
+      <soap:operation soapAction="http://tempuri.org/Accounts_CR_Receive_Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ClinicServiceSoap12" type="tns:ClinicServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Validate_TaskLogin">
+      <soap12:operation soapAction="http://tempuri.org/Validate_TaskLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_medicines">
+      <soap12:operation soapAction="http://tempuri.org/List_medicines" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_Clinic_MicrolabList">
+      <soap12:operation soapAction="http://tempuri.org/Hospital_Clinic_MicrolabList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_pharmacy_Branch">
+      <soap12:operation soapAction="http://tempuri.org/Hospital_pharmacy_Branch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListClinic">
+      <soap12:operation soapAction="http://tempuri.org/ListClinic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListClinic_Microlab">
+      <soap12:operation soapAction="http://tempuri.org/ListClinic_Microlab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MacareClinic_Microlab">
+      <soap12:operation soapAction="http://tempuri.org/MacareClinic_Microlab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listdepartment">
+      <soap12:operation soapAction="http://tempuri.org/Listdepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPharmacy">
+      <soap12:operation soapAction="http://tempuri.org/ListPharmacy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_Departments">
+      <soap12:operation soapAction="http://tempuri.org/Hospital_Departments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListDoctors_VisitCount">
+      <soap12:operation soapAction="http://tempuri.org/ListDoctors_VisitCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListDoctors_VisitCount_Datewise">
+      <soap12:operation soapAction="http://tempuri.org/ListDoctors_VisitCount_Datewise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_Visit_Doctorwise">
+      <soap12:operation soapAction="http://tempuri.org/List_Visit_Doctorwise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PatientsList_NotVisitPharma">
+      <soap12:operation soapAction="http://tempuri.org/PatientsList_NotVisitPharma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_calc">
+      <soap12:operation soapAction="http://tempuri.org/Incentive_calc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_calcMicrolab">
+      <soap12:operation soapAction="http://tempuri.org/Incentive_calcMicrolab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_Billvalue">
+      <soap12:operation soapAction="http://tempuri.org/MIS_SalesDecr_Billvalue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_visitcount">
+      <soap12:operation soapAction="http://tempuri.org/MIS_SalesDecr_visitcount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_noncount">
+      <soap12:operation soapAction="http://tempuri.org/MIS_SalesDecr_noncount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_totpat">
+      <soap12:operation soapAction="http://tempuri.org/MIS_SalesDecr_totpat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_PharmacyBillvalue">
+      <soap12:operation soapAction="http://tempuri.org/MIS_PharmacyBillvalue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_TotalCount">
+      <soap12:operation soapAction="http://tempuri.org/MIS_SalesDecr_TotalCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesDecr_ValueRPT">
+      <soap12:operation soapAction="http://tempuri.org/MIS_SalesDecr_ValueRPT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_PurchaseRPT">
+      <soap12:operation soapAction="http://tempuri.org/MIS_PurchaseRPT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesValueLoss_Report">
+      <soap12:operation soapAction="http://tempuri.org/MIS_SalesValueLoss_Report" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_SalesRPT">
+      <soap12:operation soapAction="http://tempuri.org/MIS_SalesRPT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuppliersList">
+      <soap12:operation soapAction="http://tempuri.org/SuppliersList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUsage">
+      <soap12:operation soapAction="http://tempuri.org/updateUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddincentiveHead">
+      <soap12:operation soapAction="http://tempuri.org/AddincentiveHead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListIncentiveHead">
+      <soap12:operation soapAction="http://tempuri.org/ListIncentiveHead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddincentiveSubHead">
+      <soap12:operation soapAction="http://tempuri.org/AddincentiveSubHead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_StaffList">
+      <soap12:operation soapAction="http://tempuri.org/Incentive_StaffList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListIncentiveStaff">
+      <soap12:operation soapAction="http://tempuri.org/ListIncentiveStaff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListIncentiveSubHead">
+      <soap12:operation soapAction="http://tempuri.org/ListIncentiveSubHead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddincentivePercent">
+      <soap12:operation soapAction="http://tempuri.org/AddincentivePercent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddincentiveAmountPercent">
+      <soap12:operation soapAction="http://tempuri.org/AddincentiveAmountPercent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPercentage">
+      <soap12:operation soapAction="http://tempuri.org/ListPercentage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListMainDepartment">
+      <soap12:operation soapAction="http://tempuri.org/ListMainDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListDepartment_Staff">
+      <soap12:operation soapAction="http://tempuri.org/ListDepartment_Staff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListDepartment_Staffcode">
+      <soap12:operation soapAction="http://tempuri.org/ListDepartment_Staffcode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveData_details">
+      <soap12:operation soapAction="http://tempuri.org/IncentiveData_details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_details">
+      <soap12:operation soapAction="http://tempuri.org/Incentive_details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PunchingStaff_List">
+      <soap12:operation soapAction="http://tempuri.org/PunchingStaff_List" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveStaff_ListAmount">
+      <soap12:operation soapAction="http://tempuri.org/IncentiveStaff_ListAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveHeadAmount_details">
+      <soap12:operation soapAction="http://tempuri.org/IncentiveHeadAmount_details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveStaffAmount_details">
+      <soap12:operation soapAction="http://tempuri.org/IncentiveStaffAmount_details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveMicrolabStaffAmount_details">
+      <soap12:operation soapAction="http://tempuri.org/IncentiveMicrolabStaffAmount_details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveAmount_reportHead">
+      <soap12:operation soapAction="http://tempuri.org/IncentiveAmount_reportHead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveAmount_reportstaff">
+      <soap12:operation soapAction="http://tempuri.org/IncentiveAmount_reportstaff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncentiveMonthlyCollection_details">
+      <soap12:operation soapAction="http://tempuri.org/IncentiveMonthlyCollection_details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_assignstaff">
+      <soap12:operation soapAction="http://tempuri.org/Incentive_assignstaff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_calc_phase3">
+      <soap12:operation soapAction="http://tempuri.org/Incentive_calc_phase3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incentive_calcamount_phase3">
+      <soap12:operation soapAction="http://tempuri.org/Incentive_calcamount_phase3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabBilldetails">
+      <soap12:operation soapAction="http://tempuri.org/LabBilldetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IndentReport">
+      <soap12:operation soapAction="http://tempuri.org/IndentReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transfered_PendingRpt">
+      <soap12:operation soapAction="http://tempuri.org/Transfered_PendingRpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MIS_IndentReport">
+      <soap12:operation soapAction="http://tempuri.org/MIS_IndentReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCamp">
+      <soap12:operation soapAction="http://tempuri.org/AddCamp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCampPatient">
+      <soap12:operation soapAction="http://tempuri.org/AddCampPatient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Campdetails">
+      <soap12:operation soapAction="http://tempuri.org/Campdetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Campdetails_ID">
+      <soap12:operation soapAction="http://tempuri.org/Campdetails_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCamp">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCamp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCampPatient">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCampPatient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CampPatientdetails_ID">
+      <soap12:operation soapAction="http://tempuri.org/CampPatientdetails_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CampPatientdetails_campId">
+      <soap12:operation soapAction="http://tempuri.org/CampPatientdetails_campId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CampPatient_ConversionReport">
+      <soap12:operation soapAction="http://tempuri.org/CampPatient_ConversionReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Allcamp_ConversionReport">
+      <soap12:operation soapAction="http://tempuri.org/Allcamp_ConversionReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Supplier_AuthorizationReport">
+      <soap12:operation soapAction="http://tempuri.org/Supplier_AuthorizationReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Debit_Credit_note_Report">
+      <soap12:operation soapAction="http://tempuri.org/Debit_Credit_note_Report" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_incentiveheadstaff_percent">
+      <soap12:operation soapAction="http://tempuri.org/Add_incentiveheadstaff_percent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadHeadPercentDetails">
+      <soap12:operation soapAction="http://tempuri.org/LoadHeadPercentDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadHeadPercentDetails_ID">
+      <soap12:operation soapAction="http://tempuri.org/LoadHeadPercentDetails_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadIncentive_dep_staff">
+      <soap12:operation soapAction="http://tempuri.org/LoadIncentive_dep_staff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStaffAccountDetails">
+      <soap12:operation soapAction="http://tempuri.org/UpdateStaffAccountDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMicrolab_incentive">
+      <soap12:operation soapAction="http://tempuri.org/LoadMicrolab_incentive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fill_pharmacymargin">
+      <soap12:operation soapAction="http://tempuri.org/Fill_pharmacymargin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPharmacymargin">
+      <soap12:operation soapAction="http://tempuri.org/AddPharmacymargin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agewise_stockReport">
+      <soap12:operation soapAction="http://tempuri.org/Agewise_stockReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Optical_Invoice_confirmation">
+      <soap12:operation soapAction="http://tempuri.org/Optical_Invoice_confirmation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ItemTransfer_tostore">
+      <soap12:operation soapAction="http://tempuri.org/ItemTransfer_tostore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agewise_stock_criteria">
+      <soap12:operation soapAction="http://tempuri.org/Agewise_stock_criteria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VendorsList">
+      <soap12:operation soapAction="http://tempuri.org/VendorsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Vendor_Ledgerdetails">
+      <soap12:operation soapAction="http://tempuri.org/Vendor_Ledgerdetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pharma_punch_alert">
+      <soap12:operation soapAction="http://tempuri.org/Pharma_punch_alert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_PRNo_StatusChange">
+      <soap12:operation soapAction="http://tempuri.org/Add_PRNo_StatusChange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pr_No_details">
+      <soap12:operation soapAction="http://tempuri.org/Pr_No_details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Accounts_PR_Status_select">
+      <soap12:operation soapAction="http://tempuri.org/Accounts_PR_Status_select" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Accounts_PR_Status_transfer_select">
+      <soap12:operation soapAction="http://tempuri.org/Accounts_PR_Status_transfer_select" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_AccountsPRStatus">
+      <soap12:operation soapAction="http://tempuri.org/Delete_AccountsPRStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_AccountsPRStatus">
+      <soap12:operation soapAction="http://tempuri.org/Add_AccountsPRStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_AccountsPRStatus_receive">
+      <soap12:operation soapAction="http://tempuri.org/Update_AccountsPRStatus_receive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Accounts_CR_transfer_Report">
+      <soap12:operation soapAction="http://tempuri.org/Accounts_CR_transfer_Report" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Accounts_CR_Receive_Report">
+      <soap12:operation soapAction="http://tempuri.org/Accounts_CR_Receive_Report" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClinicService">
+    <wsdl:port name="ClinicServiceSoap" binding="tns:ClinicServiceSoap">
+      <soap:address location="https://macare.mactech.net.in/MACARE_MIS_Service/PharmaService/ClinicService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ClinicServiceSoap12" binding="tns:ClinicServiceSoap12">
+      <soap12:address location="https://macare.mactech.net.in/MACARE_MIS_Service/PharmaService/ClinicService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

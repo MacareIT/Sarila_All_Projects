@@ -1,0 +1,1540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Get_login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_loginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_depertment">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_depertmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_depertmentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_grid">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_gridResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_gridResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_gridbyid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_gridbyidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_gridbyidResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmpNames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmpNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmpNamesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_empcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_empcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_empcodeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Compliance_Reg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dept_head" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Compliance_RegResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insert_Compliance_RegResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Compliance_Calendar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Com_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comp_Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="duratn_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="due_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="alert_date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Compliance_CalendarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insert_Compliance_CalendarResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_grid_Calendar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_grid_CalendarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_grid_CalendarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Compliance_Calendar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="com_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Com_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comp_Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="duratn_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="due_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="alert_date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Compliance_CalendarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update_Compliance_CalendarResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete_Compliance_Calendar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="com_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete_Compliance_CalendarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Delete_Compliance_CalendarResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Compliance_type">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Compliance_typeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_Compliance_typeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Compliance_REG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="com_type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Compliance_REGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_Compliance_REGResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Compliance_Dashboard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Compliance_DashboardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_Compliance_DashboardResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Compliance_internal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="com_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="entered_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entered_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="verified_head" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="head_verify_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="verified_cs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cs_verify_date" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="comp_status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="remarks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attachment1" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="file_name1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contenttype1" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Compliance_internalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insert_Compliance_internalResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Compliance_statutory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="com_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="entered_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entered_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="verified_head" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="head_verify_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="verified_cs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cs_verify_date" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="comp_status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="remarks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attachment1" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="file_name1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contenttype1" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Compliance_statutoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insert_Compliance_statutoryResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_Compliance_status">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="com_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_Compliance_statusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="update_Compliance_statusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_com_Register">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="com_type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_com_RegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_com_RegisterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_file">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="com_reg_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="type_" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_fileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_fileResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_for_HeadVerifn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="com_type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_for_HeadVerifnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_for_HeadVerifnResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_for_CSVerifn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="com_type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_for_CSVerifnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_for_CSVerifnResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete_Compliance_Register">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="com_reg_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete_Compliance_RegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Delete_Compliance_RegisterResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_Compliance_status_back">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="com_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_Compliance_status_backResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="update_Compliance_status_backResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Verify_Head">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="com_reg_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="verified_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Verify_HeadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update_Verify_HeadResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Verify_CS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="com_reg_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="verified_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Verify_CSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update_Verify_CSResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Head_dept">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="emp_code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_Head_deptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_Head_deptResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_for_Report">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="com_type" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dept_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_for_ReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_for_ReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_Compliance_afterverify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="com_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="due_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="alert_on" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_Compliance_afterverifyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="update_Compliance_afterverifyResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_AgreementRenewal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="agrmnt_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="agrmnt_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agrmnt_party" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date_of_exectn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="next_renewal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="first_alert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="second_alert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="third_alert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_on" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_AgreementRenewalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insert_AgreementRenewalResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_AgreementRenewal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="agrmnt_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="agrmnt_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agrmnt_party" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date_of_exectn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="next_renewal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="first_alert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="second_alert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="third_alert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_on" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_AgreementRenewalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="update_AgreementRenewalResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_grid_Agrmnt_renewal">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_grid_Agrmnt_renewalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_grid_Agrmnt_renewalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Usage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_UsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insert_UsageResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_loginSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_login" />
+  </wsdl:message>
+  <wsdl:message name="Get_loginSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_depertmentSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_depertment" />
+  </wsdl:message>
+  <wsdl:message name="Get_depertmentSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_depertmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_gridSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_grid" />
+  </wsdl:message>
+  <wsdl:message name="Get_gridSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_gridResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_gridbyidSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_gridbyid" />
+  </wsdl:message>
+  <wsdl:message name="Get_gridbyidSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_gridbyidResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmpNames" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmpNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_empcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_empcode" />
+  </wsdl:message>
+  <wsdl:message name="Get_empcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_empcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Compliance_RegSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_Compliance_Reg" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Compliance_RegSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_Compliance_RegResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Compliance_CalendarSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_Compliance_Calendar" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Compliance_CalendarSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_Compliance_CalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_grid_CalendarSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_grid_Calendar" />
+  </wsdl:message>
+  <wsdl:message name="Get_grid_CalendarSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_grid_CalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_Compliance_CalendarSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_Compliance_Calendar" />
+  </wsdl:message>
+  <wsdl:message name="Update_Compliance_CalendarSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_Compliance_CalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Delete_Compliance_CalendarSoapIn">
+    <wsdl:part name="parameters" element="tns:Delete_Compliance_Calendar" />
+  </wsdl:message>
+  <wsdl:message name="Delete_Compliance_CalendarSoapOut">
+    <wsdl:part name="parameters" element="tns:Delete_Compliance_CalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_Compliance_typeSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Compliance_type" />
+  </wsdl:message>
+  <wsdl:message name="Select_Compliance_typeSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_Compliance_typeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_Compliance_REGSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Compliance_REG" />
+  </wsdl:message>
+  <wsdl:message name="Select_Compliance_REGSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_Compliance_REGResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_Compliance_DashboardSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Compliance_Dashboard" />
+  </wsdl:message>
+  <wsdl:message name="Select_Compliance_DashboardSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_Compliance_DashboardResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Compliance_internalSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_Compliance_internal" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Compliance_internalSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_Compliance_internalResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Compliance_statutorySoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_Compliance_statutory" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Compliance_statutorySoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_Compliance_statutoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="update_Compliance_statusSoapIn">
+    <wsdl:part name="parameters" element="tns:update_Compliance_status" />
+  </wsdl:message>
+  <wsdl:message name="update_Compliance_statusSoapOut">
+    <wsdl:part name="parameters" element="tns:update_Compliance_statusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_com_RegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_com_Register" />
+  </wsdl:message>
+  <wsdl:message name="Select_com_RegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_com_RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_fileSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_file" />
+  </wsdl:message>
+  <wsdl:message name="Get_fileSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_fileResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_for_HeadVerifnSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_for_HeadVerifn" />
+  </wsdl:message>
+  <wsdl:message name="Select_for_HeadVerifnSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_for_HeadVerifnResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_for_CSVerifnSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_for_CSVerifn" />
+  </wsdl:message>
+  <wsdl:message name="Select_for_CSVerifnSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_for_CSVerifnResponse" />
+  </wsdl:message>
+  <wsdl:message name="Delete_Compliance_RegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:Delete_Compliance_Register" />
+  </wsdl:message>
+  <wsdl:message name="Delete_Compliance_RegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:Delete_Compliance_RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="update_Compliance_status_backSoapIn">
+    <wsdl:part name="parameters" element="tns:update_Compliance_status_back" />
+  </wsdl:message>
+  <wsdl:message name="update_Compliance_status_backSoapOut">
+    <wsdl:part name="parameters" element="tns:update_Compliance_status_backResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_Verify_HeadSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_Verify_Head" />
+  </wsdl:message>
+  <wsdl:message name="Update_Verify_HeadSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_Verify_HeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_Verify_CSSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_Verify_CS" />
+  </wsdl:message>
+  <wsdl:message name="Update_Verify_CSSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_Verify_CSResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_Head_deptSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_Head_dept" />
+  </wsdl:message>
+  <wsdl:message name="Select_Head_deptSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_Head_deptResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_for_ReportSoapIn">
+    <wsdl:part name="parameters" element="tns:Select_for_Report" />
+  </wsdl:message>
+  <wsdl:message name="Select_for_ReportSoapOut">
+    <wsdl:part name="parameters" element="tns:Select_for_ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="update_Compliance_afterverifySoapIn">
+    <wsdl:part name="parameters" element="tns:update_Compliance_afterverify" />
+  </wsdl:message>
+  <wsdl:message name="update_Compliance_afterverifySoapOut">
+    <wsdl:part name="parameters" element="tns:update_Compliance_afterverifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_AgreementRenewalSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_AgreementRenewal" />
+  </wsdl:message>
+  <wsdl:message name="Insert_AgreementRenewalSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_AgreementRenewalResponse" />
+  </wsdl:message>
+  <wsdl:message name="update_AgreementRenewalSoapIn">
+    <wsdl:part name="parameters" element="tns:update_AgreementRenewal" />
+  </wsdl:message>
+  <wsdl:message name="update_AgreementRenewalSoapOut">
+    <wsdl:part name="parameters" element="tns:update_AgreementRenewalResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_grid_Agrmnt_renewalSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_grid_Agrmnt_renewal" />
+  </wsdl:message>
+  <wsdl:message name="Get_grid_Agrmnt_renewalSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_grid_Agrmnt_renewalResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_UsageSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_Usage" />
+  </wsdl:message>
+  <wsdl:message name="Insert_UsageSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_UsageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService_Compliance_RegisterSoap">
+    <wsdl:operation name="Get_login">
+      <wsdl:input message="tns:Get_loginSoapIn" />
+      <wsdl:output message="tns:Get_loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_depertment">
+      <wsdl:input message="tns:Get_depertmentSoapIn" />
+      <wsdl:output message="tns:Get_depertmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_grid">
+      <wsdl:input message="tns:Get_gridSoapIn" />
+      <wsdl:output message="tns:Get_gridSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_gridbyid">
+      <wsdl:input message="tns:Get_gridbyidSoapIn" />
+      <wsdl:output message="tns:Get_gridbyidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpNames">
+      <wsdl:input message="tns:GetEmpNamesSoapIn" />
+      <wsdl:output message="tns:GetEmpNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_empcode">
+      <wsdl:input message="tns:Get_empcodeSoapIn" />
+      <wsdl:output message="tns:Get_empcodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Compliance_Reg">
+      <wsdl:input message="tns:Insert_Compliance_RegSoapIn" />
+      <wsdl:output message="tns:Insert_Compliance_RegSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Compliance_Calendar">
+      <wsdl:input message="tns:Insert_Compliance_CalendarSoapIn" />
+      <wsdl:output message="tns:Insert_Compliance_CalendarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_grid_Calendar">
+      <wsdl:input message="tns:Get_grid_CalendarSoapIn" />
+      <wsdl:output message="tns:Get_grid_CalendarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Compliance_Calendar">
+      <wsdl:input message="tns:Update_Compliance_CalendarSoapIn" />
+      <wsdl:output message="tns:Update_Compliance_CalendarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_Compliance_Calendar">
+      <wsdl:input message="tns:Delete_Compliance_CalendarSoapIn" />
+      <wsdl:output message="tns:Delete_Compliance_CalendarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Compliance_type">
+      <wsdl:input message="tns:Select_Compliance_typeSoapIn" />
+      <wsdl:output message="tns:Select_Compliance_typeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Compliance_REG">
+      <wsdl:input message="tns:Select_Compliance_REGSoapIn" />
+      <wsdl:output message="tns:Select_Compliance_REGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Compliance_Dashboard">
+      <wsdl:input message="tns:Select_Compliance_DashboardSoapIn" />
+      <wsdl:output message="tns:Select_Compliance_DashboardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Compliance_internal">
+      <wsdl:input message="tns:Insert_Compliance_internalSoapIn" />
+      <wsdl:output message="tns:Insert_Compliance_internalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Compliance_statutory">
+      <wsdl:input message="tns:Insert_Compliance_statutorySoapIn" />
+      <wsdl:output message="tns:Insert_Compliance_statutorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update_Compliance_status">
+      <wsdl:input message="tns:update_Compliance_statusSoapIn" />
+      <wsdl:output message="tns:update_Compliance_statusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_com_Register">
+      <wsdl:input message="tns:Select_com_RegisterSoapIn" />
+      <wsdl:output message="tns:Select_com_RegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_file">
+      <wsdl:input message="tns:Get_fileSoapIn" />
+      <wsdl:output message="tns:Get_fileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_for_HeadVerifn">
+      <wsdl:input message="tns:Select_for_HeadVerifnSoapIn" />
+      <wsdl:output message="tns:Select_for_HeadVerifnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_for_CSVerifn">
+      <wsdl:input message="tns:Select_for_CSVerifnSoapIn" />
+      <wsdl:output message="tns:Select_for_CSVerifnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_Compliance_Register">
+      <wsdl:input message="tns:Delete_Compliance_RegisterSoapIn" />
+      <wsdl:output message="tns:Delete_Compliance_RegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update_Compliance_status_back">
+      <wsdl:input message="tns:update_Compliance_status_backSoapIn" />
+      <wsdl:output message="tns:update_Compliance_status_backSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Verify_Head">
+      <wsdl:input message="tns:Update_Verify_HeadSoapIn" />
+      <wsdl:output message="tns:Update_Verify_HeadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Verify_CS">
+      <wsdl:input message="tns:Update_Verify_CSSoapIn" />
+      <wsdl:output message="tns:Update_Verify_CSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_Head_dept">
+      <wsdl:input message="tns:Select_Head_deptSoapIn" />
+      <wsdl:output message="tns:Select_Head_deptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_for_Report">
+      <wsdl:input message="tns:Select_for_ReportSoapIn" />
+      <wsdl:output message="tns:Select_for_ReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update_Compliance_afterverify">
+      <wsdl:input message="tns:update_Compliance_afterverifySoapIn" />
+      <wsdl:output message="tns:update_Compliance_afterverifySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_AgreementRenewal">
+      <wsdl:input message="tns:Insert_AgreementRenewalSoapIn" />
+      <wsdl:output message="tns:Insert_AgreementRenewalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update_AgreementRenewal">
+      <wsdl:input message="tns:update_AgreementRenewalSoapIn" />
+      <wsdl:output message="tns:update_AgreementRenewalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_grid_Agrmnt_renewal">
+      <wsdl:input message="tns:Get_grid_Agrmnt_renewalSoapIn" />
+      <wsdl:output message="tns:Get_grid_Agrmnt_renewalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Usage">
+      <wsdl:input message="tns:Insert_UsageSoapIn" />
+      <wsdl:output message="tns:Insert_UsageSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService_Compliance_RegisterSoap" type="tns:WebService_Compliance_RegisterSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_login">
+      <soap:operation soapAction="http://tempuri.org/Get_login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_depertment">
+      <soap:operation soapAction="http://tempuri.org/Get_depertment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_grid">
+      <soap:operation soapAction="http://tempuri.org/Get_grid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_gridbyid">
+      <soap:operation soapAction="http://tempuri.org/Get_gridbyid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpNames">
+      <soap:operation soapAction="http://tempuri.org/GetEmpNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_empcode">
+      <soap:operation soapAction="http://tempuri.org/Get_empcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Compliance_Reg">
+      <soap:operation soapAction="http://tempuri.org/Insert_Compliance_Reg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Compliance_Calendar">
+      <soap:operation soapAction="http://tempuri.org/Insert_Compliance_Calendar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_grid_Calendar">
+      <soap:operation soapAction="http://tempuri.org/Get_grid_Calendar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Compliance_Calendar">
+      <soap:operation soapAction="http://tempuri.org/Update_Compliance_Calendar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_Compliance_Calendar">
+      <soap:operation soapAction="http://tempuri.org/Delete_Compliance_Calendar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Compliance_type">
+      <soap:operation soapAction="http://tempuri.org/Select_Compliance_type" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Compliance_REG">
+      <soap:operation soapAction="http://tempuri.org/Select_Compliance_REG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Compliance_Dashboard">
+      <soap:operation soapAction="http://tempuri.org/Select_Compliance_Dashboard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Compliance_internal">
+      <soap:operation soapAction="http://tempuri.org/Insert_Compliance_internal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Compliance_statutory">
+      <soap:operation soapAction="http://tempuri.org/Insert_Compliance_statutory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_Compliance_status">
+      <soap:operation soapAction="http://tempuri.org/update_Compliance_status" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_com_Register">
+      <soap:operation soapAction="http://tempuri.org/Select_com_Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_file">
+      <soap:operation soapAction="http://tempuri.org/Get_file" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_for_HeadVerifn">
+      <soap:operation soapAction="http://tempuri.org/Select_for_HeadVerifn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_for_CSVerifn">
+      <soap:operation soapAction="http://tempuri.org/Select_for_CSVerifn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_Compliance_Register">
+      <soap:operation soapAction="http://tempuri.org/Delete_Compliance_Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_Compliance_status_back">
+      <soap:operation soapAction="http://tempuri.org/update_Compliance_status_back" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Verify_Head">
+      <soap:operation soapAction="http://tempuri.org/Update_Verify_Head" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Verify_CS">
+      <soap:operation soapAction="http://tempuri.org/Update_Verify_CS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Head_dept">
+      <soap:operation soapAction="http://tempuri.org/Select_Head_dept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_for_Report">
+      <soap:operation soapAction="http://tempuri.org/Select_for_Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_Compliance_afterverify">
+      <soap:operation soapAction="http://tempuri.org/update_Compliance_afterverify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_AgreementRenewal">
+      <soap:operation soapAction="http://tempuri.org/Insert_AgreementRenewal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_AgreementRenewal">
+      <soap:operation soapAction="http://tempuri.org/update_AgreementRenewal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_grid_Agrmnt_renewal">
+      <soap:operation soapAction="http://tempuri.org/Get_grid_Agrmnt_renewal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Usage">
+      <soap:operation soapAction="http://tempuri.org/Insert_Usage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_Compliance_RegisterSoap12" type="tns:WebService_Compliance_RegisterSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_login">
+      <soap12:operation soapAction="http://tempuri.org/Get_login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_depertment">
+      <soap12:operation soapAction="http://tempuri.org/Get_depertment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_grid">
+      <soap12:operation soapAction="http://tempuri.org/Get_grid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_gridbyid">
+      <soap12:operation soapAction="http://tempuri.org/Get_gridbyid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpNames">
+      <soap12:operation soapAction="http://tempuri.org/GetEmpNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_empcode">
+      <soap12:operation soapAction="http://tempuri.org/Get_empcode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Compliance_Reg">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Compliance_Reg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Compliance_Calendar">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Compliance_Calendar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_grid_Calendar">
+      <soap12:operation soapAction="http://tempuri.org/Get_grid_Calendar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Compliance_Calendar">
+      <soap12:operation soapAction="http://tempuri.org/Update_Compliance_Calendar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_Compliance_Calendar">
+      <soap12:operation soapAction="http://tempuri.org/Delete_Compliance_Calendar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Compliance_type">
+      <soap12:operation soapAction="http://tempuri.org/Select_Compliance_type" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Compliance_REG">
+      <soap12:operation soapAction="http://tempuri.org/Select_Compliance_REG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Compliance_Dashboard">
+      <soap12:operation soapAction="http://tempuri.org/Select_Compliance_Dashboard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Compliance_internal">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Compliance_internal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Compliance_statutory">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Compliance_statutory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_Compliance_status">
+      <soap12:operation soapAction="http://tempuri.org/update_Compliance_status" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_com_Register">
+      <soap12:operation soapAction="http://tempuri.org/Select_com_Register" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_file">
+      <soap12:operation soapAction="http://tempuri.org/Get_file" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_for_HeadVerifn">
+      <soap12:operation soapAction="http://tempuri.org/Select_for_HeadVerifn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_for_CSVerifn">
+      <soap12:operation soapAction="http://tempuri.org/Select_for_CSVerifn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_Compliance_Register">
+      <soap12:operation soapAction="http://tempuri.org/Delete_Compliance_Register" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_Compliance_status_back">
+      <soap12:operation soapAction="http://tempuri.org/update_Compliance_status_back" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Verify_Head">
+      <soap12:operation soapAction="http://tempuri.org/Update_Verify_Head" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Verify_CS">
+      <soap12:operation soapAction="http://tempuri.org/Update_Verify_CS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_Head_dept">
+      <soap12:operation soapAction="http://tempuri.org/Select_Head_dept" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_for_Report">
+      <soap12:operation soapAction="http://tempuri.org/Select_for_Report" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_Compliance_afterverify">
+      <soap12:operation soapAction="http://tempuri.org/update_Compliance_afterverify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_AgreementRenewal">
+      <soap12:operation soapAction="http://tempuri.org/Insert_AgreementRenewal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_AgreementRenewal">
+      <soap12:operation soapAction="http://tempuri.org/update_AgreementRenewal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_grid_Agrmnt_renewal">
+      <soap12:operation soapAction="http://tempuri.org/Get_grid_Agrmnt_renewal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Usage">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Usage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService_Compliance_Register">
+    <wsdl:port name="WebService_Compliance_RegisterSoap" binding="tns:WebService_Compliance_RegisterSoap">
+      <soap:address location="https://macare.mactech.net.in/MACARE_MIS_Service/Service_ComplianceRegister/Webservice_Compliance_Register.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService_Compliance_RegisterSoap12" binding="tns:WebService_Compliance_RegisterSoap12">
+      <soap12:address location="https://macare.mactech.net.in/MACARE_MIS_Service/Service_ComplianceRegister/Webservice_Compliance_Register.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,1 @@
+ALTER TABLE compliance_calender modify com_status DEFAULT 'Not Complied'

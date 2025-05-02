@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_Select">
+        <s:complexType />
+      </s:element>
+      <s:element name="Dept_SelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Dept_SelectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Module_InsertUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dept_Id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="module" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="createdby" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Module_InsertUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Module_InsertUpdateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delete_Module">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="module" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delete_ModuleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="delete_ModuleResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Modules_Select">
+        <s:complexType />
+      </s:element>
+      <s:element name="Modules_SelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Modules_SelectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_Module_Log">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="module" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loguser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="logdate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_Module_LogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insert_Module_LogResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Usage_Select">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Usage_SelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usage_SelectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Usage_Select_dtl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Usage_Select_dtlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usage_Select_dtlResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="Dept_SelectSoapIn">
+    <wsdl:part name="parameters" element="tns:Dept_Select" />
+  </wsdl:message>
+  <wsdl:message name="Dept_SelectSoapOut">
+    <wsdl:part name="parameters" element="tns:Dept_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="Module_InsertUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Module_InsertUpdate" />
+  </wsdl:message>
+  <wsdl:message name="Module_InsertUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:Module_InsertUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="delete_ModuleSoapIn">
+    <wsdl:part name="parameters" element="tns:delete_Module" />
+  </wsdl:message>
+  <wsdl:message name="delete_ModuleSoapOut">
+    <wsdl:part name="parameters" element="tns:delete_ModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="Modules_SelectSoapIn">
+    <wsdl:part name="parameters" element="tns:Modules_Select" />
+  </wsdl:message>
+  <wsdl:message name="Modules_SelectSoapOut">
+    <wsdl:part name="parameters" element="tns:Modules_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="insert_Module_LogSoapIn">
+    <wsdl:part name="parameters" element="tns:insert_Module_Log" />
+  </wsdl:message>
+  <wsdl:message name="insert_Module_LogSoapOut">
+    <wsdl:part name="parameters" element="tns:insert_Module_LogResponse" />
+  </wsdl:message>
+  <wsdl:message name="Usage_SelectSoapIn">
+    <wsdl:part name="parameters" element="tns:Usage_Select" />
+  </wsdl:message>
+  <wsdl:message name="Usage_SelectSoapOut">
+    <wsdl:part name="parameters" element="tns:Usage_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="Usage_Select_dtlSoapIn">
+    <wsdl:part name="parameters" element="tns:Usage_Select_dtl" />
+  </wsdl:message>
+  <wsdl:message name="Usage_Select_dtlSoapOut">
+    <wsdl:part name="parameters" element="tns:Usage_Select_dtlResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService_ModuleUsageSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dept_Select">
+      <wsdl:input message="tns:Dept_SelectSoapIn" />
+      <wsdl:output message="tns:Dept_SelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Module_InsertUpdate">
+      <wsdl:input message="tns:Module_InsertUpdateSoapIn" />
+      <wsdl:output message="tns:Module_InsertUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="delete_Module">
+      <wsdl:input message="tns:delete_ModuleSoapIn" />
+      <wsdl:output message="tns:delete_ModuleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Modules_Select">
+      <wsdl:input message="tns:Modules_SelectSoapIn" />
+      <wsdl:output message="tns:Modules_SelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_Module_Log">
+      <wsdl:input message="tns:insert_Module_LogSoapIn" />
+      <wsdl:output message="tns:insert_Module_LogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Usage_Select">
+      <wsdl:input message="tns:Usage_SelectSoapIn" />
+      <wsdl:output message="tns:Usage_SelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Usage_Select_dtl">
+      <wsdl:input message="tns:Usage_Select_dtlSoapIn" />
+      <wsdl:output message="tns:Usage_Select_dtlSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService_ModuleUsageSoap" type="tns:WebService_ModuleUsageSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_Select">
+      <soap:operation soapAction="http://tempuri.org/Dept_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Module_InsertUpdate">
+      <soap:operation soapAction="http://tempuri.org/Module_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete_Module">
+      <soap:operation soapAction="http://tempuri.org/delete_Module" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Modules_Select">
+      <soap:operation soapAction="http://tempuri.org/Modules_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_Module_Log">
+      <soap:operation soapAction="http://tempuri.org/insert_Module_Log" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usage_Select">
+      <soap:operation soapAction="http://tempuri.org/Usage_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usage_Select_dtl">
+      <soap:operation soapAction="http://tempuri.org/Usage_Select_dtl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_ModuleUsageSoap12" type="tns:WebService_ModuleUsageSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_Select">
+      <soap12:operation soapAction="http://tempuri.org/Dept_Select" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Module_InsertUpdate">
+      <soap12:operation soapAction="http://tempuri.org/Module_InsertUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete_Module">
+      <soap12:operation soapAction="http://tempuri.org/delete_Module" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Modules_Select">
+      <soap12:operation soapAction="http://tempuri.org/Modules_Select" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_Module_Log">
+      <soap12:operation soapAction="http://tempuri.org/insert_Module_Log" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usage_Select">
+      <soap12:operation soapAction="http://tempuri.org/Usage_Select" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usage_Select_dtl">
+      <soap12:operation soapAction="http://tempuri.org/Usage_Select_dtl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService_ModuleUsage">
+    <wsdl:port name="WebService_ModuleUsageSoap" binding="tns:WebService_ModuleUsageSoap">
+      <soap:address location="https://macare.mactech.net.in/MACARE_MIS_Service/Webservice_ModuleUsage/WebService_ModuleUsage.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService_ModuleUsageSoap12" binding="tns:WebService_ModuleUsageSoap12">
+      <soap12:address location="https://macare.mactech.net.in/MACARE_MIS_Service/Webservice_ModuleUsage/WebService_ModuleUsage.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

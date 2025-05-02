@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Get_login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_loginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Branch">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_BranchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_BranchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_dapartment">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_dapartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_dapartmentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_quotationdetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="item_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dep_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="product_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="purpose" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_quotationdetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Add_quotationdetailsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_schedule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="venue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="item_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_scheduleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Add_scheduleResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="View_Schedule">
+        <s:complexType />
+      </s:element>
+      <s:element name="View_ScheduleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="View_ScheduleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="View_Details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="venue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="View_DetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="View_DetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_pendingquotations">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_pendingquotationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_pendingquotationsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_rejectedquotations">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_rejectedquotationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_rejectedquotationsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_minutesdtl">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_minutesdtlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_minutesdtlResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_quotationforgeneratepo">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_quotationforgeneratepoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_quotationforgeneratepoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="View_Quotations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="item_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="View_QuotationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="View_QuotationsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="View_IndividualQuotations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="quotation_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="View_IndividualQuotationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="View_IndividualQuotationsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_individualpendingquotations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="item_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_individualpendingquotationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_individualpendingquotationsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_purchaseordrdtl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="quotation_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_purchaseordrdtlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_purchaseordrdtlResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_itemid">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_itemidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_itemidResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_quotation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="item_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="quotation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vendor_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="item_dec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_quotationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Add_quotationResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_minutes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="quotationid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="participants" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="decision" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="negotianted_amt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_minutesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Add_minutesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_nonapprovedminutes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="quotationid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="participants" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="decision" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="negotianted_amt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_nonapprovedminutesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Add_nonapprovedminutesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_negotiatedamt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="quotationid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="negotianted_amt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_negotiatedamtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Add_negotiatedamtResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_totalrequested">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_totalrequestedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Get_totalrequestedResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_totalpending">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_totalpendingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Get_totalpendingResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_totalrejected">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_totalrejectedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Get_totalrejectedResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Quotation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="item_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vendor_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="item_dec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attachment" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="file_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contenttype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="submitted_by" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="submitted_on" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_QuotationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insert_QuotationResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_loginSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_login" />
+  </wsdl:message>
+  <wsdl:message name="Get_loginSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_BranchSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Branch" />
+  </wsdl:message>
+  <wsdl:message name="Get_BranchSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_BranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_dapartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_dapartment" />
+  </wsdl:message>
+  <wsdl:message name="Get_dapartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_dapartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add_quotationdetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Add_quotationdetails" />
+  </wsdl:message>
+  <wsdl:message name="Add_quotationdetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:Add_quotationdetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add_scheduleSoapIn">
+    <wsdl:part name="parameters" element="tns:Add_schedule" />
+  </wsdl:message>
+  <wsdl:message name="Add_scheduleSoapOut">
+    <wsdl:part name="parameters" element="tns:Add_scheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="View_ScheduleSoapIn">
+    <wsdl:part name="parameters" element="tns:View_Schedule" />
+  </wsdl:message>
+  <wsdl:message name="View_ScheduleSoapOut">
+    <wsdl:part name="parameters" element="tns:View_ScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="View_DetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:View_Details" />
+  </wsdl:message>
+  <wsdl:message name="View_DetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:View_DetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_pendingquotationsSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_pendingquotations" />
+  </wsdl:message>
+  <wsdl:message name="Get_pendingquotationsSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_pendingquotationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_rejectedquotationsSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_rejectedquotations" />
+  </wsdl:message>
+  <wsdl:message name="Get_rejectedquotationsSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_rejectedquotationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_minutesdtlSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_minutesdtl" />
+  </wsdl:message>
+  <wsdl:message name="Get_minutesdtlSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_minutesdtlResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_quotationforgeneratepoSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_quotationforgeneratepo" />
+  </wsdl:message>
+  <wsdl:message name="Get_quotationforgeneratepoSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_quotationforgeneratepoResponse" />
+  </wsdl:message>
+  <wsdl:message name="View_QuotationsSoapIn">
+    <wsdl:part name="parameters" element="tns:View_Quotations" />
+  </wsdl:message>
+  <wsdl:message name="View_QuotationsSoapOut">
+    <wsdl:part name="parameters" element="tns:View_QuotationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="View_IndividualQuotationsSoapIn">
+    <wsdl:part name="parameters" element="tns:View_IndividualQuotations" />
+  </wsdl:message>
+  <wsdl:message name="View_IndividualQuotationsSoapOut">
+    <wsdl:part name="parameters" element="tns:View_IndividualQuotationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_individualpendingquotationsSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_individualpendingquotations" />
+  </wsdl:message>
+  <wsdl:message name="Get_individualpendingquotationsSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_individualpendingquotationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_purchaseordrdtlSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_purchaseordrdtl" />
+  </wsdl:message>
+  <wsdl:message name="Get_purchaseordrdtlSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_purchaseordrdtlResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_itemidSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_itemid" />
+  </wsdl:message>
+  <wsdl:message name="Get_itemidSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_itemidResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add_quotationSoapIn">
+    <wsdl:part name="parameters" element="tns:Add_quotation" />
+  </wsdl:message>
+  <wsdl:message name="Add_quotationSoapOut">
+    <wsdl:part name="parameters" element="tns:Add_quotationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add_minutesSoapIn">
+    <wsdl:part name="parameters" element="tns:Add_minutes" />
+  </wsdl:message>
+  <wsdl:message name="Add_minutesSoapOut">
+    <wsdl:part name="parameters" element="tns:Add_minutesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add_nonapprovedminutesSoapIn">
+    <wsdl:part name="parameters" element="tns:Add_nonapprovedminutes" />
+  </wsdl:message>
+  <wsdl:message name="Add_nonapprovedminutesSoapOut">
+    <wsdl:part name="parameters" element="tns:Add_nonapprovedminutesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add_negotiatedamtSoapIn">
+    <wsdl:part name="parameters" element="tns:Add_negotiatedamt" />
+  </wsdl:message>
+  <wsdl:message name="Add_negotiatedamtSoapOut">
+    <wsdl:part name="parameters" element="tns:Add_negotiatedamtResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_totalrequestedSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_totalrequested" />
+  </wsdl:message>
+  <wsdl:message name="Get_totalrequestedSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_totalrequestedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_totalpendingSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_totalpending" />
+  </wsdl:message>
+  <wsdl:message name="Get_totalpendingSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_totalpendingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_totalrejectedSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_totalrejected" />
+  </wsdl:message>
+  <wsdl:message name="Get_totalrejectedSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_totalrejectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_QuotationSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_Quotation" />
+  </wsdl:message>
+  <wsdl:message name="Insert_QuotationSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_QuotationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service_PurchaseCommitteeSoap">
+    <wsdl:operation name="Get_login">
+      <wsdl:input message="tns:Get_loginSoapIn" />
+      <wsdl:output message="tns:Get_loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Branch">
+      <wsdl:input message="tns:Get_BranchSoapIn" />
+      <wsdl:output message="tns:Get_BranchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_dapartment">
+      <wsdl:input message="tns:Get_dapartmentSoapIn" />
+      <wsdl:output message="tns:Get_dapartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_quotationdetails">
+      <wsdl:input message="tns:Add_quotationdetailsSoapIn" />
+      <wsdl:output message="tns:Add_quotationdetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_schedule">
+      <wsdl:input message="tns:Add_scheduleSoapIn" />
+      <wsdl:output message="tns:Add_scheduleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="View_Schedule">
+      <wsdl:input message="tns:View_ScheduleSoapIn" />
+      <wsdl:output message="tns:View_ScheduleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="View_Details">
+      <wsdl:input message="tns:View_DetailsSoapIn" />
+      <wsdl:output message="tns:View_DetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_pendingquotations">
+      <wsdl:input message="tns:Get_pendingquotationsSoapIn" />
+      <wsdl:output message="tns:Get_pendingquotationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_rejectedquotations">
+      <wsdl:input message="tns:Get_rejectedquotationsSoapIn" />
+      <wsdl:output message="tns:Get_rejectedquotationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_minutesdtl">
+      <wsdl:input message="tns:Get_minutesdtlSoapIn" />
+      <wsdl:output message="tns:Get_minutesdtlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_quotationforgeneratepo">
+      <wsdl:input message="tns:Get_quotationforgeneratepoSoapIn" />
+      <wsdl:output message="tns:Get_quotationforgeneratepoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="View_Quotations">
+      <wsdl:input message="tns:View_QuotationsSoapIn" />
+      <wsdl:output message="tns:View_QuotationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="View_IndividualQuotations">
+      <wsdl:input message="tns:View_IndividualQuotationsSoapIn" />
+      <wsdl:output message="tns:View_IndividualQuotationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_individualpendingquotations">
+      <wsdl:input message="tns:Get_individualpendingquotationsSoapIn" />
+      <wsdl:output message="tns:Get_individualpendingquotationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_purchaseordrdtl">
+      <wsdl:input message="tns:Get_purchaseordrdtlSoapIn" />
+      <wsdl:output message="tns:Get_purchaseordrdtlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_itemid">
+      <wsdl:input message="tns:Get_itemidSoapIn" />
+      <wsdl:output message="tns:Get_itemidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_quotation">
+      <wsdl:input message="tns:Add_quotationSoapIn" />
+      <wsdl:output message="tns:Add_quotationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_minutes">
+      <wsdl:input message="tns:Add_minutesSoapIn" />
+      <wsdl:output message="tns:Add_minutesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_nonapprovedminutes">
+      <wsdl:input message="tns:Add_nonapprovedminutesSoapIn" />
+      <wsdl:output message="tns:Add_nonapprovedminutesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_negotiatedamt">
+      <wsdl:input message="tns:Add_negotiatedamtSoapIn" />
+      <wsdl:output message="tns:Add_negotiatedamtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_totalrequested">
+      <wsdl:input message="tns:Get_totalrequestedSoapIn" />
+      <wsdl:output message="tns:Get_totalrequestedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_totalpending">
+      <wsdl:input message="tns:Get_totalpendingSoapIn" />
+      <wsdl:output message="tns:Get_totalpendingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_totalrejected">
+      <wsdl:input message="tns:Get_totalrejectedSoapIn" />
+      <wsdl:output message="tns:Get_totalrejectedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Quotation">
+      <wsdl:input message="tns:Insert_QuotationSoapIn" />
+      <wsdl:output message="tns:Insert_QuotationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service_PurchaseCommitteeSoap" type="tns:Service_PurchaseCommitteeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_login">
+      <soap:operation soapAction="http://tempuri.org/Get_login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Branch">
+      <soap:operation soapAction="http://tempuri.org/Get_Branch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_dapartment">
+      <soap:operation soapAction="http://tempuri.org/Get_dapartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_quotationdetails">
+      <soap:operation soapAction="http://tempuri.org/Add_quotationdetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_schedule">
+      <soap:operation soapAction="http://tempuri.org/Add_schedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="View_Schedule">
+      <soap:operation soapAction="http://tempuri.org/View_Schedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="View_Details">
+      <soap:operation soapAction="http://tempuri.org/View_Details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_pendingquotations">
+      <soap:operation soapAction="http://tempuri.org/Get_pendingquotations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_rejectedquotations">
+      <soap:operation soapAction="http://tempuri.org/Get_rejectedquotations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_minutesdtl">
+      <soap:operation soapAction="http://tempuri.org/Get_minutesdtl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_quotationforgeneratepo">
+      <soap:operation soapAction="http://tempuri.org/Get_quotationforgeneratepo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="View_Quotations">
+      <soap:operation soapAction="http://tempuri.org/View_Quotations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="View_IndividualQuotations">
+      <soap:operation soapAction="http://tempuri.org/View_IndividualQuotations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_individualpendingquotations">
+      <soap:operation soapAction="http://tempuri.org/Get_individualpendingquotations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_purchaseordrdtl">
+      <soap:operation soapAction="http://tempuri.org/Get_purchaseordrdtl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_itemid">
+      <soap:operation soapAction="http://tempuri.org/Get_itemid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_quotation">
+      <soap:operation soapAction="http://tempuri.org/Add_quotation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_minutes">
+      <soap:operation soapAction="http://tempuri.org/Add_minutes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_nonapprovedminutes">
+      <soap:operation soapAction="http://tempuri.org/Add_nonapprovedminutes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_negotiatedamt">
+      <soap:operation soapAction="http://tempuri.org/Add_negotiatedamt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_totalrequested">
+      <soap:operation soapAction="http://tempuri.org/Get_totalrequested" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_totalpending">
+      <soap:operation soapAction="http://tempuri.org/Get_totalpending" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_totalrejected">
+      <soap:operation soapAction="http://tempuri.org/Get_totalrejected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Quotation">
+      <soap:operation soapAction="http://tempuri.org/Insert_Quotation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service_PurchaseCommitteeSoap12" type="tns:Service_PurchaseCommitteeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_login">
+      <soap12:operation soapAction="http://tempuri.org/Get_login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Branch">
+      <soap12:operation soapAction="http://tempuri.org/Get_Branch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_dapartment">
+      <soap12:operation soapAction="http://tempuri.org/Get_dapartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_quotationdetails">
+      <soap12:operation soapAction="http://tempuri.org/Add_quotationdetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_schedule">
+      <soap12:operation soapAction="http://tempuri.org/Add_schedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="View_Schedule">
+      <soap12:operation soapAction="http://tempuri.org/View_Schedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="View_Details">
+      <soap12:operation soapAction="http://tempuri.org/View_Details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_pendingquotations">
+      <soap12:operation soapAction="http://tempuri.org/Get_pendingquotations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_rejectedquotations">
+      <soap12:operation soapAction="http://tempuri.org/Get_rejectedquotations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_minutesdtl">
+      <soap12:operation soapAction="http://tempuri.org/Get_minutesdtl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_quotationforgeneratepo">
+      <soap12:operation soapAction="http://tempuri.org/Get_quotationforgeneratepo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="View_Quotations">
+      <soap12:operation soapAction="http://tempuri.org/View_Quotations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="View_IndividualQuotations">
+      <soap12:operation soapAction="http://tempuri.org/View_IndividualQuotations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_individualpendingquotations">
+      <soap12:operation soapAction="http://tempuri.org/Get_individualpendingquotations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_purchaseordrdtl">
+      <soap12:operation soapAction="http://tempuri.org/Get_purchaseordrdtl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_itemid">
+      <soap12:operation soapAction="http://tempuri.org/Get_itemid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_quotation">
+      <soap12:operation soapAction="http://tempuri.org/Add_quotation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_minutes">
+      <soap12:operation soapAction="http://tempuri.org/Add_minutes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_nonapprovedminutes">
+      <soap12:operation soapAction="http://tempuri.org/Add_nonapprovedminutes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_negotiatedamt">
+      <soap12:operation soapAction="http://tempuri.org/Add_negotiatedamt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_totalrequested">
+      <soap12:operation soapAction="http://tempuri.org/Get_totalrequested" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_totalpending">
+      <soap12:operation soapAction="http://tempuri.org/Get_totalpending" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_totalrejected">
+      <soap12:operation soapAction="http://tempuri.org/Get_totalrejected" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Quotation">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Quotation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service_PurchaseCommittee">
+    <wsdl:port name="Service_PurchaseCommitteeSoap" binding="tns:Service_PurchaseCommitteeSoap">
+      <soap:address location="https://macare.mactech.net.in/MACARE_MIS_Service/ServicePurchasecommittee/Service_PurchaseCommittee.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service_PurchaseCommitteeSoap12" binding="tns:Service_PurchaseCommitteeSoap12">
+      <soap12:address location="https://macare.mactech.net.in/MACARE_MIS_Service/ServicePurchasecommittee/Service_PurchaseCommittee.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

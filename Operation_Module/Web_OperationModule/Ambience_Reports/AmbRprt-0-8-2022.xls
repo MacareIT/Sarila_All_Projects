@@ -1,0 +1,199 @@
+<table>
+	<tr>
+		<td> </td>
+	</tr><tr>
+		<td>BRANCHWISE AMBIENCE REPORT ON 8 2022</td>
+	</tr><tr>
+		<td> </td>
+	</tr><tr>
+		<td>ADMINISTRATIVE OFFICE</td>
+	</tr><tr>
+		<td>Entered by:150739,TECH LEAD,on:02-08-2022</td>
+	</tr><tr>
+		<td> </td>
+	</tr><tr>
+		<td><div>
+			<table cellspacing="0" cellpadding="4" rules="all" border="1" id="ContentPlaceHolder1_Grid_Ambience" style="color:#333333;border-color:Black;width:800px;border-collapse:collapse;">
+				<tr style="color:White;background-color:#1C5E55;">
+					<th scope="col">Ambience</th><th scope="col">Count</th><th scope="col">WorkingCondition</th><th scope="col">Remarks</th><th scope="col">Cleared</th><th scope="col">Explanation</th>
+				</tr><tr style="border-color:Black;border-width:1px;border-style:Solid;">
+					<td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_Name_0">door</span>
+                                           </td><td style="width:250px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_count_0">1 </span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_condtn_0">nmbmnb</span>
+                                           </td><td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_remarks_0"> </span>
+                                           </td><td style="width:300px;">
+                                               <span class="aspNetDisabled"><input id="ContentPlaceHolder1_Grid_Ambience_chkbox_0" type="checkbox" name="Grid_Ambience$ctl14$chkbox" disabled="disabled" /></span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lblExplanation_0"> </span>
+                                           </td>
+				</tr><tr style="border-color:Black;border-width:1px;border-style:Solid;">
+					<td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_Name_1">cooler</span>
+                                           </td><td style="width:250px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_count_1"> </span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_condtn_1"> </span>
+                                           </td><td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_remarks_1"> </span>
+                                           </td><td style="width:300px;">
+                                               <span class="aspNetDisabled"><input id="ContentPlaceHolder1_Grid_Ambience_chkbox_1" type="checkbox" name="Grid_Ambience$ctl15$chkbox" disabled="disabled" /></span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lblExplanation_1"> </span>
+                                           </td>
+				</tr><tr style="border-color:Black;border-width:1px;border-style:Solid;">
+					<td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_Name_2">Sample</span>
+                                           </td><td style="width:250px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_count_2"> </span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_condtn_2"> </span>
+                                           </td><td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_remarks_2"> </span>
+                                           </td><td style="width:300px;">
+                                               <span class="aspNetDisabled"><input id="ContentPlaceHolder1_Grid_Ambience_chkbox_2" type="checkbox" name="Grid_Ambience$ctl16$chkbox" disabled="disabled" /></span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lblExplanation_2"> </span>
+                                           </td>
+				</tr><tr style="border-color:Black;border-width:1px;border-style:Solid;">
+					<td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_Name_3">car</span>
+                                           </td><td style="width:250px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_count_3"> </span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_condtn_3"> </span>
+                                           </td><td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_remarks_3"> </span>
+                                           </td><td style="width:300px;">
+                                               <span class="aspNetDisabled"><input id="ContentPlaceHolder1_Grid_Ambience_chkbox_3" type="checkbox" name="Grid_Ambience$ctl17$chkbox" disabled="disabled" /></span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lblExplanation_3"> </span>
+                                           </td>
+				</tr><tr style="border-color:Black;border-width:1px;border-style:Solid;">
+					<td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_Name_4">chair</span>
+                                           </td><td style="width:250px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_count_4"> </span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_condtn_4"> </span>
+                                           </td><td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_remarks_4"> </span>
+                                           </td><td style="width:300px;">
+                                               <span class="aspNetDisabled"><input id="ContentPlaceHolder1_Grid_Ambience_chkbox_4" type="checkbox" name="Grid_Ambience$ctl18$chkbox" disabled="disabled" /></span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lblExplanation_4"> </span>
+                                           </td>
+				</tr><tr style="border-color:Black;border-width:1px;border-style:Solid;">
+					<td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_Name_5">gdd</span>
+                                           </td><td style="width:250px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_count_5"> </span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_condtn_5"> </span>
+                                           </td><td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_remarks_5"> </span>
+                                           </td><td style="width:300px;">
+                                               <span class="aspNetDisabled"><input id="ContentPlaceHolder1_Grid_Ambience_chkbox_5" type="checkbox" name="Grid_Ambience$ctl19$chkbox" disabled="disabled" /></span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lblExplanation_5"> </span>
+                                           </td>
+				</tr><tr style="border-color:Black;border-width:1px;border-style:Solid;">
+					<td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_Name_6">wall</span>
+                                           </td><td style="width:250px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_count_6"> </span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_condtn_6"> </span>
+                                           </td><td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_remarks_6"> </span>
+                                           </td><td style="width:300px;">
+                                               <span class="aspNetDisabled"><input id="ContentPlaceHolder1_Grid_Ambience_chkbox_6" type="checkbox" name="Grid_Ambience$ctl20$chkbox" disabled="disabled" /></span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lblExplanation_6"> </span>
+                                           </td>
+				</tr><tr style="border-color:Black;border-width:1px;border-style:Solid;">
+					<td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_Name_7">Switchboard</span>
+                                           </td><td style="width:250px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_count_7"> </span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_condtn_7"> </span>
+                                           </td><td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_remarks_7"> </span>
+                                           </td><td style="width:300px;">
+                                               <span class="aspNetDisabled"><input id="ContentPlaceHolder1_Grid_Ambience_chkbox_7" type="checkbox" name="Grid_Ambience$ctl21$chkbox" disabled="disabled" /></span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lblExplanation_7"> </span>
+                                           </td>
+				</tr><tr style="border-color:Black;border-width:1px;border-style:Solid;">
+					<td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_Name_8">Shelf</span>
+                                           </td><td style="width:250px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_count_8"> </span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_condtn_8"> </span>
+                                           </td><td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_remarks_8"> </span>
+                                           </td><td style="width:300px;">
+                                               <span class="aspNetDisabled"><input id="ContentPlaceHolder1_Grid_Ambience_chkbox_8" type="checkbox" name="Grid_Ambience$ctl22$chkbox" disabled="disabled" /></span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lblExplanation_8"> </span>
+                                           </td>
+				</tr><tr style="border-color:Black;border-width:1px;border-style:Solid;">
+					<td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_Name_9">desk</span>
+                                           </td><td style="width:250px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_count_9"> 4</span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_condtn_9"> nmbn</span>
+                                           </td><td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_remarks_9"> </span>
+                                           </td><td style="width:300px;">
+                                               <span class="aspNetDisabled"><input id="ContentPlaceHolder1_Grid_Ambience_chkbox_9" type="checkbox" name="Grid_Ambience$ctl23$chkbox" checked="checked" disabled="disabled" /></span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lblExplanation_9"> hvjhghjghjghg</span>
+                                           </td>
+				</tr><tr style="border-color:Black;border-width:1px;border-style:Solid;">
+					<td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_Name_10">window</span>
+                                           </td><td style="width:250px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_count_10">2</span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_condtn_10">nbnb</span>
+                                           </td><td style="width:400px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lbl_remarks_10"> </span>
+                                           </td><td style="width:300px;">
+                                               <span class="aspNetDisabled"><input id="ContentPlaceHolder1_Grid_Ambience_chkbox_10" type="checkbox" name="Grid_Ambience$ctl24$chkbox" disabled="disabled" /></span>
+                                           </td><td style="width:500px;">
+                                               <span id="ContentPlaceHolder1_Grid_Ambience_lblExplanation_10"> </span>
+                                           </td>
+				</tr>
+			</table>
+		</div></td>
+	</tr><tr>
+		<td> </td>
+	</tr><tr>
+		<td><div>
+			<table cellspacing="0" cellpadding="4" rules="rows" border="1" id="ContentPlaceHolder1_Grid_Image" style="color:#333333;border-color:Black;width:800px;border-collapse:collapse;">
+				<tr>
+					<th scope="col">&nbsp;</th><th scope="col">&nbsp;</th>
+				</tr><tr>
+					<td style="width:150px;">
+                                                <span id="ContentPlaceHolder1_Grid_Image_Label1_0" style="display:inline-block;width:150px;">Lab</span>
+                                           </td><td style="width:300px;">
+                                                <img id="ContentPlaceHolder1_Grid_Image_Image1_0" src="Ambience_Image/Lab92022bg_1.jpg" style="height:200px;width:300px;" />
+                                           </td>
+				</tr><tr>
+					<td style="width:150px;">
+                                                <span id="ContentPlaceHolder1_Grid_Image_Label1_1" style="display:inline-block;width:150px;">Board</span>
+                                           </td><td style="width:300px;">
+                                                <img id="ContentPlaceHolder1_Grid_Image_Image1_1" src="Ambience_Image/Board92022bg_3.jpg" style="height:200px;width:300px;" />
+                                           </td>
+				</tr>
+			</table>
+		</div></td>
+	</tr>
+</table>

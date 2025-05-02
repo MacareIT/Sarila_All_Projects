@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_Operation/WebService_Operation.asmx?wsdl" docRef="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_Operation/WebService_Operation.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_Operation/WebService_Operation.asmx" xmlns:q1="http://tempuri.org/" binding="q1:WebService_OperationSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_Operation/WebService_Operation.asmx" xmlns:q2="http://tempuri.org/" binding="q2:WebService_OperationSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

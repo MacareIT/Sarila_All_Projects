@@ -1,0 +1,153 @@
+<table>
+	<tr>
+		<td>BRANCH VISIT REPORT</td>
+	</tr><tr>
+		<td> </td>
+	</tr><tr>
+		<td> </td>
+	</tr><tr>
+		<td>Submitted by: Sarila KG 150739</td>
+	</tr><tr>
+		<td>Submitted on: 20-09-2022</td>
+	</tr><tr>
+		<td>Manappuram Health Care Ltd - VALAPAD</td>
+	</tr><tr>
+		<td> </td>
+	</tr><tr>
+		<td>CASH POSITION STATUS</td>
+	</tr><tr>
+		<td><div>
+			<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+				<tr>
+					<th scope="col">Physical Cash</th><th scope="col">System Cash</th><th scope="col">Difference</th>
+				</tr><tr>
+					<td>200</td><td>300</td><td>-100</td>
+				</tr>
+			</table>
+		</div></td>
+	</tr><tr>
+		<td> </td>
+	</tr><tr>
+		<td><div>
+			<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+				<tr>
+					<th scope="col">Physical Cash</th><th scope="col">Registerwise</th><th scope="col">Difference</th>
+				</tr><tr>
+					<td>200</td><td>200</td><td>0</td>
+				</tr>
+			</table>
+		</div></td>
+	</tr><tr>
+		<td> </td>
+	</tr><tr>
+		<td>REGISTERS</td>
+	</tr><tr>
+		<td><div>
+			<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+				<tr>
+					<th scope="col">Updating Registers</th><th scope="col">Status</th><th scope="col">Remarks</th>
+				</tr><tr>
+					<td>Movement Register</td><td>vbnvb</td><td>mbnm</td>
+				</tr><tr>
+					<td>Attendence Register</td><td>bmnb</td><td>mnbnm</td>
+				</tr><tr>
+					<td>Procedure Register</td><td>bnmb</td><td>nb</td>
+				</tr><tr>
+					<td>Fixed Asset Register</td><td>nmbn</td><td>bmnb</td>
+				</tr><tr>
+					<td>Petty Cash Register</td><td>nb</td><td>nmbmn</td>
+				</tr><tr>
+					<td>Cash Book/Cash Stock Register</td><td>bnmb</td><td>nm</td>
+				</tr><tr>
+					<td>Cash in Transit Register</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Faculty Register</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Fees Collection Register</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Complaint Register /Box</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Patient Register</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Outlab Register</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Inventory register</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Call Register</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Bills System and Manual Verification</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Marketing Files</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Equipment items</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr>
+			</table>
+		</div></td>
+	</tr><tr>
+		<td> </td>
+	</tr><tr>
+		<td>ASSET VERIFICATION</td>
+	</tr><tr>
+		<td><div>
+			<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+				<tr>
+					<th scope="col">Asset Verification</th><th scope="col">Working Status</th><th scope="col">Remarks</th>
+				</tr><tr>
+					<td>Network Issues</td><td>.n,.mlm,.</td><td>nm,</td>
+				</tr><tr>
+					<td>CCTV camaras</td><td>nm,nm,n</td><td>,nm,n</td>
+				</tr><tr>
+					<td>AC</td><td>m,nm,n</td><td>m,nm,</td>
+				</tr><tr>
+					<td>TV</td><td>vnmb,</td><td>nn</td>
+				</tr><tr>
+					<td>Floor</td><td>m,n,mn</td><td>nvnmbm</td>
+				</tr><tr>
+					<td>Fan</td><td>nmvnbn</td><td>bnmbnm</td>
+				</tr><tr>
+					<td>Sofa</td><td>bnmbn</td><td>bnmb</td>
+				</tr><tr>
+					<td>Chairs</td><td>nnm</td><td>vmnb</td>
+				</tr><tr>
+					<td>Office Table</td><td>bnm</td><td>bnb</td>
+				</tr><tr>
+					<td>Windows Glass</td><td>mnvnmb</td><td>bn</td>
+				</tr><tr>
+					<td>Signing Board</td><td>mb,m</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Tube Lights</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Walls</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Interiors</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Computers</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Laptop</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Phone</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Web Camera</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Printer</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Scanner</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Plugs and Switch boards</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>UPS and Battery</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Founder photo and Lamb</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Fire Extinguisher</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Office Cabin</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Water Dispensor</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr><tr>
+					<td>Wash Room</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr>
+			</table>
+		</div></td>
+	</tr>
+</table>

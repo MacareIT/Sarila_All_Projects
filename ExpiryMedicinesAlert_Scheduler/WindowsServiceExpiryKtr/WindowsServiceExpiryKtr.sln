@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32407.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsServiceExpiryKtr", "WindowsServiceExpiryKtr.csproj", "{625C1CF5-B718-47ED-9567-F5B0E66CB5A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{625C1CF5-B718-47ED-9567-F5B0E66CB5A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{625C1CF5-B718-47ED-9567-F5B0E66CB5A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{625C1CF5-B718-47ED-9567-F5B0E66CB5A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{625C1CF5-B718-47ED-9567-F5B0E66CB5A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05B088F4-9393-49D2-8B69-F66CDAF70B86}
+	EndGlobalSection
+EndGlobal

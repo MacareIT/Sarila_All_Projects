@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BillCancelDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BillCancelDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_BillCancelDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Load_Sales_return">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Load_Sales_returnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Load_Sales_returnResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Load_Consumption">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Load_ConsumptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Load_ConsumptionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Debitnote_Created">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Debitnote_CreatedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Debitnote_CreatedResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Creditnote_Adjust">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Creditnote_AdjustResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Creditnote_AdjustResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Cashposition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_CashpositionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_CashpositionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Chk_Inventory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Chk_InventoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Chk_InventoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="select_user">
+        <s:complexType />
+      </s:element>
+      <s:element name="select_userResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="select_userResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Load_CashPosition_InDtl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Load_CashPosition_InDtlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Load_CashPosition_InDtlResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Load_DebitCreate_InDtl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Load_DebitCreate_InDtlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Load_DebitCreate_InDtlResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_OpticalStockEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromdte" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="todate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Select_OpticalStockEntryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Select_OpticalStockEntryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Load_Inventory_Chk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Load_Inventory_ChkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Load_Inventory_ChkResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_AgreementRenewal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="agrmnt_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="agrmnt_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agrmnt_party" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date_of_exectn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="next_renewal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="first_alert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="second_alert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="third_alert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_on" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_AgreementRenewalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insert_AgreementRenewalResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_AgreementRenewal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="agrmnt_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="agrmnt_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agrmnt_party" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date_of_exectn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="next_renewal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="first_alert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="second_alert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="third_alert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_on" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updated_by" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_AgreementRenewalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="update_AgreementRenewalResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_grid_Agrmnt_renewal">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_grid_Agrmnt_renewalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_grid_Agrmnt_renewalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delete_AgreementRenewal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="agrmnt_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delete_AgreementRenewalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="delete_AgreementRenewalResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_AgreementRenewal_notifn">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_AgreementRenewal_notifnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_AgreementRenewal_notifnResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_BillCancelDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_BillCancelDetails" />
+  </wsdl:message>
+  <wsdl:message name="Get_BillCancelDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_BillCancelDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Load_Sales_returnSoapIn">
+    <wsdl:part name="parameters" element="tns:Load_Sales_return" />
+  </wsdl:message>
+  <wsdl:message name="Load_Sales_returnSoapOut">
+    <wsdl:part name="parameters" element="tns:Load_Sales_returnResponse" />
+  </wsdl:message>
+  <wsdl:message name="Load_ConsumptionSoapIn">
+    <wsdl:part name="parameters" element="tns:Load_Consumption" />
+  </wsdl:message>
+  <wsdl:message name="Load_ConsumptionSoapOut">
+    <wsdl:part name="parameters" element="tns:Load_ConsumptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Debitnote_CreatedSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Debitnote_Created" />
+  </wsdl:message>
+  <wsdl:message name="Get_Debitnote_CreatedSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Debitnote_CreatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Creditnote_AdjustSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Creditnote_Adjust" />
+  </wsdl:message>
+  <wsdl:message name="Get_Creditnote_AdjustSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Creditnote_AdjustResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_CashpositionSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Cashposition" />
+  </wsdl:message>
+  <wsdl:message name="Get_CashpositionSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_CashpositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Chk_InventorySoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Chk_Inventory" />
+  </wsdl:message>
+  <wsdl:message name="Get_Chk_InventorySoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Chk_InventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="select_userSoapIn">
+    <wsdl:part name="parameters" element="tns:select_user" />
+  </wsdl:message>
+  <wsdl:message name="select_userSoapOut">
+    <wsdl:part name="parameters" element="tns:select_userResponse" />
+  </wsdl:message>
+  <wsdl:message name="Load_CashPosition_InDtlSoapIn">
+    <wsdl:part name="parameters" element="tns:Load_CashPosition_InDtl" />
+  </wsdl:message>
+  <wsdl:message name="Load_CashPosition_InDtlSoapOut">
+    <wsdl:part name="parameters" element="tns:Load_CashPosition_InDtlResponse" />
+  </wsdl:message>
+  <wsdl:message name="Load_DebitCreate_InDtlSoapIn">
+    <wsdl:part name="parameters" element="tns:Load_DebitCreate_InDtl" />
+  </wsdl:message>
+  <wsdl:message name="Load_DebitCreate_InDtlSoapOut">
+    <wsdl:part name="parameters" element="tns:Load_DebitCreate_InDtlResponse" />
+  </wsdl:message>
+  <wsdl:message name="Select_OpticalStockEntrySoapIn">
+    <wsdl:part name="parameters" element="tns:Select_OpticalStockEntry" />
+  </wsdl:message>
+  <wsdl:message name="Select_OpticalStockEntrySoapOut">
+    <wsdl:part name="parameters" element="tns:Select_OpticalStockEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Load_Inventory_ChkSoapIn">
+    <wsdl:part name="parameters" element="tns:Load_Inventory_Chk" />
+  </wsdl:message>
+  <wsdl:message name="Load_Inventory_ChkSoapOut">
+    <wsdl:part name="parameters" element="tns:Load_Inventory_ChkResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_AgreementRenewalSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_AgreementRenewal" />
+  </wsdl:message>
+  <wsdl:message name="Insert_AgreementRenewalSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_AgreementRenewalResponse" />
+  </wsdl:message>
+  <wsdl:message name="update_AgreementRenewalSoapIn">
+    <wsdl:part name="parameters" element="tns:update_AgreementRenewal" />
+  </wsdl:message>
+  <wsdl:message name="update_AgreementRenewalSoapOut">
+    <wsdl:part name="parameters" element="tns:update_AgreementRenewalResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_grid_Agrmnt_renewalSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_grid_Agrmnt_renewal" />
+  </wsdl:message>
+  <wsdl:message name="Get_grid_Agrmnt_renewalSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_grid_Agrmnt_renewalResponse" />
+  </wsdl:message>
+  <wsdl:message name="delete_AgreementRenewalSoapIn">
+    <wsdl:part name="parameters" element="tns:delete_AgreementRenewal" />
+  </wsdl:message>
+  <wsdl:message name="delete_AgreementRenewalSoapOut">
+    <wsdl:part name="parameters" element="tns:delete_AgreementRenewalResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_AgreementRenewal_notifnSoapIn">
+    <wsdl:part name="parameters" element="tns:get_AgreementRenewal_notifn" />
+  </wsdl:message>
+  <wsdl:message name="get_AgreementRenewal_notifnSoapOut">
+    <wsdl:part name="parameters" element="tns:get_AgreementRenewal_notifnResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService_OperationDashboardSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_BillCancelDetails">
+      <wsdl:input message="tns:Get_BillCancelDetailsSoapIn" />
+      <wsdl:output message="tns:Get_BillCancelDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Load_Sales_return">
+      <wsdl:input message="tns:Load_Sales_returnSoapIn" />
+      <wsdl:output message="tns:Load_Sales_returnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Load_Consumption">
+      <wsdl:input message="tns:Load_ConsumptionSoapIn" />
+      <wsdl:output message="tns:Load_ConsumptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Debitnote_Created">
+      <wsdl:input message="tns:Get_Debitnote_CreatedSoapIn" />
+      <wsdl:output message="tns:Get_Debitnote_CreatedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Creditnote_Adjust">
+      <wsdl:input message="tns:Get_Creditnote_AdjustSoapIn" />
+      <wsdl:output message="tns:Get_Creditnote_AdjustSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cashposition">
+      <wsdl:input message="tns:Get_CashpositionSoapIn" />
+      <wsdl:output message="tns:Get_CashpositionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Chk_Inventory">
+      <wsdl:input message="tns:Get_Chk_InventorySoapIn" />
+      <wsdl:output message="tns:Get_Chk_InventorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="select_user">
+      <wsdl:input message="tns:select_userSoapIn" />
+      <wsdl:output message="tns:select_userSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Load_CashPosition_InDtl">
+      <wsdl:input message="tns:Load_CashPosition_InDtlSoapIn" />
+      <wsdl:output message="tns:Load_CashPosition_InDtlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Load_DebitCreate_InDtl">
+      <wsdl:input message="tns:Load_DebitCreate_InDtlSoapIn" />
+      <wsdl:output message="tns:Load_DebitCreate_InDtlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Select_OpticalStockEntry">
+      <wsdl:input message="tns:Select_OpticalStockEntrySoapIn" />
+      <wsdl:output message="tns:Select_OpticalStockEntrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Load_Inventory_Chk">
+      <wsdl:input message="tns:Load_Inventory_ChkSoapIn" />
+      <wsdl:output message="tns:Load_Inventory_ChkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_AgreementRenewal">
+      <wsdl:input message="tns:Insert_AgreementRenewalSoapIn" />
+      <wsdl:output message="tns:Insert_AgreementRenewalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update_AgreementRenewal">
+      <wsdl:input message="tns:update_AgreementRenewalSoapIn" />
+      <wsdl:output message="tns:update_AgreementRenewalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_grid_Agrmnt_renewal">
+      <wsdl:input message="tns:Get_grid_Agrmnt_renewalSoapIn" />
+      <wsdl:output message="tns:Get_grid_Agrmnt_renewalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="delete_AgreementRenewal">
+      <wsdl:input message="tns:delete_AgreementRenewalSoapIn" />
+      <wsdl:output message="tns:delete_AgreementRenewalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_AgreementRenewal_notifn">
+      <wsdl:input message="tns:get_AgreementRenewal_notifnSoapIn" />
+      <wsdl:output message="tns:get_AgreementRenewal_notifnSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService_OperationDashboardSoap" type="tns:WebService_OperationDashboardSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BillCancelDetails">
+      <soap:operation soapAction="http://tempuri.org/Get_BillCancelDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_Sales_return">
+      <soap:operation soapAction="http://tempuri.org/Load_Sales_return" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_Consumption">
+      <soap:operation soapAction="http://tempuri.org/Load_Consumption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Debitnote_Created">
+      <soap:operation soapAction="http://tempuri.org/Get_Debitnote_Created" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Creditnote_Adjust">
+      <soap:operation soapAction="http://tempuri.org/Get_Creditnote_Adjust" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cashposition">
+      <soap:operation soapAction="http://tempuri.org/Get_Cashposition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Chk_Inventory">
+      <soap:operation soapAction="http://tempuri.org/Get_Chk_Inventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_user">
+      <soap:operation soapAction="http://tempuri.org/select_user" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_CashPosition_InDtl">
+      <soap:operation soapAction="http://tempuri.org/Load_CashPosition_InDtl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_DebitCreate_InDtl">
+      <soap:operation soapAction="http://tempuri.org/Load_DebitCreate_InDtl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_OpticalStockEntry">
+      <soap:operation soapAction="http://tempuri.org/Select_OpticalStockEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_Inventory_Chk">
+      <soap:operation soapAction="http://tempuri.org/Load_Inventory_Chk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_AgreementRenewal">
+      <soap:operation soapAction="http://tempuri.org/Insert_AgreementRenewal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_AgreementRenewal">
+      <soap:operation soapAction="http://tempuri.org/update_AgreementRenewal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_grid_Agrmnt_renewal">
+      <soap:operation soapAction="http://tempuri.org/Get_grid_Agrmnt_renewal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete_AgreementRenewal">
+      <soap:operation soapAction="http://tempuri.org/delete_AgreementRenewal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_AgreementRenewal_notifn">
+      <soap:operation soapAction="http://tempuri.org/get_AgreementRenewal_notifn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_OperationDashboardSoap12" type="tns:WebService_OperationDashboardSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_BillCancelDetails">
+      <soap12:operation soapAction="http://tempuri.org/Get_BillCancelDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_Sales_return">
+      <soap12:operation soapAction="http://tempuri.org/Load_Sales_return" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_Consumption">
+      <soap12:operation soapAction="http://tempuri.org/Load_Consumption" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Debitnote_Created">
+      <soap12:operation soapAction="http://tempuri.org/Get_Debitnote_Created" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Creditnote_Adjust">
+      <soap12:operation soapAction="http://tempuri.org/Get_Creditnote_Adjust" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cashposition">
+      <soap12:operation soapAction="http://tempuri.org/Get_Cashposition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Chk_Inventory">
+      <soap12:operation soapAction="http://tempuri.org/Get_Chk_Inventory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_user">
+      <soap12:operation soapAction="http://tempuri.org/select_user" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_CashPosition_InDtl">
+      <soap12:operation soapAction="http://tempuri.org/Load_CashPosition_InDtl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_DebitCreate_InDtl">
+      <soap12:operation soapAction="http://tempuri.org/Load_DebitCreate_InDtl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select_OpticalStockEntry">
+      <soap12:operation soapAction="http://tempuri.org/Select_OpticalStockEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load_Inventory_Chk">
+      <soap12:operation soapAction="http://tempuri.org/Load_Inventory_Chk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_AgreementRenewal">
+      <soap12:operation soapAction="http://tempuri.org/Insert_AgreementRenewal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_AgreementRenewal">
+      <soap12:operation soapAction="http://tempuri.org/update_AgreementRenewal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_grid_Agrmnt_renewal">
+      <soap12:operation soapAction="http://tempuri.org/Get_grid_Agrmnt_renewal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete_AgreementRenewal">
+      <soap12:operation soapAction="http://tempuri.org/delete_AgreementRenewal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_AgreementRenewal_notifn">
+      <soap12:operation soapAction="http://tempuri.org/get_AgreementRenewal_notifn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService_OperationDashboard">
+    <wsdl:port name="WebService_OperationDashboardSoap" binding="tns:WebService_OperationDashboardSoap">
+      <soap:address location="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_OperationDashboard/WebService_OperationDashboard.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService_OperationDashboardSoap12" binding="tns:WebService_OperationDashboardSoap12">
+      <soap12:address location="https://macare.mactech.net.in/MACARE_MIS_Service/WebService_OperationDashboard/WebService_OperationDashboard.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
